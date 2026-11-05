@@ -42,6 +42,10 @@ header{padding-block:32px 20px;display:grid;gap:14px}
 @keyframes blink{50%{opacity:.35;box-shadow:none}}
 .tag{color:var(--muted);margin:0;max-width:60ch}
 form.search{display:flex;gap:8px;flex-wrap:wrap}
+.citypick{display:grid;gap:6px;max-width:340px}
+#citySel{font:inherit;font-size:16px;font-weight:600;padding:11px 40px 11px 14px;border-radius:10px;border:1.5px solid var(--accent);background:var(--surface);color:var(--ink);cursor:pointer;appearance:none;-webkit-appearance:none;
+  background-image:linear-gradient(45deg,transparent 50%,var(--accent) 50%),linear-gradient(135deg,var(--accent) 50%,transparent 50%);background-position:calc(100% - 20px) 52%,calc(100% - 14px) 52%;background-size:6px 6px;background-repeat:no-repeat;box-shadow:0 0 12px color-mix(in srgb,var(--accent) 30%,transparent)}
+#citySel:focus-visible{outline:3px solid var(--bulb);outline-offset:2px}
 .search input{flex:1 1 240px;min-width:0;font:inherit;font-size:16px;padding:12px 14px;border-radius:10px;border:1.5px solid var(--line);background:var(--surface);color:var(--ink)}
 .search input:focus{outline:none;border-color:var(--accent)}
 button{font:inherit;cursor:pointer}
@@ -87,17 +91,34 @@ footer{margin-top:40px;font-size:13px;color:var(--muted);border-top:1px solid va
 <header>
   <div class="bulbs" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div>
   <h1 class="logo">Laughs<span class="onair">Live</span></h1>
-  <p class="tag">Comedy shows in nine cities, from club showcases to arena headliners, in one list. Pick a city or enter where you are to see what's closest.</p>
-  <div class="chips" id="cityChips" role="group" aria-label="City">
-    <button type="button" data-v="NYC" aria-pressed="true">New York City</button>
-    <button type="button" data-v="PHL" aria-pressed="false">Philadelphia</button>
-    <button type="button" data-v="BOS" aria-pressed="false">Boston</button>
-    <button type="button" data-v="BAL" aria-pressed="false">Baltimore</button>
-    <button type="button" data-v="DC" aria-pressed="false">Washington, D.C.</button>
-    <button type="button" data-v="PIT" aria-pressed="false">Pittsburgh</button>
-    <button type="button" data-v="CLE" aria-pressed="false">Cleveland</button>
-    <button type="button" data-v="NSH" aria-pressed="false">Nashville</button>
-    <button type="button" data-v="PWM" aria-pressed="false">Portland, Maine</button>
+  <p class="tag">Comedy shows in 15 cities, from club showcases to arena headliners, in one list. Pick a city or enter where you are to see what's closest.</p>
+  <div class="citypick">
+    <label for="citySel" class="flabel">City</label>
+    <select id="citySel">
+      <optgroup label="Northeast">
+        <option value="BOS">Boston</option>
+        <option value="HFD">Hartford</option>
+        <option value="NHV">New Haven</option>
+        <option value="NYC" selected>New York City</option>
+        <option value="PHL">Philadelphia</option>
+        <option value="PWM">Portland, Maine</option>
+      </optgroup>
+      <optgroup label="Mid-Atlantic">
+        <option value="BAL">Baltimore</option>
+        <option value="ORF">Norfolk &amp; Virginia Beach</option>
+        <option value="PIT">Pittsburgh</option>
+        <option value="RIC">Richmond</option>
+        <option value="DC">Washington, D.C.</option>
+      </optgroup>
+      <optgroup label="South">
+        <option value="ATL">Atlanta</option>
+        <option value="NSH">Nashville</option>
+      </optgroup>
+      <optgroup label="Midwest">
+        <option value="CHI">Chicago</option>
+        <option value="CLE">Cleveland</option>
+      </optgroup>
+    </select>
   </div>
   <form class="search" id="searchForm" autocomplete="off">
     <label for="loc" class="flabel" style="flex-basis:100%">Your location</label>
@@ -197,7 +218,36 @@ const V={
  truth:{n:"The Truth",area:"Wedgewood-Houston",b:"Nashville",c:"NSH",lat:36.1450,lng:-86.7640},
  parnassus:{n:"Parnassus Books",area:"Green Hills",b:"Nashville",c:"NSH",lat:36.1050,lng:-86.8170},
  empire:{n:"Empire Comedy Club",area:"Downtown",b:"Portland, Maine",c:"PWM",lat:43.6565,lng:-70.2601},
- statepwm:{n:"State Theatre",area:"Downtown",b:"Portland, Maine",c:"PWM",lat:43.6562,lng:-70.2595}
+ statepwm:{n:"State Theatre",area:"Downtown",b:"Portland, Maine",c:"PWM",lat:43.6562,lng:-70.2595},
+ chimprov:{n:"Chicago Improv",area:"Woodfield Mall, Schaumburg",b:"Chicago area",c:"CHI",lat:42.0470,lng:-88.0370},
+ cwchi:{n:"City Winery Chicago",area:"West Loop",b:"Chicago",c:"CHI",lat:41.8843,lng:-87.6588},
+ zanieschi:{n:"Zanies Comedy Club",area:"Old Town",b:"Chicago",c:"CHI",lat:41.9104,lng:-87.6346},
+ secondcity:{n:"The Second City Mainstage",area:"Old Town",b:"Chicago",c:"CHI",lat:41.9114,lng:-87.6352},
+ comedybarchi:{n:"The Comedy Bar",area:"Streeterville",b:"Chicago",c:"CHI",lat:41.8955,lng:-87.6230},
+ chitheatre:{n:"The Chicago Theatre",area:"The Loop",b:"Chicago",c:"CHI",lat:41.8855,lng:-87.6273},
+ auditorium:{n:"Auditorium Theatre",area:"South Loop",b:"Chicago",c:"CHI",lat:41.8758,lng:-87.6253},
+ thalia:{n:"Thalia Hall",area:"Pilsen",b:"Chicago",c:"CHI",lat:41.8575,lng:-87.6575},
+ laughfactorychi:{n:"Laugh Factory Chicago",area:"Lakeview",b:"Chicago",c:"CHI",lat:41.9397,lng:-87.6440},
+ punchatl:{n:"Punchline Comedy Club",area:"Sandy Springs",b:"Atlanta area",c:"ATL",lat:33.9163,lng:-84.3770},
+ centerstage:{n:"Center Stage Theater",area:"Midtown",b:"Atlanta",c:"ATL",lat:33.7930,lng:-84.3880},
+ aisle5:{n:"Aisle 5",area:"Little Five Points",b:"Atlanta",c:"ATL",lat:33.7647,lng:-84.3497},
+ byers:{n:"Byers Theatre, Sandy Springs PAC",area:"Sandy Springs",b:"Atlanta area",c:"ATL",lat:33.9306,lng:-84.3790},
+ buckhead:{n:"Buckhead Theatre",area:"Buckhead",b:"Atlanta",c:"ATL",lat:33.8408,lng:-84.3797},
+ statefarm:{n:"State Farm Arena",area:"Downtown",b:"Atlanta",c:"ATL",lat:33.7573,lng:-84.3963},
+ cwatl:{n:"City Winery Atlanta",area:"Ponce City Market",b:"Atlanta",c:"ATL",lat:33.7726,lng:-84.3656},
+ symphonyatl:{n:"Atlanta Symphony Hall",area:"Midtown",b:"Atlanta",c:"ATL",lat:33.7894,lng:-84.3852},
+ redlight:{n:"Red Light Cafe",area:"Virginia-Highland",b:"Atlanta",c:"ATL",lat:33.7908,lng:-84.3600},
+ eastern:{n:"The Eastern",area:"Reynoldstown",b:"Atlanta",c:"ATL",lat:33.7425,lng:-84.3500},
+ variety:{n:"Variety Playhouse",area:"Little Five Points",b:"Atlanta",c:"ATL",lat:33.7650,lng:-84.3488},
+ foxatl:{n:"Fox Theatre",area:"Midtown",b:"Atlanta",c:"ATL",lat:33.7726,lng:-84.3856},
+ fbric:{n:"Funny Bone Comedy Club",area:"Short Pump",b:"Richmond area",c:"RIC",lat:37.6505,lng:-77.6095},
+ national:{n:"The National",area:"Downtown",b:"Richmond",c:"RIC",lat:37.5409,lng:-77.4359},
+ fbvb:{n:"Funny Bone Comedy Club",area:"Town Center, Virginia Beach",b:"Norfolk area",c:"ORF",lat:36.8432,lng:-76.1360},
+ fbhfd:{n:"Hartford Funny Bone",area:"Buckland Hills, Manchester",b:"Hartford area",c:"HFD",lat:41.8070,lng:-72.5520},
+ brewhaha:{n:"Brew Ha Ha at River",area:"Wethersfield",b:"Hartford area",c:"HFD",lat:41.7200,lng:-72.6460},
+ watersedge:{n:"Water's Edge Resort",area:"Westbrook",b:"Connecticut shoreline",c:"NHV",lat:41.2707,lng:-72.4600},
+ collegest:{n:"College Street Music Hall",area:"Downtown",b:"New Haven",c:"NHV",lat:41.3058,lng:-72.9280},
+ toads:{n:"Toad's Place",area:"Downtown",b:"New Haven",c:"NHV",lat:41.3115,lng:-72.9300}
 };
 for(const k in V)V[k].c??=(V[k].b==="Philadelphia"?"PHL":"NYC");
 const U={
@@ -238,6 +288,18 @@ const U={
  ctzan:"https://comedy.tickets/venue/zanies-comedy-night-club-nashville/",
  empire:"https://empirecomedyme.com/",
  pressherald:"https://www.pressherald.com/2026/11/02/8-maine-events-include-you-cant-take-it-with-you-and-comic-leslie-jones/",
+ chimp:"https://comedy.tickets/venue/chicago-improv/",
+ cwchi:"https://comedy.tickets/venue/city-winery-chicago/",
+ zanchi:"https://comedy.tickets/venue/zanies-comedy-club-chicago/",
+ sc:"https://comedy.tickets/venue/mainstage-at-second-city-chicago/",
+ cbchi:"https://comedy.tickets/venue/the-comedy-bar-chicago/",
+ cccchi:"https://comedycalendar.com/city/chicago/",
+ ctatl:"https://comedy.tickets/city/atlanta/",
+ ctric:"https://comedy.tickets/city/richmond/",
+ fbvb:"https://vb.funnybone.com/shows/",
+ fbhfd:"https://hartford.funnybone.com/shows/",
+ ccb:"https://www.comedycraftbeer.com/",
+ ctnhv:"https://comedy.tickets/city/new-haven/",
  dci:"https://dcimprov-com.seatengine.com/events"
 };
 const S="Stand-up",I="Improv & sketch",P="Live podcast & talk";
@@ -667,7 +729,206 @@ const RAW=[
  ["2026-11-06","20:00","Leslie Jones","Leslie Jones","statepwm",S,U.pressherald],
  ["2026-11-07","18:00|20:30","Joe Dombrowski","Joe Dombrowski","empire",S,U.empire,null,["out"]],
  ["2026-11-08","20:00","The Sunday Best","Showcase","empire",S,U.empire],
- ["2026-11-11","19:00","Kevin Sullivan","Kevin Sullivan","empire",S,U.empire]
+ ["2026-11-11","19:00","Kevin Sullivan","Kevin Sullivan","empire",S,U.empire],
+ // Chicago
+ ["2026-11-06","19:00","Pat Regan","Pat Regan","zanieschi",S,U.zanchi],
+ ["2026-11-06","19:00|21:30","Corey Holcomb","Corey Holcomb","chimprov",S,U.chimp],
+ ["2026-11-07","19:00|21:15","Pat Regan","Pat Regan","zanieschi",S,U.zanchi],
+ ["2026-11-07","23:15","After Hours with Calvin Evans","Calvin Evans","zanieschi",S,U.zanchi],
+ ["2026-11-08","15:00","Corey Holcomb","Corey Holcomb","chimprov",S,U.chimp],
+ ["2026-11-08","19:00","The Second City Mainstage 114th Revue","","secondcity",I,U.sc],
+ ["2026-11-08","19:00|21:15","Fiona Cauley","Fiona Cauley","zanieschi",S,U.zanchi],
+ ["2026-11-09","19:00","Featured Players","","zanieschi",S,U.zanchi,"$45"],
+ ["2026-11-10","19:00","Casey Rocket","Casey Rocket","zanieschi",S,U.zanchi,"$58"],
+ ["2026-11-10","20:00","The Second City Mainstage 114th Revue","","secondcity",I,U.sc],
+ ["2026-11-11","19:00","Adrian Marcelo en Vivo (en español)","Adrian Marcelo","chimprov",S,U.chimp],
+ ["2026-11-11","19:30","Michelle Collins","Michelle Collins","cwchi",S,U.cwchi],
+ ["2026-11-11","20:00","The Second City Mainstage 114th Revue","","secondcity",I,U.sc],
+ ["2026-11-11","21:30","Roast Battle Chicago","","zanieschi",S,U.zanchi,"$64"],
+ ["2026-11-12","19:00","Adrian Marcelo en Vivo (en español)","Adrian Marcelo","chimprov",S,U.chimp],
+ ["2026-11-12","20:00","The Second City Mainstage 114th Revue","","secondcity",I,U.sc],
+ ["2026-11-12","21:30","Roast Battle Chicago","","zanieschi",S,U.zanchi],
+ ["2026-11-13","18:30|21:30","The Second City Mainstage 114th Revue","","secondcity",I,U.sc],
+ ["2026-11-13","19:00","Michael Rowland","Michael Rowland","zanieschi",S,U.zanchi,"$56"],
+ ["2026-11-13","19:00|21:00","Andy Haynes","Andy Haynes","comedybarchi",S,U.cbchi,"$45"],
+ ["2026-11-13","19:00|21:30","Arnez J","Arnez J","chimprov",S,U.chimp],
+ ["2026-11-13","21:15","Chris Higgins","Chris Higgins","zanieschi",S,U.zanchi,"$69"],
+ ["2026-11-14","18:30|21:30","The Second City Mainstage 114th Revue","","secondcity",I,U.sc],
+ ["2026-11-14","19:00","Michael Rowland","Michael Rowland","zanieschi",S,U.zanchi,"$56"],
+ ["2026-11-14","19:00","Arnez J","Arnez J","chimprov",S,U.chimp],
+ ["2026-11-14","21:00","Andy Haynes","Andy Haynes","comedybarchi",S,U.cbchi,"$45"],
+ ["2026-11-14","21:15","Chris Higgins","Chris Higgins","zanieschi",S,U.zanchi,"$56"],
+ ["2026-11-14","21:30","Ismo","Ismo","chimprov",S,U.chimp,"$58"],
+ ["2026-11-15","18:00","Arnez J","Arnez J","chimprov",S,U.chimp],
+ ["2026-11-15","18:00","Gabe Gibbs","Gabe Gibbs","zanieschi",S,U.zanchi,"$58"],
+ ["2026-11-15","19:00","The Second City Mainstage 114th Revue","","secondcity",I,U.sc],
+ ["2026-11-16","20:15","Super Six Showcase","","zanieschi",S,U.zanchi,"$69"],
+ ["2026-11-17","19:00","Isa Medina","Isa Medina","zanieschi",S,U.zanchi,"$50"],
+ ["2026-11-17","20:00","The Second City Mainstage 114th Revue","","secondcity",I,U.sc],
+ ["2026-11-18","19:00","Dwayne Kennedy","Dwayne Kennedy","zanieschi",S,U.zanchi,"$50"],
+ ["2026-11-18","20:00","The Second City Mainstage 114th Revue","","secondcity",I,U.sc],
+ ["2026-11-19","19:00","Rohan Joshi","Rohan Joshi","chimprov",S,U.chimp],
+ ["2026-11-19","20:00","The Second City Mainstage 114th Revue","","secondcity",I,U.sc],
+ ["2026-11-19","21:30","Roast Battle Chicago","","zanieschi",S,U.zanchi,"$61"],
+ ["2026-11-20","18:30|21:30","The Second City Mainstage 114th Revue","","secondcity",I,U.sc],
+ ["2026-11-20","19:00|21:15","Pat Tomasulo","Pat Tomasulo","zanieschi",S,U.zanchi],
+ ["2026-11-20","19:00|21:15","Samuel J. Comroe","Samuel J. Comroe","chimprov",S,U.chimp,"$54"],
+ ["2026-11-20","19:30","Nurse John: Against Medical Advice Tour","Nurse John","chitheatre",S,U.cccchi],
+ ["2026-11-21","18:30|21:30","The Second City Mainstage 114th Revue","","secondcity",I,U.sc],
+ ["2026-11-21","19:00","George Lopez","George Lopez","chitheatre",S,U.cccchi],
+ ["2026-11-21","19:00|21:15","Pat Tomasulo","Pat Tomasulo","zanieschi",S,U.zanchi],
+ ["2026-11-21","19:00|21:15","Samuel J. Comroe","Samuel J. Comroe","chimprov",S,U.chimp,"$54"],
+ ["2026-11-21","23:15","After Hours with Calvin Evans","Calvin Evans","zanieschi",S,U.zanchi],
+ ["2026-11-22","19:00","Daniel Sloss: Bitter","Daniel Sloss","auditorium",S,U.cccchi],
+ ["2026-11-22","19:00","Success Jr.","Success Jr.","zanieschi",S,U.zanchi,"$66"],
+ ["2026-11-23","19:00","Super Six Showcase","","zanieschi",S,U.zanchi,"$69"],
+ ["2026-11-23","19:30","Damon Williams","Damon Williams","cwchi",S,U.cwchi,"$46"],
+ ["2026-11-23","20:00","Kyle Kinane","Kyle Kinane","thalia",S,U.cccchi],
+ ["2026-11-24","19:00","Zako Ryan","Zako Ryan","zanieschi",S,U.zanchi,"$49"],
+ ["2026-11-24","19:00","Tomato Throw Show","","comedybarchi",S,U.cccchi],
+ ["2026-11-24","19:30","Fresh Faces Chicago","New comics","laughfactorychi",S,U.cccchi],
+ ["2026-11-24","20:00","Kyle Kinane","Kyle Kinane","thalia",S,U.cccchi],
+ ["2026-11-24","20:00","The Second City Mainstage 114th Revue","","secondcity",I,U.sc],
+ ["2026-11-25","19:00","Alex Dragicevich","Alex Dragicevich","zanieschi",S,U.zanchi,"$59"],
+ ["2026-11-25","20:00","The Second City Mainstage 114th Revue","","secondcity",I,U.sc],
+ ["2026-11-27","18:30|21:30","The Second City Mainstage 114th Revue","","secondcity",I,U.sc],
+ ["2026-11-27","19:00|21:30","Tommy Davidson","Tommy Davidson","chimprov",S,U.chimp,"$59"],
+ ["2026-11-28","18:30|21:30","The Second City Mainstage 114th Revue","","secondcity",I,U.sc],
+ ["2026-11-28","19:00|21:30","Tommy Davidson","Tommy Davidson","chimprov",S,U.chimp,"$59"],
+ ["2026-11-29","18:00","Tommy Davidson","Tommy Davidson","chimprov",S,U.chimp,"$59"],
+ ["2026-11-29","19:00","The Second City Mainstage 114th Revue","","secondcity",I,U.sc],
+ ["2026-11-30","19:30","Cousin Tiera","Cousin Tiera","cwchi",S,U.cwchi,"$69"],
+ ["2026-12-01","20:00","The Second City Mainstage 114th Revue","","secondcity",I,U.sc],
+ ["2026-12-02","20:00","The Second City Mainstage 114th Revue","","secondcity",I,U.sc],
+ ["2026-12-03","19:00","Boyacoman","Boyacoman","chimprov",S,U.chimp],
+ ["2026-12-03","20:00","The Second City Mainstage 114th Revue","","secondcity",I,U.sc],
+ ["2026-12-04","18:30|21:30","The Second City Mainstage 114th Revue","","secondcity",I,U.sc],
+ ["2026-12-04","19:00|21:30","Steve Byrne","Steve Byrne","chimprov",S,U.chimp,"$53"],
+ ["2026-12-05","18:30|21:30","The Second City Mainstage 114th Revue","","secondcity",I,U.sc],
+ ["2026-12-05","19:00|21:30","Steve Byrne","Steve Byrne","chimprov",S,U.chimp,"$53"],
+ ["2026-12-06","18:00","Steve Byrne","Steve Byrne","chimprov",S,U.chimp,"$53"],
+ ["2026-12-09","19:00","Don McMillan","Don McMillan","chimprov",S,U.chimp],
+ ["2026-12-10","19:00","Cactus Tate","Cactus Tate","chimprov",S,U.chimp,"$58"],
+ ["2026-12-11","19:00","Sienna Hubert-Ross","Sienna Hubert-Ross","comedybarchi",S,U.cbchi,"$56"],
+ ["2026-12-11","19:00|21:30","Marcus D. Wiley","Marcus D. Wiley","chimprov",S,U.chimp,"$57"],
+ ["2026-12-12","19:00","Sienna Hubert-Ross","Sienna Hubert-Ross","comedybarchi",S,U.cbchi,"$45"],
+ ["2026-12-18","18:00|21:30","D.L. Hughley","D.L. Hughley","cwchi",S,U.cwchi,"$69"],
+ ["2026-12-18","19:00|21:15","Christian Johnson","Christian Johnson","comedybarchi",S,U.cbchi,"$45"],
+ ["2026-12-19","18:00|21:30","D.L. Hughley","D.L. Hughley","cwchi",S,U.cwchi,"$69"],
+ ["2026-12-19","19:00|21:15","Christian Johnson","Christian Johnson","comedybarchi",S,U.cbchi,"$45"],
+ ["2026-12-20","17:00|20:30","D.L. Hughley","D.L. Hughley","cwchi",S,U.cwchi,"$69"],
+ // Atlanta
+ ["2026-11-06","21:30","Usama Siddiquee","Usama Siddiquee","punchatl",S,U.ctatl,"$27"],
+ ["2026-11-07","18:00","Usama Siddiquee","Usama Siddiquee","punchatl",S,U.ctatl],
+ ["2026-11-07","20:00","Charlie Berens: The Lost and Found Tour","Charlie Berens","centerstage",S,U.ctatl,"$55"],
+ ["2026-11-13","18:00","JK Live!","","centerstage",S,U.ctatl,"$49"],
+ ["2026-11-14","19:00","Randy Feltface: Gimmick","Randy Feltface","centerstage",S,U.ctatl,"$70"],
+ ["2026-11-14","20:30","Wolves of Glendale","Wolves of Glendale","aisle5",S,U.ctatl,"$41"],
+ ["2026-11-16","19:30","Whose Live Anyway?","Improv from the cast of Whose Line","byers",I,U.ctatl,"$88"],
+ ["2026-11-21","19:00","Jonathan Van Ness","Jonathan Van Ness","centerstage",S,U.ctatl,"$52"],
+ ["2026-12-01","20:00","Nick Cannon's Wild 'N Out Live","","statefarm",I,U.ctatl,"$48"],
+ ["2026-12-01","20:00","T.K. Kirkland","T.K. Kirkland","cwatl",S,U.ctatl,"$73"],
+ ["2026-12-04","19:00","Matteo Lane","Matteo Lane","symphonyatl",S,U.ctatl,"$55"],
+ ["2026-12-04","19:30","Maria Bamford","Maria Bamford","buckhead",S,U.ctatl,"$40"],
+ ["2026-12-04","20:00","The Tipsy Zone: Improv Comedy","","redlight",I,U.ctatl,"$31"],
+ ["2026-12-07","19:30","Elon Gold","Elon Gold","buckhead",S,U.ctatl,"$55"],
+ ["2026-12-09","19:00","Rene Vaca & That Mexican OT","","eastern",S,U.ctatl],
+ ["2026-12-10","19:00","Gianmarco Soresi","Gianmarco Soresi","buckhead",S,U.ctatl,"$60"],
+ ["2026-12-11","19:00|21:30","Gianmarco Soresi","Gianmarco Soresi","buckhead",S,U.ctatl,"$45"],
+ ["2026-12-18","18:30|21:30","Zarna Garg","Zarna Garg","buckhead",S,U.ctatl,"$51"],
+ ["2026-12-19","19:00","Nacho Redondo","Nacho Redondo","variety",S,U.ctatl,"$66"],
+ ["2026-12-20","16:00|19:30","KevOnStage","KevOnStage","buckhead",S,U.ctatl],
+ ["2026-12-28","18:30|21:30","D.L. Hughley","D.L. Hughley","cwatl",S,U.ctatl,"$78"],
+ ["2026-12-28","19:00","John Oliver","John Oliver","foxatl",S,U.ctatl,"$92"],
+ ["2026-12-29","18:30","D.L. Hughley","D.L. Hughley","cwatl",S,U.ctatl,"$78"],
+ // Richmond
+ ["2026-11-05","19:00","Kevin James Thornton: Book Reading Show","Kevin James Thornton","fbric",S,U.ctric,"$53"],
+ ["2026-11-06","19:00|21:45","Arnez J","Arnez J","fbric",S,U.ctric,"$51"],
+ ["2026-11-07","18:30|21:15","Arnez J","Arnez J","fbric",S,U.ctric,"$51"],
+ ["2026-11-08","18:00","Arnez J","Arnez J","fbric",S,U.ctric,"$50"],
+ ["2026-11-11","19:00","Anthony Rodia","Anthony Rodia","fbric",S,U.ctric,"$43"],
+ ["2026-11-12","19:00","Chalee Jr.","Chalee Jr.","fbric",S,U.ctric,"$41"],
+ ["2026-11-13","19:00|21:45","Chad Daniels","Chad Daniels","fbric",S,U.ctric,"$37"],
+ ["2026-11-14","18:00|20:45","Trae Crowder","Trae Crowder","fbric",S,U.ctric,"$41"],
+ ["2026-11-15","18:30","Dustin Nickerson","Dustin Nickerson","fbric",S,U.ctric,null],
+ ["2026-11-20","19:00|21:45","Marcus D. Wiley","Marcus D. Wiley","fbric",S,U.ctric,"$37"],
+ ["2026-11-21","18:30|21:15","Marcus D. Wiley","Marcus D. Wiley","fbric",S,U.ctric,"$37"],
+ ["2026-11-21","20:00","Please Don't Destroy","Ben Marshall, John Higgins & Martin Herlihy","national",S,U.ctric,"$69"],
+ ["2026-11-24","19:00","Rich Guzzi","Rich Guzzi","fbric",S,U.ctric,"$25"],
+ ["2026-11-27","19:00|21:45","Justin Silva","Justin Silva","fbric",S,U.ctric,"$41"],
+ ["2026-11-28","18:30|21:15","Chico Bean","Chico Bean","fbric",S,U.ctric,"$56"],
+ ["2026-11-29","18:00|20:30","Chico Bean","Chico Bean","fbric",S,U.ctric,"$51"],
+ // Norfolk & Virginia Beach
+ ["2026-11-06","19:00|21:45","Jess Hilarious","Jess Hilarious","fbvb",S,U.fbvb,"$50",["21"]],
+ ["2026-11-07","18:30|21:30","Jess Hilarious","Jess Hilarious","fbvb",S,U.fbvb,"$50",["21"]],
+ ["2026-11-11","19:00","Dem DD-214 Boys","Chalee Jr. & KG The Kid","fbvb",S,U.fbvb,"$32",["21"]],
+ ["2026-11-12","19:00","Anthony Rodia: Insanely Funny Tour","Anthony Rodia","fbvb",S,U.fbvb,"$37",["21"]],
+ ["2026-11-13","18:30|21:15","Trae Crowder","Trae Crowder","fbvb",S,U.fbvb,"$32",["21"]],
+ ["2026-11-14","18:30|21:30","Chad Daniels","Chad Daniels","fbvb",S,U.fbvb,"$32",["21"]],
+ ["2026-11-15","18:00","And Then We…","","fbvb",S,U.fbvb,"$32",["21"]],
+ ["2026-11-18","19:00","Grits & Eggs Podcast: Coming Thru America Tour","","fbvb",P,U.fbvb,"$37",["21"]],
+ ["2026-11-19","19:00","Alaire Thomas","Alaire Thomas","fbvb",S,U.fbvb,"$27",["21"]],
+ ["2026-11-20","19:00|21:45","Sommore","Sommore","fbvb",S,U.fbvb,"$47",["21"]],
+ ["2026-11-21","18:30|21:30","Sommore","Sommore","fbvb",S,U.fbvb,"$47",["21"]],
+ ["2026-11-25","19:00","The Rich Guzzi Comedy Hypnosis Show","Rich Guzzi","fbvb",S,U.fbvb,"$20",["21"]],
+ ["2026-11-27","19:00|21:45","Leonard Ouzts","Leonard Ouzts","fbvb",S,U.fbvb,"$20",["21"]],
+ ["2026-11-28","18:30|21:30","Justin Silva","Justin Silva","fbvb",S,U.fbvb,"$32",["21"]],
+ ["2026-12-04","19:00|21:45","Kevin Nealon","Kevin Nealon","fbvb",S,U.fbvb,"$42",["21"]],
+ ["2026-12-05","18:30|21:30","Kevin Nealon","Kevin Nealon","fbvb",S,U.fbvb,"$42",["21"]],
+ ["2026-12-06","18:00","Cousin Tiera","Cousin Tiera","fbvb",S,U.fbvb,"$32",["21"]],
+ ["2026-12-13","14:00","Dolly Parton Hard Candy Christmas Drag Brunch","","fbvb",S,U.fbvb,"$27",["21"]],
+ ["2026-12-17","19:00","Nate Jackson: Big Dog Comedy Tour","Nate Jackson","fbvb",S,U.fbvb,"$48",["21"]],
+ ["2026-12-18","19:00|21:45","Nate Jackson: Big Dog Comedy Tour","Nate Jackson","fbvb",S,U.fbvb,"$48",["21"]],
+ ["2026-12-19","18:30|21:30","Nate Jackson: Big Dog Comedy Tour","Nate Jackson","fbvb",S,U.fbvb,"$48",["21"]],
+ ["2026-12-20","18:30","Nate Jackson: Big Dog Comedy Tour","Nate Jackson","fbvb",S,U.fbvb,"$48",["21"]],
+ ["2026-12-26","18:30|21:30","Chris Powell","Chris Powell","fbvb",S,U.fbvb,"$25",["21"]],
+ ["2026-12-27","18:00","Chris Powell","Chris Powell","fbvb",S,U.fbvb,"$25",["21"]],
+ // Hartford
+ ["2026-11-06","19:00","Sam Tallent","Sam Tallent","fbhfd",S,U.fbhfd,"$32"],
+ ["2026-11-07","18:30|21:00","Sam Tallent","Sam Tallent","fbhfd",S,U.fbhfd,"$32"],
+ ["2026-11-07","19:30","Comedy Night","Comedy Craft Beer","brewhaha",S,U.ccb],
+ ["2026-11-08","18:00","Nasser Al-Rayess","Nasser Al-Rayess","fbhfd",S,U.fbhfd,"$37"],
+ ["2026-11-12","19:00","Jimmy Cash","Jimmy Cash","fbhfd",S,U.fbhfd,"$27"],
+ ["2026-11-13","19:00|21:30","Damon Wayans Jr.","Damon Wayans Jr.","fbhfd",S,U.fbhfd,"$42"],
+ ["2026-11-13","19:30","Comedy Night","Comedy Craft Beer","brewhaha",S,U.ccb],
+ ["2026-11-14","18:30|21:00","Damon Wayans Jr.","Damon Wayans Jr.","fbhfd",S,U.fbhfd,"$42"],
+ ["2026-11-14","19:30","Comedy Night","Comedy Craft Beer","brewhaha",S,U.ccb],
+ ["2026-11-15","18:00","WTF! What Tha Funny Comedy Tour","Shang, Mike Estime & JP Justice","fbhfd",S,U.fbhfd,"$25",["18"]],
+ ["2026-11-20","19:00","Ryan Davis","Ryan Davis","fbhfd",S,U.fbhfd,"$32"],
+ ["2026-11-20","19:30","Comedy Night","Comedy Craft Beer","brewhaha",S,U.ccb],
+ ["2026-11-21","18:30|21:00","Ryan Davis","Ryan Davis","fbhfd",S,U.fbhfd,"$32"],
+ ["2026-11-21","19:30","Comedy Night","Comedy Craft Beer","brewhaha",S,U.ccb],
+ ["2026-11-22","18:00","Dale Elliott Jr.","Dale Elliott Jr.","fbhfd",S,U.fbhfd,"$48"],
+ ["2026-11-27","19:00|21:30","JJ Williamson","JJ Williamson","fbhfd",S,U.fbhfd,"$24"],
+ ["2026-11-27","19:30","Comedy Night","Comedy Craft Beer","brewhaha",S,U.ccb],
+ ["2026-11-28","18:30|21:00","JJ Williamson","JJ Williamson","fbhfd",S,U.fbhfd,"$24"],
+ ["2026-11-28","19:30","Comedy Night","Comedy Craft Beer","brewhaha",S,U.ccb],
+ ["2026-12-03","19:00","The Rich Guzzi Comedy Hypnosis Show","Rich Guzzi","fbhfd",S,U.fbhfd,"$20"],
+ ["2026-12-04","19:00|21:30","Chico Bean","Chico Bean","fbhfd",S,U.fbhfd,"$37"],
+ ["2026-12-04","19:30","Comedy Night","Comedy Craft Beer","brewhaha",S,U.ccb],
+ ["2026-12-05","18:30|21:00","Chico Bean","Chico Bean","fbhfd",S,U.fbhfd,"$37"],
+ ["2026-12-05","19:30","Comedy Night","Comedy Craft Beer","brewhaha",S,U.ccb],
+ ["2026-12-06","18:30","Sienna Hubert-Ross","Sienna Hubert-Ross","fbhfd",S,U.fbhfd,"$27"],
+ ["2026-12-10","19:00","Eric André: Subtle","Eric André","fbhfd",S,U.fbhfd,"$48"],
+ ["2026-12-11","19:00|21:30","Eric André: Subtle","Eric André","fbhfd",S,U.fbhfd,"$48"],
+ ["2026-12-11","19:30","Comedy Night","Comedy Craft Beer","brewhaha",S,U.ccb],
+ ["2026-12-12","18:30|21:00","Eric André: Subtle","Eric André","fbhfd",S,U.fbhfd,"$48"],
+ ["2026-12-13","18:00","Splou","Splou","fbhfd",S,U.fbhfd,"$37"],
+ ["2026-12-17","19:00","Triple Headliners","Sean Donelley, Sarah Tollemache & Derek Humphrey","fbhfd",S,U.fbhfd,"$27",["18"]],
+ ["2026-12-18","19:00","Natalie Cuomo","Natalie Cuomo","fbhfd",S,U.fbhfd,"$27"],
+ ["2026-12-19","18:30|21:00","Natalie Cuomo","Natalie Cuomo","fbhfd",S,U.fbhfd,"$27"],
+ ["2026-12-20","14:00","Dolly Parton Hard Candy Christmas Drag Brunch","","fbhfd",S,U.fbhfd,"$27"],
+ ["2026-12-26","18:30|21:00","Joe DeVito","Joe DeVito","fbhfd",S,U.fbhfd,"$20"],
+ ["2026-12-27","18:30","Joe DeVito","Joe DeVito","fbhfd",S,U.fbhfd,"$20"],
+ // New Haven & shoreline
+ ["2026-11-06","19:30","Comedy Night at Water's Edge","Comedy Craft Beer","watersedge",S,U.ccb,"$25",["21"]],
+ ["2026-11-13","19:30","Comedy Night at Water's Edge","Comedy Craft Beer","watersedge",S,U.ccb,"$25",["21"]],
+ ["2026-11-19","19:30","Zoltan Kaszas","Zoltan Kaszas","collegest",S,U.ctnhv,"$50"],
+ ["2026-11-20","19:30","Comedy Night at Water's Edge","Comedy Craft Beer","watersedge",S,U.ccb,"$25",["21"]],
+ ["2026-11-27","19:30","Comedy Night at Water's Edge","Comedy Craft Beer","watersedge",S,U.ccb,"$25",["21"]],
+ ["2026-12-04","19:30","Comedy Night at Water's Edge","Comedy Craft Beer","watersedge",S,U.ccb,"$25",["21"]],
+ ["2026-12-11","19:30","Comedy Night at Water's Edge","Comedy Craft Beer","watersedge",S,U.ccb,"$25",["21"]],
+ ["2026-12-18","21:30","John Valby","John Valby","toads",S,U.ctnhv,"$41"]
 ];
 const SHOWS=RAW.flatMap(([d,ts,title,who,v,type,url,price,flags=[]])=>ts.split("|").map(t=>({d,t,title,who,v:V[v],type,url,price,flags})));
 
@@ -764,6 +1025,34 @@ Object.assign(ZIPS,{"15222":[40.4470,-79.9930],"15219":[40.4410,-79.9830],"15213
  "04101":[43.6600,-70.2590],"04102":[43.6600,-70.2900],"04103":[43.6900,-70.2900],"04106":[43.6230,-70.2800],"04092":[43.6800,-70.3600],"04105":[43.7300,-70.2400]});
 ZIP_PREFIX.push(["152",CENTER.PIT],["150",[40.5500,-80.1000]],["151",[40.4000,-79.7000]],["441",CENTER.CLE],["440",[41.4000,-81.8000]],["442",[41.1000,-81.5000]],["443",[41.0814,-81.5190]],
  ["372",CENTER.NSH],["370",[36.1000,-86.7000]],["371",[35.9000,-86.5000]],["041",CENTER.PWM],["040",[43.6000,-70.4000]],["042",[44.0000,-70.2000]]);
+Object.assign(CENTER,{CHI:[41.8781,-87.6298],ATL:[33.7490,-84.3880],RIC:[37.5407,-77.4360],ORF:[36.8508,-76.2859],HFD:[41.7658,-72.6734],NHV:[41.3083,-72.9279]});
+const CHI_PLACES={"chicago":[41.8781,-87.6298],"downtown chicago":[41.8781,-87.6298],"the loop":[41.8820,-87.6278],"loop":[41.8820,-87.6278],"river north":[41.8925,-87.6340],"streeterville":[41.8930,-87.6200],"gold coast":[41.9050,-87.6280],
+ "old town":[41.9110,-87.6350],"lincoln park":[41.9214,-87.6513],"lakeview":[41.9400,-87.6530],"wrigleyville":[41.9480,-87.6560],"andersonville":[41.9800,-87.6680],"uptown chicago":[41.9660,-87.6540],"west loop":[41.8830,-87.6500],
+ "wicker park":[41.9088,-87.6796],"bucktown":[41.9200,-87.6800],"logan square chicago":[41.9230,-87.7090],"pilsen":[41.8550,-87.6600],"hyde park":[41.7943,-87.5907],"south loop":[41.8580,-87.6270],
+ "evanston":[42.0451,-87.6877],"oak park":[41.8850,-87.7845],"skokie":[42.0324,-87.7416],"schaumburg":[42.0334,-88.0834],"naperville":[41.7508,-88.1535],"aurora il":[41.7606,-88.3201],"joliet":[41.5250,-88.0817],"arlington heights":[42.0884,-87.9806],"gary":[41.5934,-87.3464]};
+const ATL_PLACES={"atlanta":[33.7490,-84.3880],"downtown atlanta":[33.7550,-84.3900],"midtown atlanta":[33.7840,-84.3830],"buckhead":[33.8400,-84.3800],"little five points":[33.7640,-84.3490],"l5p":[33.7640,-84.3490],"virginia-highland":[33.7810,-84.3530],
+ "virginia highland":[33.7810,-84.3530],"inman park":[33.7580,-84.3530],"old fourth ward":[33.7680,-84.3700],"o4w":[33.7680,-84.3700],"east atlanta":[33.7400,-84.3420],"reynoldstown":[33.7480,-84.3530],"grant park":[33.7370,-84.3700],"west midtown":[33.7860,-84.4100],
+ "decatur":[33.7748,-84.2963],"sandy springs":[33.9304,-84.3733],"dunwoody":[33.9462,-84.3346],"marietta":[33.9526,-84.5499],"alpharetta":[34.0754,-84.2941],"roswell":[34.0232,-84.3616],"kennesaw":[34.0234,-84.6155],"duluth ga":[34.0029,-84.1446],"smyrna ga":[33.8840,-84.5144],"college park ga":[33.6534,-84.4494]};
+const RIC_PLACES={"richmond":[37.5407,-77.4360],"richmond va":[37.5407,-77.4360],"downtown richmond":[37.5407,-77.4360],"the fan":[37.5530,-77.4650],"fan district":[37.5530,-77.4650],"carytown":[37.5550,-77.4850],"scott's addition":[37.5680,-77.4780],"scotts addition":[37.5680,-77.4780],
+ "church hill":[37.5310,-77.4180],"shockoe bottom":[37.5320,-77.4290],"shockoe slip":[37.5340,-77.4360],"short pump":[37.6504,-77.6125],"glen allen":[37.6660,-77.5064],"henrico":[37.5500,-77.4600],"midlothian":[37.5054,-77.6497],"chesterfield":[37.3771,-77.5050],
+ "mechanicsville":[37.6088,-77.3733],"petersburg":[37.2279,-77.4019],"williamsburg va":[37.2707,-76.7075],"ashland va":[37.7590,-77.4800]};
+const ORF_PLACES={"norfolk":[36.8508,-76.2859],"downtown norfolk":[36.8468,-76.2852],"ghent":[36.8620,-76.2950],"virginia beach":[36.8529,-75.9780],"oceanfront":[36.8520,-75.9770],"town center virginia beach":[36.8432,-76.1360],"chesapeake":[36.7682,-76.2875],
+ "portsmouth":[36.8354,-76.2983],"suffolk":[36.7282,-76.5836],"hampton":[37.0299,-76.3452],"newport news":[37.0871,-76.4730],"yorktown":[37.2388,-76.5097],"hampton roads":[36.8508,-76.2859]};
+const HFD_PLACES={"hartford":[41.7658,-72.6734],"downtown hartford":[41.7658,-72.6734],"west hartford":[41.7621,-72.7420],"east hartford":[41.7823,-72.6120],"manchester ct":[41.7759,-72.5215],"manchester":[41.7759,-72.5215],"glastonbury":[41.7123,-72.6081],
+ "wethersfield":[41.7143,-72.6526],"new britain":[41.6612,-72.7795],"farmington":[41.7198,-72.8320],"bristol ct":[41.6718,-72.9493],"enfield":[41.9762,-72.5918],"windsor ct":[41.8526,-72.6437],"middletown ct":[41.5623,-72.6506],"storrs":[41.8084,-72.2495],"vernon ct":[41.8187,-72.4795]};
+const NHV_PLACES={"new haven":[41.3083,-72.9279],"downtown new haven":[41.3083,-72.9279],"yale":[41.3163,-72.9223],"east haven":[41.2762,-72.8684],"west haven":[41.2706,-72.9470],"hamden":[41.3959,-72.8968],"milford ct":[41.2223,-73.0565],"branford":[41.2795,-72.8151],
+ "guilford ct":[41.2890,-72.6818],"westbrook ct":[41.2854,-72.4476],"madison ct":[41.2795,-72.5984],"meriden":[41.5382,-72.8070],"wallingford":[41.4570,-72.8231],"bridgeport":[41.1865,-73.1952],"shelton":[41.3165,-73.0932],"stratford ct":[41.1845,-73.1332]};
+Object.assign(ZIPS,{"60601":[41.8860,-87.6230],"60607":[41.8740,-87.6510],"60610":[41.9030,-87.6340],"60611":[41.8940,-87.6200],"60614":[41.9220,-87.6510],"60622":[41.9020,-87.6810],"60657":[41.9400,-87.6530],"60173":[42.0470,-88.0450],
+ "30303":[33.7520,-84.3910],"30305":[33.8320,-84.3850],"30307":[33.7650,-84.3420],"30308":[33.7720,-84.3760],"30309":[33.7980,-84.3880],"30328":[33.9330,-84.3810],
+ "23219":[37.5410,-77.4370],"23220":[37.5500,-77.4600],"23221":[37.5530,-77.4880],"23230":[37.5870,-77.4900],"23233":[37.6480,-77.6250],
+ "23510":[36.8490,-76.2880],"23507":[36.8640,-76.3010],"23451":[36.8580,-75.9800],"23462":[36.8370,-76.1500],
+ "06103":[41.7670,-72.6730],"06105":[41.7700,-72.7010],"06107":[41.7530,-72.7570],"06040":[41.7630,-72.5240],"06042":[41.8000,-72.5250],"06109":[41.7020,-72.6640],
+ "06510":[41.3080,-72.9250],"06511":[41.3160,-72.9310],"06513":[41.3150,-72.8710],"06498":[41.2850,-72.4500]});
+ZIP_PREFIX.push(["606",CENTER.CHI],["600",[42.2000,-87.9500]],["601",[42.0000,-88.1500]],["602",[42.0451,-87.6877]],["603",[41.8850,-87.7845]],["604",[41.6000,-87.8000]],["605",[41.7500,-88.2000]],
+ ["303",CENTER.ATL],["300",[33.9500,-84.2000]],["301",[33.9500,-84.5500]],["302",[33.5500,-84.4000]],
+ ["232",CENTER.RIC],["230",[37.5000,-77.6000]],["231",[37.6000,-77.3000]],["238",[37.2279,-77.4019]],
+ ["235",CENTER.ORF],["234",[36.8500,-76.0500]],["233",[36.8000,-76.3000]],["236",[37.0500,-76.4000]],["237",[36.8354,-76.2983]],
+ ["061",CENTER.HFD],["060",[41.7500,-72.6000]],["065",CENTER.NHV],["064",[41.3500,-72.7000]],["066",[41.1865,-73.1952]]);
 Object.assign(PLACES,{"newark":[40.7357,-74.1724],"montclair":[40.8259,-74.2090],"morristown":[40.7968,-74.4815],"new brunswick":[40.4862,-74.4518],"red bank":[40.3471,-74.0643],"asbury park":[40.2204,-74.0121],
  "white plains":[41.0340,-73.7629],"yonkers":[40.9312,-73.8988],"new rochelle":[40.9115,-73.7824],"tarrytown":[41.0762,-73.8587],"stamford":[41.0534,-73.5387],"greenwich":[41.0262,-73.6282],"norwalk":[41.1177,-73.4082],
  "long island":[40.7891,-73.1350],"huntington":[40.8682,-73.4257],"levittown":[40.7259,-73.5143],"garden city":[40.7268,-73.6343],"westbury":[40.7557,-73.5876],"hackensack":[40.8859,-74.0435],"paterson":[40.9168,-74.1718]});
@@ -785,14 +1074,17 @@ function locate(q){
 }
 function locateRaw(q){
   const raw=q.trim().toLowerCase();
-  const s=raw.replace(/,?\s*(ny|new york|nyc|pa|pennsylvania|nj|new jersey|ma|massachusetts|md|maryland|va|virginia|dc|d\.c\.|oh|ohio|tn|tennessee|me|maine)$/,"").trim()||raw;
+  const s=raw.replace(/,?\s*(ny|new york|nyc|pa|pennsylvania|nj|new jersey|ma|massachusetts|md|maryland|va|virginia|dc|d\.c\.|oh|ohio|tn|tennessee|me|maine|il|illinois|ga|georgia|ct|connecticut)$/,"").trim()||raw;
   if(/^\d{5}$/.test(s)){
     const c=zipCity(s);
     if(ZIPS[s]) return {ll:ZIPS[s],label:s,c};
     const p=ZIP_PREFIX.find(([k])=>s.startsWith(k)); if(p) return {ll:p[1],label:s,c};
     return null;
   }
-  const TABLES=[[PLACES,"NYC"],[PHL_PLACES,"PHL"],[BOS_PLACES,"BOS"],[BAL_PLACES,"BAL"],[DC_PLACES,"DC"],[PIT_PLACES,"PIT"],[CLE_PLACES,"CLE"],[NSH_PLACES,"NSH"],[PWM_PLACES,"PWM"]];
+  const TABLES=[[PLACES,"NYC"],[PHL_PLACES,"PHL"],[BOS_PLACES,"BOS"],[BAL_PLACES,"BAL"],[DC_PLACES,"DC"],[PIT_PLACES,"PIT"],[CLE_PLACES,"CLE"],[NSH_PLACES,"NSH"],[PWM_PLACES,"PWM"],
+    [CHI_PLACES,"CHI"],[ATL_PLACES,"ATL"],[RIC_PLACES,"RIC"],[ORF_PLACES,"ORF"],[HFD_PLACES,"HFD"],[NHV_PLACES,"NHV"]];
+  const whole=raw.replace(/,/g,"").replace(/\s+/g," ");
+  for(const [tbl,c] of TABLES) if(tbl[whole]) return {ll:tbl[whole],label:titleCase(whole),c};
   for(const [tbl,c] of TABLES) if(tbl[s]) return {ll:tbl[s],label:titleCase(s),c};
   for(const [tbl,c] of TABLES){
     const key=Object.keys(tbl).find(k=>k.length>3&&(s.includes(k)||k.includes(s)&&s.length>3));
@@ -800,9 +1092,10 @@ function locateRaw(q){
   }
   return null;
 }
-const CITY_NAME={NYC:"New York City",PHL:"Philadelphia",BOS:"Boston",BAL:"Baltimore",DC:"Washington, D.C.",PIT:"Pittsburgh",CLE:"Cleveland",NSH:"Nashville",PWM:"Portland, Maine"};
+const CITY_NAME={NYC:"New York City",PHL:"Philadelphia",BOS:"Boston",BAL:"Baltimore",DC:"Washington, D.C.",PIT:"Pittsburgh",CLE:"Cleveland",NSH:"Nashville",PWM:"Portland, Maine",
+ CHI:"Chicago",ATL:"Atlanta",RIC:"Richmond",ORF:"Norfolk & Virginia Beach",HFD:"Hartford",NHV:"New Haven"};
 const CITY_LIST=(()=>{const n=Object.values(CITY_NAME);return n.slice(0,-1).join(", ")+" or "+n[n.length-1]})();
-function setCity(c){state.city=c;document.querySelectorAll("#cityChips button").forEach(x=>x.setAttribute("aria-pressed",x.dataset.v===c));}
+function setCity(c){state.city=c;document.getElementById("citySel").value=c;}
 const titleCase=s=>s.replace(/\b\w/g,c=>c.toUpperCase()).replace(/\bUws\b/,"UWS").replace(/\bUes\b/,"UES").replace(/\bLes\b/,"LES").replace(/\bLic\b/,"LIC").replace(/\bNyc\b/,"NYC").replace(/\bDc\b|\bD\.c\./,"D.C.");
 function miles(a,b){const R=3958.8,r=x=>x*Math.PI/180,dLa=r(b[0]-a[0]),dLo=r(b[1]-a[1]);
   const h=Math.sin(dLa/2)**2+Math.cos(r(a[0]))*Math.cos(r(b[0]))*Math.sin(dLo/2)**2;return 2*R*Math.asin(Math.sqrt(h));}
@@ -868,8 +1161,8 @@ function search(q){
 document.getElementById("searchForm").addEventListener("submit",e=>{e.preventDefault();search(document.getElementById("loc").value)});
 function chips(id,key,num){document.getElementById(id).addEventListener("click",e=>{const btn=e.target.closest("button");if(!btn)return;
   document.querySelectorAll(`#${id} button`).forEach(x=>x.setAttribute("aria-pressed",x===btn));state[key]=num?Number(btn.dataset.v):btn.dataset.v;render()})}
-document.getElementById("cityChips").addEventListener("click",e=>{const btn=e.target.closest("button");if(!btn||btn.dataset.v===state.city)return;
-  setCity(btn.dataset.v);state.here=null;document.getElementById("loc").value="";render()});
+document.getElementById("citySel").addEventListener("change",e=>{
+  setCity(e.target.value);state.here=null;document.getElementById("loc").value="";render()});
 chips("whenChips","when");chips("typeChips","type");chips("distChips","dist",true);
 let saved=null;try{saved=localStorage.getItem("lit-loc")}catch(e){}
 if(saved)document.getElementById("loc").value=saved;
