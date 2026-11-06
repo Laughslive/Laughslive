@@ -291,6 +291,30 @@ const V={
  hardrockorl:{n:"Hard Rock Live",area:"Universal CityWalk",b:"Orlando",c:"ORL",lat:28.4740,lng:-81.4660}
 };
 for(const k in V)V[k].c??=(V[k].b==="Philadelphia"?"PHL":"NYC");
+// Venues' own websites / box offices. Ticket buttons use these instead of
+// listing or resale sites whenever a show's link points at one of those.
+const SITES={
+ zanies:"https://nashville.zanies.com/",zlab:"https://nashville.zanies.com/",zanieschi:"https://chicago.zanies.com/",
+ miaimprov:"https://www.miamiimprov.com/",secondcity:"https://www.secondcity.com/shows/chicago/the-second-city-mainstage-114th-revue-chi",
+ heliumstl:"https://st-louis.heliumcomedy.com/",helium:"https://philadelphia-heliumcomedy-com.seatengine.com/events",
+ bell:"https://www.thebellhouseny.com/",gotham:"https://gothamcomedyclub.com/",nyccMid:"https://newyorkcomedyclub.com/calendar",nyccUws:"https://newyorkcomedyclub.com/calendar",
+ ucb:"https://ucbcomedy.com/shows/new-york/",harlem:"https://www.comedyinharlem.com/events",msg:"https://www.msg.com/",
+ fbliberty:"https://liberty.funnybone.com/",fborl:"https://orlando.funnybone.com/",fbric:"https://richmond.funnybone.com/",
+ fbvb:"https://vb.funnybone.com/shows/",fbhfd:"https://hartford.funnybone.com/shows/",fbtpa:"https://tampa.funnybone.com/",funnybone:"https://cleveland.funnybone.com/shows/",
+ acme:"https://acmecomedycompany.com/",castle:"https://www.comedycastle.com/",hilarities:"https://hilarities.com/events",frolic:"https://hilarities.com/events",
+ loft:"https://www.dccomedyloft.com/events",dcimprov:"https://dcimprov-com.seatengine.com/events",wilbur:"https://thewilbur.com/",
+ punch:"https://www.punchlinephilly.com/",magooby:"https://www.magoobysjokehouse.com/events",empire:"https://empirecomedyme.com/",
+ statepwm:"https://statetheatreportland.com/calendar/",academy:"https://www.ensembleartsphilly.org/",miller:"https://www.ensembleartsphilly.org/",
+ cwchi:"https://citywinery.com/pages/genre/chicago-comedy",micdrop:"https://www.micdropcomedydetroit.com/events",
+ comedybardet:"https://comedybar.com/detroit/comedy-shows-detroit/",brewhaha:"https://www.comedycraftbeer.com/",watersedge:"https://www.comedycraftbeer.com/"
+};
+for(const k in SITES) if(V[k]) V[k].site=SITES[k];
+const LISTING_SITE=/comedy\.tickets|theater\.guide|concertfix|concerts50|new-york\.events|americanarenas|lotta\.events|ticketnetwork|comedycalendar|seatgeek|vividseats|stubhub|tickpick|eventticketscenter/;
+function ticketLink(s){
+  if(!LISTING_SITE.test(s.url)) return {href:s.url,label:"Tickets & info"};
+  if(s.v.site) return {href:s.v.site,label:"Tickets at venue"};
+  return {href:"https://www.google.com/search?q="+encodeURIComponent(s.v.n+" "+s.v.b+" "+s.title+" tickets"),label:"Find tickets"};
+}
 const U={
  tm:"https://www.ticketmaster.com/discover/arts-theater?classificationId=KnvZfZ7vAe1",
  nycc:"https://newyorkcomedyclub.com/calendar",
@@ -1244,7 +1268,7 @@ const RAW=[
  ["2026-12-20","18:00","Billy Gardell","Billy Gardell","micdrop",S,U.mdd],
  ["2027-01-30","19:00","Jerry Seinfeld","Jerry Seinfeld","foxdet",S,U.foxdet,"$91"]
 ];
-const SHOWS=RAW.flatMap(([d,ts,title,who,v,type,url,price,flags=[]])=>ts.split("|").map(t=>({d,t,title,who,v:V[v],type,url,price,flags})));
+const SHOWS=RAW.flatMap(([d,ts,title,who,v,type,url,price,flags=[]])=>ts.split("|").map(t=>({d,t,title,who,vk:v,v:V[v],type,url,price,flags})));
 
 // Places people might type, with approximate centers
 const PLACES={
@@ -1500,7 +1524,7 @@ function card(s){
   <div class="info"><h3>${esc(s.title)}</h3>${who}
   <div class="where"><span>${esc(s.v.n)} · ${esc(s.v.area)}, ${s.v.b}</span>${dist}</div>
   <div class="row"><div class="badges">${b.join("")}</div>
-  <div class="buy">${s.price?`<span class="price">from ${s.price}</span>`:""}<a href="${s.url}" target="_blank" rel="noopener">Tickets &amp; info ↗</a></div></div></div></article>`;
+  <div class="buy">${s.price?`<span class="price">from ${s.price}</span>`:""}${(l=>`<a href="${esc(l.href)}" target="_blank" rel="noopener">${l.label} ↗</a>`)(ticketLink(s))}</div></div></div></article>`;
 }
 function search(q){
   const st=document.getElementById("status");
