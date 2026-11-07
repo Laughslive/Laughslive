@@ -12,15 +12,9 @@ KEY = os.environ.get("TM_API_KEY")
 if not KEY:
     sys.exit("TM_API_KEY is not set")
 
-CENTERS = {  # same city centers as the LaughsLive page (lat, lng)
- "NYC":(40.7549,-73.9840),"PHL":(39.9526,-75.1652),"BOS":(42.3601,-71.0589),"BAL":(39.2904,-76.6122),
- "DC":(38.9072,-77.0369),"PIT":(40.4406,-79.9959),"CLE":(41.4993,-81.6944),"NSH":(36.1627,-86.7816),
- "PWM":(43.6591,-70.2568),"CHI":(41.8781,-87.6298),"ATL":(33.7490,-84.3880),"RIC":(37.5407,-77.4360),
- "ORF":(36.8508,-76.2859),"HFD":(41.7658,-72.6734),"NHV":(41.3083,-72.9279),"MIA":(25.7617,-80.1918),
- "TPA":(27.9506,-82.4572),"ORL":(28.5384,-81.3789),"CIN":(39.1031,-84.5120),"STL":(38.6270,-90.1994),
- "MSP":(44.9778,-93.2650),"MKE":(43.0389,-87.9065),"DET":(42.3314,-83.0458),
- "DEN":(39.7392,-104.9903),"IND":(39.7684,-86.1581),"AUS":(30.2672,-97.7431),"DFW":(32.7767,-96.7970),
- "PHX":(33.4484,-112.0740),"LAS":(36.1147,-115.1728)}
+_ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+CENTERS = {c["code"]: tuple(c["center"]) for c in
+           json.load(open(os.path.join(_ROOT, "data", "cities.json"), encoding="utf-8"))["cities"]}
 COMEDY_GENRE = "KnvZfZ7vAe1"   # Ticketmaster classification: Arts & Theatre > Comedy
 DAYS_AHEAD = 70
 

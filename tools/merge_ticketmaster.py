@@ -32,10 +32,10 @@ def tokens(s):
 VENUE_GENERIC = set("""the theatre theater center centre hall club comedy at presented by music of for performing
 arts live room main and in concert with house venue presents ga""".split())
 # States each city area can reach within 50 miles (guards against bad venue coordinates in the feed)
-CITY_STATES = {"NYC":"NY NJ CT","PHL":"PA NJ DE","BOS":"MA NH RI","BAL":"MD DC VA PA","DC":"DC MD VA",
- "PIT":"PA WV OH","CLE":"OH","NSH":"TN","PWM":"ME","CHI":"IL IN","ATL":"GA","RIC":"VA","ORF":"VA NC",
- "HFD":"CT MA","NHV":"CT NY","MIA":"FL","TPA":"FL","ORL":"FL","CIN":"OH KY IN","STL":"MO IL",
- "MSP":"MN WI","MKE":"WI","DET":"MI","DEN":"CO","IND":"IN","AUS":"TX","DFW":"TX","PHX":"AZ","LAS":"NV AZ"}
+import os as _os
+_CITIES = json.load(open(_os.path.join(_os.path.dirname(_os.path.dirname(_os.path.abspath(__file__))), "data", "cities.json"),
+                        encoding="utf-8"))["cities"]
+CITY_STATES = {c["code"]: " ".join(c["states"]) for c in _CITIES}
 
 def vtokens(s):
     return {w for w in re.findall(r"[a-z0-9]+", (s or "").lower()) if w not in VENUE_GENERIC}

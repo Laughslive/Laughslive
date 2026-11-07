@@ -14,40 +14,12 @@ import datetime, html, json, os, re, subprocess, sys, tempfile
 SITE = "https://laughslive.com"
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
-CITIES = [  # code, slug, display name, short name for titles, nearby places for the description
- ("NYC","new-york-city","New York City","NYC","Manhattan, Brooklyn, Queens, Long Island, Westchester and North Jersey"),
- ("PHL","philadelphia","Philadelphia","Philadelphia","the Main Line, Bucks County, South Jersey and Wilmington"),
- ("BOS","boston","Boston","Boston","Cambridge, Somerville, the North Shore, Worcester and Providence"),
- ("BAL","baltimore","Baltimore","Baltimore","Fells Point, Canton, Annapolis, Columbia and Towson"),
- ("DC","washington-dc","Washington, D.C.","Washington, D.C.","Arlington, Alexandria, Bethesda, National Harbor and Northern Virginia"),
- ("PIT","pittsburgh","Pittsburgh","Pittsburgh","the South Side, Homestead, the North Hills and Greensburg"),
- ("CLE","cleveland","Cleveland","Cleveland","Akron, Northfield Park, Kent and the East and West Sides"),
- ("NSH","nashville","Nashville","Nashville","Franklin, Murfreesboro, East Nashville and the Gulch"),
- ("PWM","portland-maine","Portland, Maine","Portland, Maine","South Portland, Westbrook, Biddeford and Brunswick"),
- ("CHI","chicago","Chicago","Chicago","Old Town, Wrigleyville, Schaumburg, Rosemont and the suburbs"),
- ("ATL","atlanta","Atlanta","Atlanta","Midtown, Buckhead, Sandy Springs, Alpharetta and Decatur"),
- ("RIC","richmond","Richmond","Richmond","Short Pump, the Fan, Scott's Addition and Henrico"),
- ("ORF","norfolk-virginia-beach","Norfolk & Virginia Beach","Norfolk & Virginia Beach","Hampton Roads, Chesapeake, Newport News and Hampton"),
- ("HFD","hartford","Hartford","Hartford","Manchester, West Hartford, New Britain and the Connecticut casinos"),
- ("NHV","new-haven","New Haven","New Haven","Bridgeport, Milford, the Connecticut shoreline and Waterbury"),
- ("MIA","miami","Miami","Miami","Miami Beach, Doral, Coral Gables, Fort Lauderdale and Hollywood"),
- ("TPA","tampa","Tampa","Tampa","Ybor City, St. Petersburg, Clearwater and Lakeland"),
- ("ORL","orlando","Orlando","Orlando","International Drive, Winter Park, Kissimmee and Sanford"),
- ("CIN","cincinnati","Cincinnati","Cincinnati","Northern Kentucky, Liberty Township, West Chester and Dayton"),
- ("STL","st-louis","St. Louis","St. Louis","Westport, Chesterfield, the Delmar Loop and St. Charles"),
- ("MSP","minneapolis-st-paul","Minneapolis–St. Paul","Minneapolis–St. Paul","Uptown, Bloomington, Northeast and the Twin Cities suburbs"),
- ("MKE","milwaukee","Milwaukee","Milwaukee","the Third Ward, Wauwatosa, Racine and Kenosha"),
- ("DET","detroit","Detroit","Detroit","Royal Oak, Ferndale, Ann Arbor and Windsor"),
- ("DEN","denver","Denver","Denver","LoDo, RiNo, Boulder, Aurora, Lakewood and the Denver Tech Center"),
- ("IND","indianapolis","Indianapolis","Indianapolis","Broad Ripple, Fountain Square, Carmel, Fishers and Bloomington"),
- ("AUS","austin","Austin","Austin","Sixth Street, East Austin, South Congress, Round Rock and San Marcos"),
- ("DFW","dallas-fort-worth","Dallas–Fort Worth","Dallas–Fort Worth","Deep Ellum, Addison, Plano, Arlington, Fort Worth and Frisco"),
- ("PHX","phoenix","Phoenix","Phoenix","Scottsdale, Tempe, Mesa, Chandler and Glendale"),
- ("LAS","las-vegas","Las Vegas","Las Vegas","the Strip, Downtown and Fremont Street, Henderson and Summerlin"),
-]
-REGIONS = [("Northeast",["BOS","HFD","NHV","NYC","PHL","PWM"]),("Mid-Atlantic",["BAL","ORF","PIT","RIC","DC"]),
-           ("South",["ATL","AUS","DFW","MIA","NSH","ORL","TPA"]),("Midwest",["CHI","CIN","CLE","DET","IND","MKE","MSP","STL"]),
-           ("West",["DEN","LAS","PHX"])]
+# The city list lives in data/cities.json (shared with the Ticketmaster scripts).
+_CFG = json.load(open(os.path.join(ROOT, "data", "cities.json"), encoding="utf-8"))
+CITIES = [(c["code"], c["slug"], c["name"], c["short"], c["nearby"]) for c in _CFG["cities"]]
+REGIONS = [(r, sorted([c["code"] for c in _CFG["cities"] if c["region"] == r],
+                      key=lambda k: next(x["name"] for x in _CFG["cities"] if x["code"] == k)))
+           for r in _CFG["regions"]]
 BY = {c[0]: c for c in CITIES}
 
 def block(name, content):
@@ -184,10 +156,32 @@ def set_title_desc(page, title, desc):
                   lambda m: f'<meta name="description" content="{html.escape(desc)}">', page, count=1)
     return page
 
+def check_page(page):
+    """Make sure the page's own code knows every city in data/cities.json (and no others)."""
+    problems = []
+    js = page[page.rindex("<script>"):]
+    centers = set(re.findall(r"\b([A-Z]{2,3}):\[-?\d", js[js.index("const CENTER="):]))
+    names = re.search(r"const CITY_NAME=\{(.*?)\};", js, re.S)
+    slugs = re.search(r"const CITY_SLUG=\{(.*?)\};", js, re.S)
+    opts = set(re.findall(r'<option value="([A-Z]{2,3})"', page))
+    for code, slug, name, short, nearby in CITIES:
+        if code not in centers: problems.append(f"{code}: missing from CENTER")
+        if not names or not re.search(r"\b%s:\"" % code, names.group(1)): problems.append(f"{code}: missing from CITY_NAME")
+        if not slugs or f'{code}:"{slug}"' not in slugs.group(1): problems.append(f"{code}: CITY_SLUG should be \"{slug}\"")
+        if code not in opts: problems.append(f"{code}: missing from the city dropdown")
+        if not re.search(r"\[%s_PLACES,\"%s\"\]" % (code, code), js) and code not in ("NYC", "PHL"):
+            problems.append(f"{code}: no {code}_PLACES place-name table in TABLES")
+    extra = opts - {c[0] for c in CITIES}
+    if extra: problems.append(f"dropdown has cities not in data/cities.json: {sorted(extra)}")
+    if problems:
+        sys.exit("City list mismatch between data/cities.json and index.html:\n  " + "\n  ".join(problems) +
+                 "\nSee tools/ADDING_A_CITY.md.")
+
 def main():
     today = datetime.date.today().isoformat()
     index_path = os.path.join(ROOT, "index.html")
     base = strip_blocks(open(index_path, encoding="utf-8").read())
+    check_page(base)
     shows = city_shows()
 
     # Home page
