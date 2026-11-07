@@ -17,6 +17,9 @@ GENERIC = set("""comedy comedian comedians show shows live tour presents present
 with the and festival york new friends stand standup stand-up late early main room hour evening vip
 package experience club theatre theater tickets ticket an a of in at on for by from""".split())
 
+# Acts the owner chose not to list (family/novelty acts Ticketmaster files under comedy). Case-insensitive.
+EXCLUDE = re.compile(r"popovich|pet theater|tape face|\bmagic\b|magician|hypnot", re.I)
+
 def miles(a, b):
     R = 3958.8
     la1, lo1, la2, lo2 = map(math.radians, (a[0], a[1], b[0], b[1]))
@@ -85,6 +88,8 @@ def main(page_path, data_path="data/ticketmaster.json"):
             skipped["status"] += 1; continue
         if e["date"] < today:
             continue
+        if EXCLUDE.search(e.get("name") or "") or any(EXCLUDE.search(x or "") for x in e.get("attractions") or []):
+            skipped["excluded"] = skipped.get("excluded", 0) + 1; continue
         if e.get("lat") is None or e.get("lng") is None:
             skipped["nogeo"] += 1; continue
         ll = (e["lat"], e["lng"])
