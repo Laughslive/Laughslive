@@ -108,11 +108,16 @@ def nav_html(current=None):
              f'<a href="/{BY[c][1]}/">{html.escape(BY[c][2])}</a>') for c in codes)
         groups.append(f"<p><span>{region}:</span> {links}</p>")
     home = "" if current is None else ' · <a href="/">All cities</a>'
+    sub = ("mailto:shows@laughslive.com?subject=Show%20submission&body=Comedian(s)%3A%0AVenue%3A%0ACity%3A%0A"
+           "Date%20and%20time%3A%0ATicket%20link%3A%0A")
+    groups.append(f'<p class="sitelinks"><a href="/about/">About &amp; contact</a> · <a href="{sub}">Submit a show</a>'
+                  ' · <a href="/privacy/">Privacy</a></p>')
     return ('<nav class="citylinks" aria-label="Comedy shows by city"><style>'
             ".citylinks{margin-top:36px;font-size:14px;color:var(--muted)}"
             ".citylinks h2{font-size:15px;margin:0 0 6px;color:var(--ink)}"
             ".citylinks p{margin:4px 0}.citylinks span{font-weight:600}"
             ".citylinks a{color:var(--accent)}.citylinks b{color:var(--ink)}"
+            ".citylinks .sitelinks{margin-top:12px;padding-top:10px;border-top:1px solid var(--line)}"
             f"</style><h2>Comedy shows by city{home}</h2>{''.join(groups)}</nav>")
 
 def head_html(title, desc, url):
@@ -135,6 +140,43 @@ def head_html(title, desc, url):
             '<script>window.LL_SITE=1;if("serviceWorker"in navigator)addEventListener("load",()=>navigator.serviceWorker.register("/sw.js").catch(()=>{}))</script>'
             '<script defer src="/install.js"></script>'
             f"{extra}")
+
+STATIC_PAGES = [
+    ("about", "About LaughsLive: Where Our Comedy Listings Come From",
+     "LaughsLive lists stand-up, improv and live podcast shows in 29 cities, from venues' own calendars, comedians' tour pages and Ticketmaster. Submit a missing show or get in touch."),
+    ("privacy", "Privacy | LaughsLive",
+     "LaughsLive has no accounts and sets no cookies. What the site stores on your device, the cookie-free analytics it uses, and how to contact us."),
+]
+STATIC_CSS = """:root{--bg:#0A0E22;--surface:#121834;--ink:#EEF0FF;--muted:#9AA3C9;--line:#252D57;--accent:#FF3EA5;--bulb:#3CC8FF;
+--display:"Bungee","Arial Black",Impact,sans-serif;--body:"Figtree",system-ui,-apple-system,"Segoe UI",sans-serif;color-scheme:dark}
+*{box-sizing:border-box}html{background:var(--bg)}
+body{margin:0;background:var(--bg) radial-gradient(60rem 28rem at 15% -10%,color-mix(in srgb,var(--accent) 16%,transparent),transparent 70%) no-repeat;
+color:var(--ink);font:16px/1.6 var(--body);padding:0 max(16px,env(safe-area-inset-left,0px)) 48px}
+.wrap{max-width:720px;margin:0 auto}header{padding:28px 0 8px;display:grid;gap:12px}
+.bulbs{display:flex;gap:9px}.bulbs i{width:9px;height:9px;border-radius:50%;background:var(--bulb);box-shadow:0 0 8px var(--bulb)}
+.bulbs i:nth-child(2n){background:var(--accent);box-shadow:0 0 8px var(--accent)}
+.logo{font-family:var(--display);font-size:clamp(26px,6vw,38px);line-height:1;margin:0;color:var(--ink);text-decoration:none;
+text-shadow:0 0 .3em color-mix(in srgb,var(--bulb) 55%,transparent)}
+.logo .onair{display:inline-block;margin-left:.12em;padding:.04em .22em .02em;border:.07em solid var(--accent);border-radius:.14em;font-size:.82em;
+color:var(--accent);text-shadow:0 0 .35em color-mix(in srgb,var(--accent) 70%,transparent)}
+main h1{font-family:var(--display);font-weight:400;font-size:clamp(24px,5vw,32px);line-height:1.15;margin:22px 0 8px}
+main h2{font-size:19px;margin:28px 0 6px}main p,main li{color:var(--ink)}main .lead{font-size:18px}
+main .small{color:var(--muted);font-size:14px}main ul{padding-left:22px}main li{margin:6px 0}
+a{color:var(--accent)}a:focus-visible{outline:3px solid var(--bulb);outline-offset:2px}
+footer{margin-top:28px;color:var(--muted);font-size:13px}"""
+
+def static_page(title, desc, url, body):
+    e = html.escape
+    return ('<!doctype html>\n<html lang="en">\n<head>\n<meta charset="utf-8">\n'
+            '<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">\n'
+            f'<title>{e(title)}</title>\n<meta name="description" content="{e(desc)}">\n'
+            '<link rel="preconnect" href="https://fonts.googleapis.com">\n'
+            '<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bungee&family=Figtree:wght@400;500;600;700&display=swap">\n'
+            f"<style>{STATIC_CSS}</style>\n" + block("head", head_html(title, desc, url)) + "\n</head>\n<body>\n<div class=\"wrap\">\n"
+            '<header><div class="bulbs" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i><i></i></div>'
+            '<a class="logo" href="/">Laughs<span class="onair">Live</span></a></header>\n'
+            f"<main>\n{body}\n</main>\n" + block("nav", nav_html("_static")) +
+            "\n<footer>LaughsLive · comedy shows near you</footer>\n</div>\n</body>\n</html>\n")
 
 def set_title_desc(page, title, desc):
     page = re.sub(r"<title>.*?</title>", lambda m: f"<title>{html.escape(title)}</title>", page, count=1, flags=re.S)
@@ -180,7 +222,14 @@ def main():
         open(os.path.join(ROOT, slug, "index.html"), "w", encoding="utf-8").write(pg)
         print(f"{slug}: {n} shows in static list")
 
-    urls = [SITE + "/"] + [f"{SITE}/{c[1]}/" for c in CITIES]
+    # About / Privacy pages, from tools/pages/<slug>.html
+    for slug, title, desc in STATIC_PAGES:
+        body = open(os.path.join(ROOT, "tools", "pages", slug + ".html"), encoding="utf-8").read()
+        os.makedirs(os.path.join(ROOT, slug), exist_ok=True)
+        open(os.path.join(ROOT, slug, "index.html"), "w", encoding="utf-8").write(static_page(title, desc, f"{SITE}/{slug}/", body))
+        print(f"{slug}: static page")
+
+    urls = [SITE + "/"] + [f"{SITE}/{c[1]}/" for c in CITIES] + [f"{SITE}/{p[0]}/" for p in STATIC_PAGES]
     sm = ('<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n'
           + "".join(f"  <url><loc>{u}</loc><lastmod>{today}</lastmod><changefreq>daily</changefreq></url>\n" for u in urls)
           + "</urlset>\n")
