@@ -3,17 +3,18 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<meta name="description" content="LaughsLive: find upcoming comedy shows near you in 23 cities, including New York, Chicago, Boston, Philadelphia, Washington D.C., Detroit, Atlanta, Miami and Nashville.">
+<meta name="description" content="Find upcoming stand-up comedy, improv and live podcast shows in 23 cities, including New York, Chicago, Boston, Philadelphia, Washington D.C., Atlanta, Detroit, Miami and Nashville.">
 <style>
 :root{padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
 body{margin:0;font:14px/1.5 system-ui,-apple-system,"Segoe UI",sans-serif}
 img{max-width:100%}
 [hidden]{display:none!important}
 </style>
-<title>LaughsLive</title>
+<title>LaughsLive: Comedy Shows Near You in 23 Cities</title>
 <meta name="claude:viewport-fit-sides" content="cover">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bungee&family=Figtree:wght@400;500;600;700&display=swap">
+<!--ll:head--><link rel="canonical" href="https://laughslive.com/"><meta property="og:type" content="website"><meta property="og:site_name" content="LaughsLive"><meta property="og:title" content="LaughsLive: Comedy Shows Near You in 23 Cities"><meta property="og:description" content="Find upcoming stand-up comedy, improv and live podcast shows in 23 cities, including New York, Chicago, Boston, Philadelphia, Washington D.C., Atlanta, Detroit, Miami and Nashville."><meta property="og:url" content="https://laughslive.com/"><meta name="twitter:card" content="summary"><script>window.LL_SITE=1</script><!--/ll:head-->
 </head>
 <body>
 <style>
@@ -162,8 +163,9 @@ footer{margin-top:40px;font-size:13px;color:var(--muted);border-top:1px solid va
   </div>
 </header>
 <main id="results"></main>
+<!--ll:nav--><nav class="citylinks" aria-label="Comedy shows by city"><style>.citylinks{margin-top:36px;font-size:14px;color:var(--muted)}.citylinks h2{font-size:15px;margin:0 0 6px;color:var(--ink)}.citylinks p{margin:4px 0}.citylinks span{font-weight:600}.citylinks a{color:var(--accent)}.citylinks b{color:var(--ink)}</style><h2>Comedy shows by city</h2><p><span>Northeast:</span> <a href="/boston/">Boston</a> · <a href="/hartford/">Hartford</a> · <a href="/new-haven/">New Haven</a> · <a href="/new-york-city/">New York City</a> · <a href="/philadelphia/">Philadelphia</a> · <a href="/portland-maine/">Portland, Maine</a></p><p><span>Mid-Atlantic:</span> <a href="/baltimore/">Baltimore</a> · <a href="/norfolk-virginia-beach/">Norfolk &amp; Virginia Beach</a> · <a href="/pittsburgh/">Pittsburgh</a> · <a href="/richmond/">Richmond</a> · <a href="/washington-dc/">Washington, D.C.</a></p><p><span>South:</span> <a href="/atlanta/">Atlanta</a> · <a href="/miami/">Miami</a> · <a href="/nashville/">Nashville</a> · <a href="/orlando/">Orlando</a> · <a href="/tampa/">Tampa</a></p><p><span>Midwest:</span> <a href="/chicago/">Chicago</a> · <a href="/cincinnati/">Cincinnati</a> · <a href="/cleveland/">Cleveland</a> · <a href="/detroit/">Detroit</a> · <a href="/milwaukee/">Milwaukee</a> · <a href="/minneapolis-st-paul/">Minneapolis–St. Paul</a> · <a href="/st-louis/">St. Louis</a></p></nav><!--/ll:nav-->
 <footer>
-  Listings gathered November 3, 2026 from venue and ticketing sites. Each city includes shows within 50 miles of its center, so suburban venues are included, and a venue between two cities can appear in both. Lineups and times change, so check the venue's page before you go. Prices are the lowest listed at the time and may include resale.
+  Listings gathered November 3, 2026 from venue and ticketing sites. Each city includes shows within 50 miles of its center, so suburban venues are included, and a venue between two cities can appear in both. Lineups and times change, so check the venue's page before you go. Prices come from the venue or its ticket seller where listed.
 </footer>
 </div>
 
@@ -1956,12 +1958,18 @@ function search(q){
 document.getElementById("searchForm").addEventListener("submit",e=>{e.preventDefault();search(document.getElementById("loc").value)});
 function chips(id,key,num){document.getElementById(id).addEventListener("click",e=>{const btn=e.target.closest("button");if(!btn)return;
   document.querySelectorAll(`#${id} button`).forEach(x=>x.setAttribute("aria-pressed",x===btn));state[key]=num?Number(btn.dataset.v):btn.dataset.v;render()})}
+// On laughslive.com each city has its own page (/pittsburgh/ etc.); the build
+// script sets window.LL_SITE on every page and window.LL_CITY on city pages.
+const CITY_SLUG={NYC:"new-york-city",PHL:"philadelphia",BOS:"boston",BAL:"baltimore",DC:"washington-dc",PIT:"pittsburgh",CLE:"cleveland",NSH:"nashville",PWM:"portland-maine",CHI:"chicago",ATL:"atlanta",RIC:"richmond",ORF:"norfolk-virginia-beach",HFD:"hartford",NHV:"new-haven",MIA:"miami",TPA:"tampa",ORL:"orlando",CIN:"cincinnati",STL:"st-louis",MSP:"minneapolis-st-paul",MKE:"milwaukee",DET:"detroit"};
 document.getElementById("citySel").addEventListener("change",e=>{
+  if(window.LL_SITE&&CITY_SLUG[e.target.value]){location.href="/"+CITY_SLUG[e.target.value]+"/";return}
   setCity(e.target.value);state.here=null;document.getElementById("loc").value="";render()});
 chips("whenChips","when");chips("typeChips","type");chips("distChips","dist",true);
+if(window.LL_CITY&&CENTER[window.LL_CITY]){setCity(window.LL_CITY);document.getElementById("loc").value="";render();}
+else{
 let saved=null;try{saved=localStorage.getItem("lit-loc")}catch(e){}
 if(saved)document.getElementById("loc").value=saved;
-search(document.getElementById("loc").value);
+search(document.getElementById("loc").value);}
 </script>
 
 </body>
