@@ -1,5 +1,5 @@
 {
-"fetched": "2026-11-07T09:54:28+00:00",
+"fetched": "2026-11-07T16:05:35+00:00",
 "source": "Ticketmaster Discovery API",
 "events": [
 {
@@ -38350,7 +38350,7 @@
 {
 "city": "PIT",
 "id": "1AvbZ_fGkBiaE5i",
-"name": "Dinner and Laughs with Mike Conley and Tracie Jayne",
+"name": "Dinner and Laughs Comedy with Mike Conley and Tracie Jayne",
 "date": "2026-11-27",
 "time": "20:00",
 "status": "onsale",
@@ -38360,7 +38360,7 @@
 "address": "1 S. Stone Street",
 "lat": 40.0634936,
 "lng": -80.7292648,
-"url": "https://www.ticketmaster.com/dinner-and-laughs-with-mike-conley-wheeling-west-virginia-11-27-2026/event/1600654EAC2672EC",
+"url": "https://www.ticketmaster.com/dinner-and-laughs-comedy-with-mike-wheeling-west-virginia-11-27-2026/event/1600654EAC2672EC",
 "priceMin": null,
 "priceMax": null,
 "subGenre": "Comedy",
