@@ -172,6 +172,11 @@ footer{margin-top:40px;font-size:13px;color:var(--muted);border-top:1px solid va
       <button type="button" data-v="Live podcast & talk" aria-pressed="false">Live podcast &amp; talk</button>
       <button type="button" data-v="fest" aria-pressed="false">NY Comedy Festival</button>
     </div>
+    <span class="flabel">Lineup</span>
+    <div class="chips" id="lineupChips">
+      <button type="button" data-v="all" aria-pressed="true">All shows</button>
+      <button type="button" data-v="head" aria-pressed="false" title="Hides weekly showcases, open-mic style nights and nightly residencies">Headliners only</button>
+    </div>
     <span class="flabel">Distance</span>
     <div class="chips" id="distChips">
       <button type="button" data-v="999" aria-pressed="true">Any</button>
@@ -3232,7 +3237,7 @@ const titleCase=s=>s.replace(/\b\w/g,c=>c.toUpperCase()).replace(/\bUws\b/,"UWS"
 function miles(a,b){const R=3958.8,r=x=>x*Math.PI/180,dLa=r(b[0]-a[0]),dLo=r(b[1]-a[1]);
   const h=Math.sin(dLa/2)**2+Math.cos(r(a[0]))*Math.cos(r(b[0]))*Math.sin(dLo/2)**2;return 2*R*Math.asin(Math.sqrt(h));}
 
-const state={here:null,label:"",when:"all",type:"all",dist:999,city:"NYC",comic:""};
+const state={here:null,label:"",when:"all",type:"all",dist:999,city:"NYC",comic:"",lineup:"all"};
 const todayStr=(()=>{const n=new Date();return `${n.getFullYear()}-${String(n.getMonth()+1).padStart(2,"0")}-${String(n.getDate()).padStart(2,"0")}`})();
 const parse=d=>{const[y,m,dd]=d.split("-").map(Number);return new Date(y,m-1,dd)};
 const addDays=(d,n)=>{const x=new Date(d);x.setDate(x.getDate()+n);return x};
@@ -3250,10 +3255,15 @@ const esc=s=>String(s).replace(/[&<>"]/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",
 
 const fold=x=>String(x||"").normalize("NFD").replace(/[\u0300-\u036f]/g,"").toLowerCase().replace(/[^a-z0-9]+/g," ").trim();
 SHOWS.forEach(s=>{s.key=fold(s.title+" "+s.who);s.city=nearestCity([s.v.lat,s.v.lng]).c});
+// "Headliners only": a named comic, not a recurring showcase/residency.
+// Recurring = same title at the same venue on more than 6 dates in the listings.
+const SHOWCASE=/showcase|open mic|\bmic\b|all[- ]?stars?|after hours|roast battle|best of|comedy night|super six|featured players|tomato throw|chicago's best|captain's quarters|boiler room|new material|late night|hump day|happy hour|comedy hour|graduation|class show|\bjam\b|improv show|game night|trivia|brunch|karaoke/i;
+(()=>{const dates={};SHOWS.forEach(s=>{const k=s.vk+"|"+fold(s.title);(dates[k]??=new Set()).add(s.d)});
+  SHOWS.forEach(s=>{s.headliner=!!s.who&&!SHOWCASE.test(s.title)&&dates[s.vk+"|"+fold(s.title)].size<=6})})();
 function render(){
   const out=document.getElementById("results");
   if(state.comic)return renderComic(out);
-  let list=SHOWS.filter(s=>miles(CENTER[state.city],[s.v.lat,s.v.lng])<=RADIUS&&s.d>=todayStr&&inWhen(s.d));
+  let list=SHOWS.filter(s=>miles(CENTER[state.city],[s.v.lat,s.v.lng])<=RADIUS&&s.d>=todayStr&&inWhen(s.d)&&(state.lineup!=="head"||s.headliner));
   if(state.type==="fest")list=list.filter(s=>s.flags.includes("fest"));
   else if(state.type!=="all")list=list.filter(s=>s.type===state.type);
   const from=state.here||CENTER[state.city];
@@ -3336,7 +3346,7 @@ const CITY_SLUG={NYC:"new-york-city",PHL:"philadelphia",BOS:"boston",BAL:"baltim
 document.getElementById("citySel").addEventListener("change",e=>{
   if(window.LL_SITE&&CITY_SLUG[e.target.value]){location.href="/"+CITY_SLUG[e.target.value]+"/";return}
   setComic("");setCity(e.target.value);state.here=null;document.getElementById("loc").value="";render()});
-chips("whenChips","when");chips("typeChips","type");chips("distChips","dist",true);
+chips("whenChips","when");chips("typeChips","type");chips("lineupChips","lineup");chips("distChips","dist",true);
 let comicParam=null;try{comicParam=new URL(location.href).searchParams.get("comic")}catch(e){}
 if(comicParam){if(window.LL_CITY&&CENTER[window.LL_CITY]){setCity(window.LL_CITY);document.getElementById("loc").value=""}setComic(comicParam);render();}
 else if(window.LL_CITY&&CENTER[window.LL_CITY]){setCity(window.LL_CITY);document.getElementById("loc").value="";render();}
