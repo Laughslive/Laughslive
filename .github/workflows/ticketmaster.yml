@@ -1,0 +1,23 @@
+name: Ticketmaster comedy feed
+on:
+  schedule:
+    - cron: "17 9 * * *"   # daily, ~4-5am Eastern
+  workflow_dispatch: {}
+permissions:
+  contents: write
+jobs:
+  fetch:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Fetch comedy events
+        env:
+          TM_API_KEY: ${{ secrets.TM_API_KEY }}
+        run: python3 tools/fetch_ticketmaster.py
+      - name: Commit if changed
+        run: |
+          git config user.name "LaughsLive"
+          git config user.email "laughslive@users.noreply.github.com"
+          git add data/ticketmaster.json
+          git diff --cached --quiet || git commit -m "Ticketmaster feed $(date -u +%F)"
+          git push
