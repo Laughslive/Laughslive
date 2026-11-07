@@ -32,7 +32,7 @@ arts live room main and in concert with house venue presents ga""".split())
 CITY_STATES = {"NYC":"NY NJ CT","PHL":"PA NJ DE","BOS":"MA NH RI","BAL":"MD DC VA PA","DC":"DC MD VA",
  "PIT":"PA WV OH","CLE":"OH","NSH":"TN","PWM":"ME","CHI":"IL IN","ATL":"GA","RIC":"VA","ORF":"VA NC",
  "HFD":"CT MA","NHV":"CT NY","MIA":"FL","TPA":"FL","ORL":"FL","CIN":"OH KY IN","STL":"MO IL",
- "MSP":"MN WI","MKE":"WI","DET":"MI"}
+ "MSP":"MN WI","MKE":"WI","DET":"MI","DEN":"CO","IND":"IN","AUS":"TX","DFW":"TX","PHX":"AZ","LAS":"NV AZ"}
 
 def vtokens(s):
     return {w for w in re.findall(r"[a-z0-9]+", (s or "").lower()) if w not in VENUE_GENERIC}
