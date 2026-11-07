@@ -38,9 +38,16 @@ CITIES = [  # code, slug, display name, short name for titles, nearby places for
  ("MSP","minneapolis-st-paul","Minneapolis–St. Paul","Minneapolis–St. Paul","Uptown, Bloomington, Northeast and the Twin Cities suburbs"),
  ("MKE","milwaukee","Milwaukee","Milwaukee","the Third Ward, Wauwatosa, Racine and Kenosha"),
  ("DET","detroit","Detroit","Detroit","Royal Oak, Ferndale, Ann Arbor and Windsor"),
+ ("DEN","denver","Denver","Denver","LoDo, RiNo, Boulder, Aurora, Lakewood and the Denver Tech Center"),
+ ("IND","indianapolis","Indianapolis","Indianapolis","Broad Ripple, Fountain Square, Carmel, Fishers and Bloomington"),
+ ("AUS","austin","Austin","Austin","Sixth Street, East Austin, South Congress, Round Rock and San Marcos"),
+ ("DFW","dallas-fort-worth","Dallas–Fort Worth","Dallas–Fort Worth","Deep Ellum, Addison, Plano, Arlington, Fort Worth and Frisco"),
+ ("PHX","phoenix","Phoenix","Phoenix","Scottsdale, Tempe, Mesa, Chandler and Glendale"),
+ ("LAS","las-vegas","Las Vegas","Las Vegas","the Strip, Downtown and Fremont Street, Henderson and Summerlin"),
 ]
 REGIONS = [("Northeast",["BOS","HFD","NHV","NYC","PHL","PWM"]),("Mid-Atlantic",["BAL","ORF","PIT","RIC","DC"]),
-           ("South",["ATL","MIA","NSH","ORL","TPA"]),("Midwest",["CHI","CIN","CLE","DET","MKE","MSP","STL"])]
+           ("South",["ATL","AUS","DFW","MIA","NSH","ORL","TPA"]),("Midwest",["CHI","CIN","CLE","DET","IND","MKE","MSP","STL"]),
+           ("West",["DEN","LAS","PHX"])]
 BY = {c[0]: c for c in CITIES}
 
 def block(name, content):
@@ -133,9 +140,9 @@ def main():
     shows = city_shows()
 
     # Home page
-    title = "LaughsLive: Comedy Shows Near You in 23 Cities"
-    desc = ("Find upcoming stand-up comedy, improv and live podcast shows in 23 cities, including New York, "
-            "Chicago, Boston, Philadelphia, Washington D.C., Atlanta, Detroit, Miami and Nashville.")
+    title = "LaughsLive: Comedy Shows Near You in 29 Cities"
+    desc = ("Find upcoming stand-up comedy, improv and live podcast shows in 29 cities, including New York, "
+            "Chicago, Las Vegas, Austin, Dallas, Boston, Philadelphia, Washington D.C., Atlanta, Denver and Miami.")
     home = set_title_desc(base, title, desc)
     home = put_block(home, "head", head_html(title, desc, SITE + "/"), "</head>")
     home = put_block(home, "nav", nav_html(), "<footer>")
