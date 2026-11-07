@@ -149,8 +149,8 @@ footer{margin-top:40px;font-size:13px;color:var(--muted);border-top:1px solid va
     <button type="submit">Find shows</button>
   </form>
   <form class="search" id="comicForm" autocomplete="off" role="search">
-    <label for="comic" class="flabel" style="flex-basis:100%">Comedian or show</label>
-    <input id="comic" type="search" list="comicList" placeholder="Search every city — e.g. Sam Morril, Kill Tony, Doughboys">
+    <label for="comic" class="flabel" style="flex-basis:100%">Comedian or show <span style="text-transform:none;letter-spacing:0;font-weight:500">· searches all cities</span></label>
+    <input id="comic" type="search" list="comicList" placeholder="e.g. Sam Morril or Kill Tony">
     <datalist id="comicList"></datalist>
     <button type="submit">Search</button>
     <button type="button" id="comicClear" class="ghost" hidden>Clear</button>
