@@ -51,6 +51,11 @@ form.search{display:flex;gap:8px;flex-wrap:wrap}
 .search input{flex:1 1 240px;min-width:0;font:inherit;font-size:16px;padding:12px 14px;border-radius:10px;border:1.5px solid var(--line);background:var(--surface);color:var(--ink)}
 .search input:focus{outline:none;border-color:var(--accent)}
 button{font:inherit;cursor:pointer}
+.search button.ghost{background:transparent;color:var(--ink);border:1.5px solid var(--line);box-shadow:none}
+#comicForm{margin-top:10px}
+#comicForm input{flex-basis:140px}
+#comicForm button{padding-inline:14px}
+.citytag{font-size:12px;font-weight:600;color:var(--accent);white-space:nowrap}
 .search button{padding:12px 18px;border-radius:10px;border:0;background:var(--accent);color:#fff;font-weight:700;box-shadow:0 0 14px color-mix(in srgb,var(--accent) 55%,transparent)}
 .search button:focus-visible,.chips button:focus-visible,a:focus-visible{outline:3px solid var(--bulb);outline-offset:2px}
 .status{font-size:14px;color:var(--muted);min-height:1.5em}
@@ -142,6 +147,13 @@ footer{margin-top:40px;font-size:13px;color:var(--muted);border-top:1px solid va
     <label for="loc" class="flabel" style="flex-basis:100%">Your location</label>
     <input id="loc" type="text" placeholder="Neighborhood, town or zip — e.g. Park Slope, Fells Point, 02139" value="Chelsea">
     <button type="submit">Find shows</button>
+  </form>
+  <form class="search" id="comicForm" autocomplete="off" role="search">
+    <label for="comic" class="flabel" style="flex-basis:100%">Comedian or show</label>
+    <input id="comic" type="search" list="comicList" placeholder="Search every city — e.g. Sam Morril, Kill Tony, Doughboys">
+    <datalist id="comicList"></datalist>
+    <button type="submit">Search</button>
+    <button type="button" id="comicClear" class="ghost" hidden>Clear</button>
   </form>
   <div class="status" id="status" role="status"></div>
   <div class="filters">
@@ -3228,7 +3240,7 @@ const titleCase=s=>s.replace(/\b\w/g,c=>c.toUpperCase()).replace(/\bUws\b/,"UWS"
 function miles(a,b){const R=3958.8,r=x=>x*Math.PI/180,dLa=r(b[0]-a[0]),dLo=r(b[1]-a[1]);
   const h=Math.sin(dLa/2)**2+Math.cos(r(a[0]))*Math.cos(r(b[0]))*Math.sin(dLo/2)**2;return 2*R*Math.asin(Math.sqrt(h));}
 
-const state={here:null,label:"",when:"all",type:"all",dist:999,city:"NYC"};
+const state={here:null,label:"",when:"all",type:"all",dist:999,city:"NYC",comic:""};
 const todayStr=(()=>{const n=new Date();return `${n.getFullYear()}-${String(n.getMonth()+1).padStart(2,"0")}-${String(n.getDate()).padStart(2,"0")}`})();
 const parse=d=>{const[y,m,dd]=d.split("-").map(Number);return new Date(y,m-1,dd)};
 const addDays=(d,n)=>{const x=new Date(d);x.setDate(x.getDate()+n);return x};
@@ -3244,8 +3256,11 @@ function inWhen(d){
 function fmtTime(t){let[h,m]=t.split(":").map(Number);const ap=h>=12?"PM":"AM";h=h%12||12;return{t:m?`${h}:${String(m).padStart(2,"0")}`:`${h}`,ap}}
 const esc=s=>String(s).replace(/[&<>"]/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));
 
+const fold=x=>String(x||"").normalize("NFD").replace(/[\u0300-\u036f]/g,"").toLowerCase().replace(/[^a-z0-9]+/g," ").trim();
+SHOWS.forEach(s=>{s.key=fold(s.title+" "+s.who);s.city=nearestCity([s.v.lat,s.v.lng]).c});
 function render(){
   const out=document.getElementById("results");
+  if(state.comic)return renderComic(out);
   let list=SHOWS.filter(s=>miles(CENTER[state.city],[s.v.lat,s.v.lng])<=RADIUS&&s.d>=todayStr&&inWhen(s.d));
   if(state.type==="fest")list=list.filter(s=>s.flags.includes("fest"));
   else if(state.type!=="all")list=list.filter(s=>s.type===state.type);
@@ -3263,6 +3278,24 @@ function render(){
     const sub=dt.toLocaleDateString("en-US",{month:"long",day:"numeric"});
     return `<section class="day"><h2>${head}<small>${sub}</small></h2><div class="list">${arr.map(card).join("")}</div></section>`}).join("");
 }
+// Comedian / show search: matches every word typed, across all cities, ignoring city and distance.
+function renderComic(out){
+  const words=fold(state.comic).split(" ").filter(Boolean);
+  let list=SHOWS.filter(s=>s.d>=todayStr&&inWhen(s.d)&&words.every(w=>(" "+s.key).includes(" "+w)));
+  if(state.type==="fest")list=list.filter(s=>s.flags.includes("fest"));
+  else if(state.type!=="all")list=list.filter(s=>s.type===state.type);
+  list.forEach(s=>s.mi=null);
+  list.sort((a,b)=>(a.d+a.t).localeCompare(b.d+b.t));
+  const cities=new Set(list.map(s=>s.city));
+  const st=document.getElementById("status");st.className="status";
+  st.innerHTML=`<b>${list.length}</b> show${list.length===1?"":"s"} matching <b>“${esc(state.comic)}”</b>${list.length?` in ${cities.size} cit${cities.size===1?"y":"ies"}`:""} · searching every city`;
+  if(!list.length){out.innerHTML=`<div class="empty">No upcoming shows match “${esc(state.comic)}”. Check the spelling, try just a last name, or clear the search to browse by city.</div>`;return}
+  const days={};list.forEach(s=>(days[s.d]??=[]).push(s));
+  out.innerHTML=Object.entries(days).map(([d,arr])=>{
+    const dt=parse(d);const head=d===todayStr?"Tonight":dt.toLocaleDateString("en-US",{weekday:"long"});
+    const sub=dt.toLocaleDateString("en-US",{month:"long",day:"numeric"});
+    return `<section class="day"><h2>${head}<small>${sub}</small></h2><div class="list">${arr.map(card).join("")}</div></section>`}).join("");
+}
 function card(s){
   const tm=fmtTime(s.t);const b=[`<span class="b">${s.type}</span>`];
   if(s.flags.includes("fest"))b.push(`<span class="b fest">NY Comedy Fest</span>`);
@@ -3270,7 +3303,8 @@ function card(s){
   if(s.flags.includes("18"))b.push(`<span class="b">18+</span>`);
   if(s.flags.includes("21"))b.push(`<span class="b">21+</span>`);
   const who=s.who&&s.who!==s.title?`<p class="who">${esc(s.who)}</p>`:"";
-  const dist=s.mi!=null?`<span class="dist">${s.mi<0.1?"<0.1":s.mi.toFixed(1)} mi</span>`:"";
+  const cn=CITY_NAME[s.city]||"",shown=(s.v.b+" "+s.v.area).includes(cn.split(/[ ,–&]/)[0]);
+  const dist=state.comic?(shown?"":`<span class="citytag">${esc(cn)} area</span>`):s.mi!=null?`<span class="dist">${s.mi<0.1?"<0.1":s.mi.toFixed(1)} mi</span>`:"";
   return `<article class="ticket"><div class="stub"><span class="t">${tm.t}</span><span class="ap">${tm.ap}</span></div>
   <div class="info"><h3>${esc(s.title)}</h3>${who}
   <div class="where"><span>${esc(s.v.n)} · ${esc(s.v.area)}, ${s.v.b}</span>${dist}</div>
@@ -3286,7 +3320,22 @@ function search(q){
   state.here=r.ll;state.label=r.label;setCity(r.c);render();
   try{localStorage.setItem("lit-loc",q)}catch(e){}
 }
-document.getElementById("searchForm").addEventListener("submit",e=>{e.preventDefault();search(document.getElementById("loc").value)});
+document.getElementById("searchForm").addEventListener("submit",e=>{e.preventDefault();setComic("");search(document.getElementById("loc").value)});
+function setComic(q){
+  state.comic=q.trim();document.getElementById("comic").value=state.comic;
+  document.getElementById("comicClear").hidden=!state.comic;
+  try{const u=new URL(location.href);if(state.comic)u.searchParams.set("comic",state.comic);else u.searchParams.delete("comic");history.replaceState(null,"",u)}catch(e){}
+}
+document.getElementById("comicForm").addEventListener("submit",e=>{e.preventDefault();setComic(document.getElementById("comic").value);render();
+  if(state.comic)document.getElementById("status").scrollIntoView({behavior:"smooth",block:"start"})});
+document.getElementById("comicClear").addEventListener("click",()=>{setComic("");render()});
+(()=>{ // suggestions: performer names, plus titles of shows that list none
+  const n=new Map();
+  SHOWS.forEach(s=>{if(s.d<todayStr)return;
+    const names=s.who?s.who.split(/\s*,\s*|\s+&\s+|\s+and\s+/):[s.title.split(/\s+[·:–-]\s+|:\s/)[0]];
+    names.forEach(x=>{x=x.replace(/^(hosted by|with|feat\.?|featuring)\s+/i,"").trim();if(x.length>2&&x.length<40)n.set(x,(n.get(x)||0)+1)})});
+  document.getElementById("comicList").innerHTML=[...n.keys()].sort((a,b)=>a.localeCompare(b)).map(x=>`<option value="${esc(x)}">`).join("");
+})();
 function chips(id,key,num){document.getElementById(id).addEventListener("click",e=>{const btn=e.target.closest("button");if(!btn)return;
   document.querySelectorAll(`#${id} button`).forEach(x=>x.setAttribute("aria-pressed",x===btn));state[key]=num?Number(btn.dataset.v):btn.dataset.v;render()})}
 // On laughslive.com each city has its own page (/pittsburgh/ etc.); the build
@@ -3294,9 +3343,11 @@ function chips(id,key,num){document.getElementById(id).addEventListener("click",
 const CITY_SLUG={NYC:"new-york-city",PHL:"philadelphia",BOS:"boston",BAL:"baltimore",DC:"washington-dc",PIT:"pittsburgh",CLE:"cleveland",NSH:"nashville",PWM:"portland-maine",CHI:"chicago",ATL:"atlanta",RIC:"richmond",ORF:"norfolk-virginia-beach",HFD:"hartford",NHV:"new-haven",MIA:"miami",TPA:"tampa",ORL:"orlando",CIN:"cincinnati",STL:"st-louis",MSP:"minneapolis-st-paul",MKE:"milwaukee",DET:"detroit",DEN:"denver",IND:"indianapolis",AUS:"austin",DFW:"dallas-fort-worth",PHX:"phoenix",LAS:"las-vegas"};
 document.getElementById("citySel").addEventListener("change",e=>{
   if(window.LL_SITE&&CITY_SLUG[e.target.value]){location.href="/"+CITY_SLUG[e.target.value]+"/";return}
-  setCity(e.target.value);state.here=null;document.getElementById("loc").value="";render()});
+  setComic("");setCity(e.target.value);state.here=null;document.getElementById("loc").value="";render()});
 chips("whenChips","when");chips("typeChips","type");chips("distChips","dist",true);
-if(window.LL_CITY&&CENTER[window.LL_CITY]){setCity(window.LL_CITY);document.getElementById("loc").value="";render();}
+let comicParam=null;try{comicParam=new URL(location.href).searchParams.get("comic")}catch(e){}
+if(comicParam){if(window.LL_CITY&&CENTER[window.LL_CITY]){setCity(window.LL_CITY);document.getElementById("loc").value=""}setComic(comicParam);render();}
+else if(window.LL_CITY&&CENTER[window.LL_CITY]){setCity(window.LL_CITY);document.getElementById("loc").value="";render();}
 else{
 let saved=null;try{saved=localStorage.getItem("lit-loc")}catch(e){}
 if(saved)document.getElementById("loc").value=saved;
