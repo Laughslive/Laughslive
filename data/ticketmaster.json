@@ -1,5 +1,5 @@
 {
-"fetched": "2026-11-07T02:54:02+00:00",
+"fetched": "2026-11-07T09:54:28+00:00",
 "source": "Ticketmaster Discovery API",
 "events": [
 {
@@ -1678,28 +1678,6 @@
 },
 {
 "city": "BOS",
-"id": "vv177Z_8GkDdY5rJ",
-"name": "Tim Dillon",
-"date": "2026-11-06",
-"time": "22:00",
-"status": "onsale",
-"venue": "The Wilbur",
-"venueCity": "Boston",
-"state": "MA",
-"address": "246 Tremont St.",
-"lat": 42.3504843,
-"lng": -71.065086,
-"url": "https://www.ticketmaster.com/tim-dillon-boston-massachusetts-11-06-2026/event/0100650EC3C0B7A6",
-"priceMin": null,
-"priceMax": null,
-"subGenre": "Comedy",
-"attractions": [
-"Tim Dillon"
-],
-"ageRestricted": false
-},
-{
-"city": "BOS",
 "id": "vv1AvZkfYGkec4PZ0",
 "name": "Late Nite Catechism: Til Death Do Us Part",
 "date": "2026-11-07",
@@ -3119,24 +3097,24 @@
 "ageRestricted": false
 },
 {
-"city": "CHI",
-"id": "rZ7HnEZ1AfJkZK",
-"name": "Corey Holcomb Live",
-"date": "2026-11-06",
-"time": "21:30",
+"city": "BOS",
+"id": "vv177Z_fGkXIjHIK",
+"name": "Anthony Jeselnik: Wrath of Man",
+"date": "2027-01-15",
+"time": "22:00",
 "status": "onsale",
-"venue": "Chicago Improv",
-"venueCity": "Schaumburg",
-"state": "IL",
-"address": "5 Woodfield Mall K120B",
-"lat": 42.045532,
-"lng": -88.035151,
-"url": "https://www.ticketweb.com/event/corey-holcomb-live-chicago-improv-tickets/14986013",
-"priceMin": 52.42,
-"priceMax": 52.42,
+"venue": "The Wilbur",
+"venueCity": "Boston",
+"state": "MA",
+"address": "246 Tremont St.",
+"lat": 42.3504843,
+"lng": -71.065086,
+"url": "https://www.ticketmaster.com/anthony-jeselnik-wrath-of-man-boston-massachusetts-01-15-2027/event/0100654FA873CA13",
+"priceMin": null,
+"priceMax": null,
 "subGenre": "Comedy",
 "attractions": [
-"Corey Holcomb"
+"Anthony Jeselnik"
 ],
 "ageRestricted": false
 },
@@ -5169,28 +5147,6 @@
 },
 {
 "city": "DEN",
-"id": "rZ7HnEZ1A4ZybN",
-"name": "Tommy Davidson",
-"date": "2026-11-06",
-"time": "21:45",
-"status": "onsale",
-"venue": "Denver Improv",
-"venueCity": "Denver",
-"state": "CO",
-"address": "8246 E 49th Ave #1400",
-"lat": 39.782478,
-"lng": -104.89133,
-"url": "https://www.ticketweb.com/event/tommy-davidson-denver-improv-tickets/15039623",
-"priceMin": 5.0,
-"priceMax": 71.83,
-"subGenre": "Comedy",
-"attractions": [
-"Tommy Davidson"
-],
-"ageRestricted": false
-},
-{
-"city": "DEN",
 "id": "rZ7HnEZ1A4Zybd",
 "name": "Tommy Davidson",
 "date": "2026-11-07",
@@ -6274,70 +6230,6 @@
 "attractions": [
 "HYPROV: Improv Under Hypnosis."
 ],
-"ageRestricted": false
-},
-{
-"city": "DFW",
-"id": "vvG1YZ_fMn_BJr",
-"name": "Comedy Allstars",
-"date": "2026-11-06",
-"time": "21:30",
-"status": "onsale",
-"venue": "Punch Line Irving",
-"venueCity": "Irving",
-"state": "TX",
-"address": "310 W Las Colinas Blvd., Suite 130",
-"lat": 32.86581,
-"lng": -96.93776,
-"url": "https://www.ticketmaster.com/comedy-allstars-irving-texas-11-06-2026/event/0C00654DEA67A99E",
-"priceMin": null,
-"priceMax": null,
-"subGenre": "Comedy",
-"attractions": [
-"Comedy Allstars"
-],
-"ageRestricted": false
-},
-{
-"city": "DFW",
-"id": "vvG1YZ_oH8rfJW",
-"name": "Filthy Pop-Up Comedy Show",
-"date": "2026-11-06",
-"time": "21:30",
-"status": "cancelled",
-"venue": "Punch Line Irving",
-"venueCity": "Irving",
-"state": "TX",
-"address": "310 W Las Colinas Blvd., Suite 130",
-"lat": 32.86581,
-"lng": -96.93776,
-"url": "https://www.ticketmaster.com/filthy-popup-comedy-show-irving-texas-11-06-2026/event/0C00651F107949BD",
-"priceMin": null,
-"priceMax": null,
-"subGenre": "Comedy",
-"attractions": [
-"Dubz General"
-],
-"ageRestricted": false
-},
-{
-"city": "DFW",
-"id": "1Ae0Z_7GkV8t-1f",
-"name": "Shuler King",
-"date": "2026-11-06",
-"time": "21:45",
-"status": "onsale",
-"venue": "Arlington Improv",
-"venueCity": "Arlington",
-"state": "TX",
-"address": "309 Curtis Mathes Way #147",
-"lat": 32.68074,
-"lng": -97.107349,
-"url": "https://www.ticketweb.com/event/shuler-king-arlington-improv-tickets/14162094?REFERRAL_ID=tmfeed",
-"priceMin": null,
-"priceMax": null,
-"subGenre": "Comedy",
-"attractions": [],
 "ageRestricted": false
 },
 {
@@ -9578,6 +9470,28 @@
 "ageRestricted": false
 },
 {
+"city": "DFW",
+"id": "vvG1YZ_KK7la40",
+"name": "Ron Funches",
+"date": "2027-01-15",
+"time": "21:15",
+"status": "onsale",
+"venue": "Punch Line Irving",
+"venueCity": "Irving",
+"state": "TX",
+"address": "310 W Las Colinas Blvd., Suite 130",
+"lat": 32.86581,
+"lng": -96.93776,
+"url": "https://www.ticketmaster.com/ron-funches-irving-texas-01-15-2027/event/0C006534C4AC9564",
+"priceMin": null,
+"priceMax": null,
+"subGenre": "Comedy",
+"attractions": [
+"Ron Funches"
+],
+"ageRestricted": false
+},
+{
 "city": "HFD",
 "id": "G5vVZ_5ljEq5Y",
 "name": "DeRay Davis",
@@ -10468,265 +10382,6 @@
 "subGenre": "Comedy",
 "attractions": [
 "Josh Sneed"
-],
-"ageRestricted": false
-},
-{
-"city": "LAS",
-"id": "1Ad0Z_eGkSp-lP5",
-"name": "Comedy Cellar (Las Vegas)",
-"date": "2026-11-06",
-"time": "19:00",
-"status": "onsale",
-"venue": "Comedy Cellar at Rio Las Vegas",
-"venueCity": "Las Vegas",
-"state": "NV",
-"address": "3700 W Flamingo Rd",
-"lat": 36.117575,
-"lng": -115.187717,
-"url": "https://www.ticketmaster.com/comedy-cellar-las-vegas-las-vegas-nevada-11-06-2026/event/3900642CD686B94B",
-"priceMin": null,
-"priceMax": null,
-"subGenre": "Comedy",
-"attractions": [
-"Comedy Cellar (Las Vegas)",
-"Mark Cohen",
-"Veronica Mosey",
-"Derek Gaines",
-"Eddie Ifft",
-"Butch Bradley"
-],
-"ageRestricted": false
-},
-{
-"city": "LAS",
-"id": "1AyZkuUGkdud5a_",
-"name": "Orny Adams At Jimmy Kimmel's Comedy Club",
-"date": "2026-11-06",
-"time": "19:30",
-"status": "onsale",
-"venue": "Jimmy Kimmel's Comedy Club",
-"venueCity": "Las Vegas",
-"state": "NV",
-"address": "3545 S Las Vegas Blvd",
-"lat": 36.11793,
-"lng": -115.171531,
-"url": "https://www.ticketmaster.com/orny-adams-at-jimmy-kimmels-comedy-las-vegas-nevada-11-06-2026/event/39006376CD0CB259",
-"priceMin": null,
-"priceMax": null,
-"subGenre": "Comedy",
-"attractions": [
-"Orny Adams",
-"Jimmy Kimmel's Comedy Club - Las Vegas"
-],
-"ageRestricted": false
-},
-{
-"city": "LAS",
-"id": "G5ezZbzEunJg9",
-"name": "Tape Face",
-"date": "2026-11-06",
-"time": "19:30",
-"status": "onsale",
-"venue": "Underground Theater at MGM Grand",
-"venueCity": "Las Vegas",
-"state": "NV",
-"address": "3799 Las Vegas Blvd South",
-"lat": 36.10226,
-"lng": -115.167991,
-"url": "https://www.ticketmaster.com/tape-face-las-vegas-nevada-11-06-2026/event/2E006389CDAA6D57",
-"priceMin": null,
-"priceMax": null,
-"subGenre": "Comedy",
-"attractions": [
-"Tape Face"
-],
-"ageRestricted": false
-},
-{
-"city": "LAS",
-"id": "1kAYvP4zGAu4QlD",
-"name": "Pete Davidson",
-"date": "2026-11-06",
-"time": "20:00",
-"status": "onsale",
-"venue": "The Cosmopolitan of Las Vegas",
-"venueCity": "Las Vegas",
-"state": "NV",
-"address": "3708 Las Vegas Boulevard South ",
-"lat": 36.10907659,
-"lng": -115.17318003,
-"url": "https://www.ticketmaster.com/pete-davidson-las-vegas-nevada-11-06-2026/event/170065578D55AAFB",
-"priceMin": null,
-"priceMax": null,
-"subGenre": "Comedy",
-"attractions": [
-"Pete Davidson"
-],
-"ageRestricted": false
-},
-{
-"city": "LAS",
-"id": "G5ezZbgZeIthR",
-"name": "BGCC: Tom Rhodes with Murray Valeriano & Trixx",
-"date": "2026-11-06",
-"time": "20:00",
-"status": "onsale",
-"venue": "Brad Garrett's Comedy Club",
-"venueCity": "Las Vegas",
-"state": "NV",
-"address": "3799 Las Vegas Blvd South Las Vegas",
-"lat": 36.102906,
-"lng": -115.168696,
-"url": "https://www.ticketmaster.com/bgcc-tom-rhodes-with-murray-valeriano-las-vegas-nevada-11-06-2026/event/2E00635002A296EF",
-"priceMin": null,
-"priceMax": null,
-"subGenre": "Comedy",
-"attractions": [
-"Brad Garrett's Comedy Club",
-"Tom Rhodes",
-"Murray Valeriano",
-"Trixx"
-],
-"ageRestricted": false
-},
-{
-"city": "LAS",
-"id": "G5ezZbY9mTw3B",
-"name": "Carrot Top",
-"date": "2026-11-06",
-"time": "20:00",
-"status": "onsale",
-"venue": "Atrium Showroom at Luxor Hotel and Casino",
-"venueCity": "Las Vegas",
-"state": "NV",
-"address": "3900 Las Vegas Blvd South",
-"lat": 36.095325,
-"lng": -115.175975,
-"url": "https://www.ticketmaster.com/carrot-top-las-vegas-nevada-11-06-2026/event/2E006305EEFF24BA",
-"priceMin": null,
-"priceMax": null,
-"subGenre": "Comedy",
-"attractions": [
-"Carrot Top"
-],
-"ageRestricted": false
-},
-{
-"city": "LAS",
-"id": "1Ad0ZbzGkSI6cQF",
-"name": "Vicki Barbolak at Laugh Factory Las Vegas",
-"date": "2026-11-06",
-"time": "20:30",
-"status": "onsale",
-"venue": "Laugh Factory at Horseshoe Las Vegas",
-"venueCity": "Las Vegas",
-"state": "NV",
-"address": "3645 Las Vegas Blvd. South",
-"lat": 36.11376452,
-"lng": -115.16889906,
-"url": "https://www.ticketmaster.com/vicki-barbolak-at-laugh-factory-las-las-vegas-nevada-11-06-2026/event/3900638CE81ED688",
-"priceMin": null,
-"priceMax": null,
-"subGenre": "Comedy",
-"attractions": [
-"Laugh Factory Las Vegas",
-"Vicki Barbolak"
-],
-"ageRestricted": false
-},
-{
-"city": "LAS",
-"id": "17AYv0G6GKlWlep",
-"name": "Big Black Comedy Show",
-"date": "2026-11-06",
-"time": "20:30",
-"status": "onsale",
-"venue": "V Theater at Planet Hollywood Inside the Miracle Mile Mall",
-"venueCity": "Las Vegas",
-"state": "NV",
-"address": "3663 Las Vegas Blvd South Suite 360A",
-"lat": 36.1101115,
-"lng": -115.1708107,
-"url": "https://www.ticketmaster.com/big-black-comedy-show-las-vegas-nevada-11-06-2026/event/170064C4EBF6B096",
-"priceMin": null,
-"priceMax": null,
-"subGenre": "Comedy",
-"attractions": [
-"Big Black Comedy Show"
-],
-"ageRestricted": false
-},
-{
-"city": "LAS",
-"id": "1AyZkuUGkdueha9",
-"name": "Orny Adams At Jimmy Kimmel's Comedy Club",
-"date": "2026-11-06",
-"time": "21:30",
-"status": "onsale",
-"venue": "Jimmy Kimmel's Comedy Club",
-"venueCity": "Las Vegas",
-"state": "NV",
-"address": "3545 S Las Vegas Blvd",
-"lat": 36.11793,
-"lng": -115.171531,
-"url": "https://www.ticketmaster.com/orny-adams-at-jimmy-kimmels-comedy-las-vegas-nevada-11-06-2026/event/39006376CD09B257",
-"priceMin": null,
-"priceMax": null,
-"subGenre": "Comedy",
-"attractions": [
-"Orny Adams",
-"Jimmy Kimmel's Comedy Club - Las Vegas"
-],
-"ageRestricted": false
-},
-{
-"city": "LAS",
-"id": "1Ad0Z_eGkSpN5P4",
-"name": "Comedy Cellar (Las Vegas)",
-"date": "2026-11-06",
-"time": "21:30",
-"status": "onsale",
-"venue": "Comedy Cellar at Rio Las Vegas",
-"venueCity": "Las Vegas",
-"state": "NV",
-"address": "3700 W Flamingo Rd",
-"lat": 36.117575,
-"lng": -115.187717,
-"url": "https://www.ticketmaster.com/comedy-cellar-las-vegas-las-vegas-nevada-11-06-2026/event/3900642CD68CB955",
-"priceMin": null,
-"priceMax": null,
-"subGenre": "Comedy",
-"attractions": [
-"Comedy Cellar (Las Vegas)",
-"Mark Cohen",
-"Veronica Mosey",
-"Derek Gaines",
-"Eddie Ifft",
-"Butch Bradley"
-],
-"ageRestricted": false
-},
-{
-"city": "LAS",
-"id": "1Ad0ZbzGkSIFWQ5",
-"name": "Vicki Barbolak at Laugh Factory Las Vegas",
-"date": "2026-11-06",
-"time": "22:30",
-"status": "onsale",
-"venue": "Laugh Factory at Horseshoe Las Vegas",
-"venueCity": "Las Vegas",
-"state": "NV",
-"address": "3645 Las Vegas Blvd. South",
-"lat": 36.11376452,
-"lng": -115.16889906,
-"url": "https://www.ticketmaster.com/vicki-barbolak-at-laugh-factory-las-las-vegas-nevada-11-06-2026/event/3900638CE823D68B",
-"priceMin": null,
-"priceMax": null,
-"subGenre": "Comedy",
-"attractions": [
-"Laugh Factory Las Vegas",
-"Vicki Barbolak"
 ],
 "ageRestricted": false
 },
@@ -27230,24 +26885,182 @@
 "ageRestricted": false
 },
 {
-"city": "MIA",
-"id": "Z7r9jZ1A70K19",
-"name": "Jeff Arcuri",
-"date": "2026-11-06",
-"time": "22:00",
+"city": "LAS",
+"id": "1AyZk4pGkd5BBBV",
+"name": "Jon Rudnitsky At Jimmy Kimmel's Comedy Club",
+"date": "2027-01-15",
+"time": "19:30",
 "status": "onsale",
-"venue": "Fort Lauderdale Improv",
-"venueCity": "Fort Lauderdale",
-"state": "FL",
-"address": "5700 Seminole Way",
-"lat": 26.0688,
-"lng": -80.225601,
-"url": "https://www.ticketmaster.com/event/Z7r9jZ1A70K19",
+"venue": "Jimmy Kimmel's Comedy Club",
+"venueCity": "Las Vegas",
+"state": "NV",
+"address": "3545 S Las Vegas Blvd",
+"lat": 36.11793,
+"lng": -115.171531,
+"url": "https://www.ticketmaster.com/jon-rudnitsky-at-jimmy-kimmels-comedy-las-vegas-nevada-01-15-2027/event/39006556CBEBAEB4",
 "priceMin": null,
 "priceMax": null,
 "subGenre": "Comedy",
 "attractions": [
-"Jeff Arcuri"
+"Jon Rudnitsky",
+"Jimmy Kimmel's Comedy Club - Las Vegas"
+],
+"ageRestricted": false
+},
+{
+"city": "LAS",
+"id": "G5ezZ_KUB47tm",
+"name": "Tape Face",
+"date": "2027-01-15",
+"time": "19:30",
+"status": "onsale",
+"venue": "Underground Theater at MGM Grand",
+"venueCity": "Las Vegas",
+"state": "NV",
+"address": "3799 Las Vegas Blvd South",
+"lat": 36.10226,
+"lng": -115.167991,
+"url": "https://www.ticketmaster.com/tape-face-las-vegas-nevada-01-15-2027/event/2E00653DBA544A6E",
+"priceMin": null,
+"priceMax": null,
+"subGenre": "Comedy",
+"attractions": [
+"Tape Face"
+],
+"ageRestricted": false
+},
+{
+"city": "LAS",
+"id": "G5ezZ_fQbQwz2",
+"name": "BGCC: Brad Garrett with Chris Franjola",
+"date": "2027-01-15",
+"time": "20:00",
+"status": "onsale",
+"venue": "Brad Garrett's Comedy Club",
+"venueCity": "Las Vegas",
+"state": "NV",
+"address": "3799 Las Vegas Blvd South Las Vegas",
+"lat": 36.102906,
+"lng": -115.168696,
+"url": "https://www.ticketmaster.com/bgcc-brad-garrett-with-chris-franjola-las-vegas-nevada-01-15-2027/event/2E006546986B2E0F",
+"priceMin": null,
+"priceMax": null,
+"subGenre": "Comedy",
+"attractions": [
+"Brad Garrett's Comedy Club",
+"Brad Garrett",
+"Chris Franjola"
+],
+"ageRestricted": false
+},
+{
+"city": "LAS",
+"id": "1a9Zk4Ak73AZe8v",
+"name": "Chris Tucker Live!",
+"date": "2027-01-15",
+"time": "20:00",
+"status": "onsale",
+"venue": "Encore Theater at Wynn Las Vegas",
+"venueCity": "Las Vegas",
+"state": "NV",
+"address": "3131 Las Vegas Boulevard South",
+"lat": 36.1276013,
+"lng": -115.1676835,
+"url": "https://www.ticketmaster.com/chris-tucker-live-las-vegas-nevada-01-15-2027/event/17006545184485F0",
+"priceMin": null,
+"priceMax": null,
+"subGenre": "Comedy",
+"attractions": [
+"Chris Tucker"
+],
+"ageRestricted": false
+},
+{
+"city": "LAS",
+"id": "G5ezZ_8BI63H8",
+"name": "Carrot Top",
+"date": "2027-01-15",
+"time": "20:00",
+"status": "onsale",
+"venue": "Atrium Showroom at Luxor Hotel and Casino",
+"venueCity": "Las Vegas",
+"state": "NV",
+"address": "3900 Las Vegas Blvd South",
+"lat": 36.095325,
+"lng": -115.175975,
+"url": "https://www.ticketmaster.com/carrot-top-las-vegas-nevada-01-15-2027/event/2E00650EA81D2F10",
+"priceMin": null,
+"priceMax": null,
+"subGenre": "Comedy",
+"attractions": [
+"Carrot Top"
+],
+"ageRestricted": false
+},
+{
+"city": "LAS",
+"id": "1AyZk4FGkdr5_ho",
+"name": "Laugh Factory Las Vegas",
+"date": "2027-01-15",
+"time": "20:30",
+"status": "onsale",
+"venue": "Laugh Factory at Horseshoe Las Vegas",
+"venueCity": "Las Vegas",
+"state": "NV",
+"address": "3645 Las Vegas Blvd. South",
+"lat": 36.11376452,
+"lng": -115.16889906,
+"url": "https://www.ticketmaster.com/laugh-factory-las-vegas-las-vegas-nevada-01-15-2027/event/39006548DE2D96D1",
+"priceMin": null,
+"priceMax": null,
+"subGenre": "Comedy",
+"attractions": [
+"Laugh Factory Las Vegas"
+],
+"ageRestricted": false
+},
+{
+"city": "LAS",
+"id": "1AyZk4pGkd5H1WY",
+"name": "Jon Rudnitsky At Jimmy Kimmel's Comedy Club",
+"date": "2027-01-15",
+"time": "21:30",
+"status": "onsale",
+"venue": "Jimmy Kimmel's Comedy Club",
+"venueCity": "Las Vegas",
+"state": "NV",
+"address": "3545 S Las Vegas Blvd",
+"lat": 36.11793,
+"lng": -115.171531,
+"url": "https://www.ticketmaster.com/jon-rudnitsky-at-jimmy-kimmels-comedy-las-vegas-nevada-01-15-2027/event/39006556CBF0AF70",
+"priceMin": null,
+"priceMax": null,
+"subGenre": "Comedy",
+"attractions": [
+"Jon Rudnitsky",
+"Jimmy Kimmel's Comedy Club - Las Vegas"
+],
+"ageRestricted": false
+},
+{
+"city": "LAS",
+"id": "1AyZk4FGkdrGthH",
+"name": "Laugh Factory Las Vegas",
+"date": "2027-01-15",
+"time": "22:30",
+"status": "onsale",
+"venue": "Laugh Factory at Horseshoe Las Vegas",
+"venueCity": "Las Vegas",
+"state": "NV",
+"address": "3645 Las Vegas Blvd. South",
+"lat": 36.11376452,
+"lng": -115.16889906,
+"url": "https://www.ticketmaster.com/laugh-factory-las-vegas-las-vegas-nevada-01-15-2027/event/39006548DE3296FC",
+"priceMin": null,
+"priceMax": null,
+"subGenre": "Comedy",
+"attractions": [
+"Laugh Factory Las Vegas"
 ],
 "ageRestricted": false
 },
@@ -28534,28 +28347,6 @@
 },
 {
 "city": "MKE",
-"id": "rZ7HnEZ1AfGNF7",
-"name": "Lavell Crawford",
-"date": "2026-11-06",
-"time": "21:00",
-"status": "onsale",
-"venue": "Milwaukee Improv (Main Room)",
-"venueCity": "Brookfield",
-"state": "WI",
-"address": "20110 Lower Union Street",
-"lat": 43.03523,
-"lng": -88.16302,
-"url": "https://www.ticketweb.com/event/lavell-crawford-milwaukee-improv-main-room-tickets/14323204",
-"priceMin": 38.67,
-"priceMax": 57.75,
-"subGenre": "Comedy",
-"attractions": [
-"Lavell Crawford"
-],
-"ageRestricted": false
-},
-{
-"city": "MKE",
 "id": "rZ7HnEZ1AfGNaV",
 "name": "Lavell Crawford",
 "date": "2026-11-07",
@@ -28612,7 +28403,7 @@
 "lat": 43.03523,
 "lng": -88.16302,
 "url": "https://www.ticketweb.com/event/lavell-crawford-milwaukee-improv-main-room-tickets/14323244",
-"priceMin": 38.67,
+"priceMin": 112.47,
 "priceMax": 112.47,
 "subGenre": "Comedy",
 "attractions": [
@@ -29876,28 +29667,6 @@
 },
 {
 "city": "NYC",
-"id": "1AdZZ_8GkY7m5q7",
-"name": "Olivia Carter",
-"date": "2026-11-06",
-"time": "22:00",
-"status": "onsale",
-"venue": "The Bell House",
-"venueCity": "Brooklyn",
-"state": "NY",
-"address": "149 7th Street",
-"lat": 40.67373,
-"lng": -73.99156,
-"url": "https://www.ticketmaster.com/olivia-carter-brooklyn-new-york-11-06-2026/event/3000650C04B8B744",
-"priceMin": null,
-"priceMax": null,
-"subGenre": "Comedy",
-"attractions": [
-"Olivia Carter"
-],
-"ageRestricted": false
-},
-{
-"city": "NYC",
 "id": "1AYZkfoGkd-E_Nw",
 "name": "Jay Jurden",
 "date": "2026-11-07",
@@ -29978,7 +29747,7 @@
 "lng": -73.957775,
 "url": "https://www.ticketweb.com/event/andrew-dice-clay-west-nyack-levity-live-tickets/14303344",
 "priceMin": 67.55,
-"priceMax": 119.88,
+"priceMax": 67.55,
 "subGenre": "Comedy",
 "attractions": [
 "Andrew Dice Clay"
@@ -30131,8 +29900,8 @@
 "lat": 40.323929,
 "lng": -74.644334,
 "url": "https://www.ticketweb.com/event/original-last-comic-standing-winner-hyatt-regency-princeton-tickets/14289704",
-"priceMin": 33.27,
-"priceMax": 42.5,
+"priceMin": 36.35,
+"priceMax": 46.61,
 "subGenre": "Comedy",
 "attractions": [
 "Dat Phan"
@@ -37578,28 +37347,6 @@
 },
 {
 "city": "PHX",
-"id": "1A_ZkoPGkdGi1SU",
-"name": "Daniel Tosh: My First Farewell Tour",
-"date": "2026-11-06",
-"time": "20:00",
-"status": "onsale",
-"venue": "Arizona Financial Theatre",
-"venueCity": "Phoenix",
-"state": "AZ",
-"address": "400 West Washington Street",
-"lat": 33.448775,
-"lng": -112.079564,
-"url": "https://www.ticketmaster.com/daniel-tosh-my-first-farewell-tour-phoenix-arizona-11-06-2026/event/19006465CCB0ACF6",
-"priceMin": null,
-"priceMax": null,
-"subGenre": "Comedy",
-"attractions": [
-"Daniel Tosh"
-],
-"ageRestricted": false
-},
-{
-"city": "PHX",
 "id": "17k8v0G61h-jh_2",
 "name": "Dougie Hall",
 "date": "2026-11-07",
@@ -38223,6 +37970,50 @@
 "subGenre": "Comedy",
 "attractions": [
 "Georgie Carroll"
+],
+"ageRestricted": false
+},
+{
+"city": "PHX",
+"id": "1Av0Z_KGksDpwOX",
+"name": "Iliza Shlesinger",
+"date": "2027-01-15",
+"time": "20:00",
+"status": "onsale",
+"venue": "The Showroom at Wild Horse Pass Resort & Casino",
+"venueCity": "Chandler",
+"state": "AZ",
+"address": "5040 Wild Horse Pass Blvd",
+"lat": 33.281669,
+"lng": -111.973712,
+"url": "https://www.ticketmaster.com/iliza-shlesinger-chandler-arizona-01-15-2027/event/1900653C7B5B283E",
+"priceMin": null,
+"priceMax": null,
+"subGenre": "Comedy",
+"attractions": [
+"Iliza Shlesinger"
+],
+"ageRestricted": true
+},
+{
+"city": "PHX",
+"id": "1kk8vP36GAuSdsz",
+"name": "Iliza Shlesinger | Official Ticket + Hotel Packages",
+"date": "2027-01-15",
+"time": "20:00",
+"status": "onsale",
+"venue": "The Showroom at Wild Horse Pass Resort & Casino",
+"venueCity": "Chandler",
+"state": "AZ",
+"address": "5040 Wild Horse Pass Blvd",
+"lat": 33.281669,
+"lng": -111.973712,
+"url": "https://travel.ticketmaster.com/tm-event/1900653C7B5B283E?_uid=2ec5b68a-9d83-4aed-b0bf-f2c4534d2ad8&utm_source=Gila&utm_medium=TM_ADP_Iliza-Shlesinger-0115",
+"priceMin": null,
+"priceMax": null,
+"subGenre": "Comedy",
+"attractions": [
+"Iliza Shlesinger"
 ],
 "ageRestricted": false
 },
