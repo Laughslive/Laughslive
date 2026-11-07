@@ -1,4 +1,6 @@
 name: Ticketmaster comedy feed
+# Every morning: download Ticketmaster's stand-up listings, merge them into the site,
+# rebuild the city pages, publish, and notify search engines. Runs without Claude.
 on:
   schedule:
     - cron: "17 9 * * *"   # daily, ~4-5am Eastern
@@ -13,20 +15,30 @@ jobs:
       - name: Fetch comedy events
         env:
           TM_API_KEY: ${{ secrets.TM_API_KEY }}
-        run: python3 tools/fetch_ticketmaster.py
-      - name: Commit if changed
+        run: |
+          python3 tools/fetch_ticketmaster.py
+          cp data/ticketmaster.json "$RUNNER_TEMP/tm.json"
+      - name: Merge into the site, rebuild city pages, publish
+        id: publish
         run: |
           git config user.name "LaughsLive"
           git config user.email "laughslive@users.noreply.github.com"
-          cp data/ticketmaster.json "$RUNNER_TEMP/tm.json"
-          # Other commits may have landed while this job ran: start from the latest main each try.
+          # Other commits (e.g. the Claude update) may land while this runs: start from the latest main each try.
           for i in 1 2 3; do
             git fetch -q origin main && git reset -q --hard origin/main
             cp "$RUNNER_TEMP/tm.json" data/ticketmaster.json
-            git add data/ticketmaster.json
-            if git diff --cached --quiet; then echo "No changes"; exit 0; fi
+            python3 tools/merge_ticketmaster.py index.html data/ticketmaster.json
+            python3 tools/check_script.py
+            python3 tools/build_pages.py
+            git add -A
+            if git diff --cached --quiet; then echo "No changes"; echo "pushed=no" >> "$GITHUB_OUTPUT"; exit 0; fi
             git commit -q -m "Ticketmaster feed $(date -u +%F)"
-            if git push -q origin HEAD:main; then exit 0; fi
+            if git push -q origin HEAD:main; then echo "pushed=yes" >> "$GITHUB_OUTPUT"; exit 0; fi
             sleep 5
           done
           exit 1
+      - name: Notify search engines (IndexNow)
+        if: steps.publish.outputs.pushed == 'yes'
+        run: |
+          sleep 90
+          python3 tools/indexnow.py
