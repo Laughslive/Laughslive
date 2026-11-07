@@ -125,7 +125,16 @@ def head_html(title, desc, url):
             f'<meta property="og:type" content="website"><meta property="og:site_name" content="LaughsLive">'
             f'<meta property="og:title" content="{e(title)}"><meta property="og:description" content="{e(desc)}">'
             f'<meta property="og:url" content="{url}"><meta name="twitter:card" content="summary">'
-            f"<script>window.LL_SITE=1</script>{extra}")
+            '<link rel="manifest" href="/manifest.webmanifest"><meta name="theme-color" content="#0A0E22">'
+            '<link rel="icon" type="image/png" sizes="32x32" href="/icons/favicon-32.png">'
+            '<link rel="icon" type="image/png" sizes="192x192" href="/icons/icon-192.png">'
+            '<link rel="apple-touch-icon" href="/icons/apple-touch-icon.png">'
+            '<meta name="apple-mobile-web-app-capable" content="yes"><meta name="mobile-web-app-capable" content="yes">'
+            '<meta name="apple-mobile-web-app-title" content="LaughsLive">'
+            '<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">'
+            '<script>window.LL_SITE=1;if("serviceWorker"in navigator)addEventListener("load",()=>navigator.serviceWorker.register("/sw.js").catch(()=>{}))</script>'
+            '<script defer src="/install.js"></script>'
+            f"{extra}")
 
 def set_title_desc(page, title, desc):
     page = re.sub(r"<title>.*?</title>", lambda m: f"<title>{html.escape(title)}</title>", page, count=1, flags=re.S)

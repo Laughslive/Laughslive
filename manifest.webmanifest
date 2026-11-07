@@ -1,0 +1,18 @@
+{
+  "name": "LaughsLive: Comedy Shows Near You",
+  "short_name": "LaughsLive",
+  "description": "Upcoming stand-up, improv and live podcast shows near you, with links to the venue's own tickets.",
+  "id": "/",
+  "start_url": "/",
+  "scope": "/",
+  "display": "standalone",
+  "orientation": "portrait",
+  "background_color": "#0A0E22",
+  "theme_color": "#0A0E22",
+  "categories": ["entertainment", "lifestyle"],
+  "icons": [
+    {"src": "/icons/icon-192.png", "sizes": "192x192", "type": "image/png", "purpose": "any"},
+    {"src": "/icons/icon-512.png", "sizes": "512x512", "type": "image/png", "purpose": "any"},
+    {"src": "/icons/icon-512.png", "sizes": "512x512", "type": "image/png", "purpose": "maskable"}
+  ]
+}
