@@ -140,8 +140,8 @@ def main():
     shows = city_shows()
 
     # Home page
-    title = "LaughsLive: Comedy Shows Near You in 29 Cities"
-    desc = ("Find upcoming stand-up comedy, improv and live podcast shows in 29 cities, including New York, "
+    title = "LaughsLive: Comedy Shows Near You"
+    desc = ("Find upcoming stand-up comedy, improv and live podcast shows near you, in cities including New York, "
             "Chicago, Las Vegas, Austin, Dallas, Boston, Philadelphia, Washington D.C., Atlanta, Denver and Miami.")
     home = set_title_desc(base, title, desc)
     home = put_block(home, "head", head_html(title, desc, SITE + "/"), "</head>")
