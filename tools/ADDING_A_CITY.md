@@ -19,3 +19,8 @@
 4. Run `python3 tools/build_pages.py`. It refuses to build (and says what's missing) if step 1 and step 2 disagree.
 
 Then run the "Ticketmaster comedy feed" action once from GitHub's Actions tab to pull the new city's shows right away.
+
+## Scheduled updates
+The twice-weekly updates are split into two runs that follow `tools/update/east.md`
+(Northeast, Mid-Atlantic, South) and `tools/update/west.md` (Midwest, West).
+When you add a city, add it to the area list, region list and venue list in the matching file.
