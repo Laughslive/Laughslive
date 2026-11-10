@@ -149,8 +149,11 @@ def main(page_path, data_path="data/ticketmaster.json"):
     page = head + vblock + page[v_end:]
     r_end = page.index("\n];", page.index("const RAW=["))
     head = page[:r_end].rstrip()
-    if not head.endswith(",") and not head.endswith("["):
-        head += ","
+    last_row = [l for l in head.splitlines() if l.strip() and not l.strip().startswith("//")][-1].rstrip()
+    if not last_row.endswith(",") and not last_row.endswith("["):
+        # add the missing comma after the last real row, not after a trailing comment
+        i = head.rindex(last_row) + len(last_row)
+        head = head[:i] + "," + head[i:]
     page = head + rblock + page[r_end:]
     open(page_path, "w", encoding="utf-8").write(page)
     from collections import Counter

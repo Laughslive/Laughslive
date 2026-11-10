@@ -464,6 +464,81 @@
     "AZ"
    ],
    "nearby": "the Strip, Downtown and Fremont Street, Henderson and Summerlin"
+  },
+  {
+   "code": "LA",
+   "slug": "los-angeles",
+   "name": "Los Angeles",
+   "short": "Los Angeles",
+   "region": "West",
+   "center": [
+    34.0522,
+    -118.2437
+   ],
+   "states": [
+    "CA"
+   ],
+   "nearby": "Hollywood, West Hollywood, Santa Monica, the Valley, Pasadena, Long Beach and Orange County"
+  },
+  {
+   "code": "SFO",
+   "slug": "san-francisco-bay-area",
+   "name": "San Francisco Bay Area",
+   "short": "the Bay Area",
+   "region": "West",
+   "center": [
+    37.7749,
+    -122.4194
+   ],
+   "states": [
+    "CA"
+   ],
+   "nearby": "San Francisco, Oakland, Berkeley, San Jose, Palo Alto and Marin"
+  },
+  {
+   "code": "SEA",
+   "slug": "seattle",
+   "name": "Seattle",
+   "short": "Seattle",
+   "region": "West",
+   "center": [
+    47.6062,
+    -122.3321
+   ],
+   "states": [
+    "WA"
+   ],
+   "nearby": "Capitol Hill, Pioneer Square, Ballard, Bellevue, Tacoma and Everett"
+  },
+  {
+   "code": "HOU",
+   "slug": "houston",
+   "name": "Houston",
+   "short": "Houston",
+   "region": "South",
+   "center": [
+    29.7604,
+    -95.3698
+   ],
+   "states": [
+    "TX"
+   ],
+   "nearby": "Montrose, the Heights, Midtown, Sugar Land, Katy, the Woodlands and Galveston"
+  },
+  {
+   "code": "SAN",
+   "slug": "san-diego",
+   "name": "San Diego",
+   "short": "San Diego",
+   "region": "West",
+   "center": [
+    32.7157,
+    -117.1611
+   ],
+   "states": [
+    "CA"
+   ],
+   "nearby": "the Gaslamp, La Jolla, Pacific Beach, North Park, Chula Vista and Oceanside"
   }
  ]
 }
