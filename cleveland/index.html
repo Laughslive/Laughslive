@@ -336,6 +336,7 @@ const V={
  hyenasdal:{n:"Hyena's Comedy Nightclub",area:"Lower Greenville / Mockingbird",b:"Dallas",c:"DFW",lat:32.8370,lng:-96.7720},
  comedystore:{n:"The Comedy Store",area:"Sunset Strip",b:"West Hollywood",c:"LA",lat:34.0956,lng:-118.3735},
  largo:{n:"Largo at the Coronet",area:"Beverly Grove",b:"Los Angeles",c:"LA",lat:34.0775,lng:-118.3763},
+ amcomedy:{n:"The American Comedy Co.",area:"Gaslamp Quarter",b:"San Diego",c:"SAN",lat:32.7148,lng:-117.1590},
 // <tm-venues>  (added automatically from the Ticketmaster feed; rebuilt each update)
  tm_trilith_live:{n:"Trilith LIVE",area:"Fayetteville",b:"GA",c:"ATL",lat:33.4726,lng:-84.5068},
  tm_gas_south_arena:{n:"Gas South Arena",area:"Duluth",b:"GA",c:"ATL",lat:33.9869,lng:-84.0907},
@@ -538,6 +539,7 @@ for(const k in V)V[k].c??=(V[k].b==="Philadelphia"?"PHL":"NYC");
 // Venues' own websites / box offices. Ticket buttons use these instead of
 // listing or resale sites whenever a show's link points at one of those.
 const SITES={
+ amcomedy:"https://americancomedyco.com/",
  comedystore:"https://thecomedystore.com/calendar",largo:"https://www.largo-la.com/",
  zanies:"https://nashville.zanies.com/",zlab:"https://nashville.zanies.com/",zanieschi:"https://chicago.zanies.com/",
  miaimprov:"https://www.miamiimprov.com/",secondcity:"https://www.secondcity.com/shows/chicago/the-second-city-mainstage-114th-revue-chi",
@@ -2163,6 +2165,22 @@ const RAW=[
  // Seattle
  // Houston
  // San Diego
+ ["2026-11-12","20:00","Pete Holmes","Pete Holmes","amcomedy",S,"https://americancomedyco.com/",null],
+ ["2026-11-13","19:00|21:00","Pete Holmes","Pete Holmes","amcomedy",S,"https://americancomedyco.com/",null],
+ ["2026-11-14","19:00|21:00","Pete Holmes","Pete Holmes","amcomedy",S,"https://americancomedyco.com/",null],
+ ["2026-11-20","19:00|21:00","Carlos Mencia","Carlos Mencia","amcomedy",S,"https://americancomedyco.com/",null],
+ ["2026-11-21","19:00|21:00","Carlos Mencia","Carlos Mencia","amcomedy",S,"https://americancomedyco.com/",null],
+ ["2026-11-22","19:00","Carlos Mencia","Carlos Mencia","amcomedy",S,"https://americancomedyco.com/",null],
+ ["2026-11-27","19:00|21:00","Kevin Nealon","Kevin Nealon","amcomedy",S,"https://americancomedyco.com/",null],
+ ["2026-11-28","19:00|21:00","Kevin Nealon","Kevin Nealon","amcomedy",S,"https://americancomedyco.com/",null],
+ ["2026-12-03","20:00","Joey Avery","Joey Avery","amcomedy",S,"https://americancomedyco.com/",null],
+ ["2026-12-04","19:00|21:00","Joey Avery","Joey Avery","amcomedy",S,"https://americancomedyco.com/",null],
+ ["2026-12-05","19:00|21:00","Joey Avery","Joey Avery","amcomedy",S,"https://americancomedyco.com/",null],
+ ["2026-12-11","19:00|21:00","Yannis Pappas","Yannis Pappas","amcomedy",S,"https://americancomedyco.com/",null],
+ ["2026-12-12","19:00|21:00","Yannis Pappas","Yannis Pappas","amcomedy",S,"https://americancomedyco.com/",null],
+ ["2026-12-18","19:00|21:00","Desi Banks","Desi Banks","amcomedy",S,"https://americancomedyco.com/",null],
+ ["2026-12-19","19:00|21:00","Desi Banks","Desi Banks","amcomedy",S,"https://americancomedyco.com/",null],
+ ["2026-12-20","19:00","Desi Banks","Desi Banks","amcomedy",S,"https://americancomedyco.com/",null],
 // <tm>  (Ticketmaster feed, fetched 2026-11-10; rebuilt each update — don't edit by hand)
  ["2026-11-13","19:00","JK Live!","","centerstage",S,"https://www.ticketmaster.com/jk-live-atlanta-georgia-11-13-2026/event/0E0064FBBAB2D769",null],
  ["2026-11-19","19:00","Adam Ray: WHO IS ME Tour","Adam Ray","buckhead",S,"https://www.ticketmaster.com/adam-ray-who-is-me-tour-atlanta-georgia-11-19-2026/event/0E00649708FB8F3A",null],
