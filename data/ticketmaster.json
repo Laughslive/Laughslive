@@ -1,5 +1,5 @@
 {
-"fetched": "2026-11-10T10:01:22+00:00",
+"fetched": "2026-11-11T10:07:29+00:00",
 "source": "Ticketmaster Discovery API",
 "events": [
 {
@@ -73,7 +73,7 @@
 "date": "2026-11-19",
 "time": "19:00",
 "status": "rescheduled",
-"venue": "Buckhead Theatre",
+"venue": "Buckhead Theatre by SCANA Energy",
 "venueCity": "Atlanta",
 "state": "GA",
 "address": "3110 Roswell Rd",
@@ -183,7 +183,7 @@
 "date": "2026-12-04",
 "time": "19:30",
 "status": "onsale",
-"venue": "Buckhead Theatre",
+"venue": "Buckhead Theatre by SCANA Energy",
 "venueCity": "Atlanta",
 "state": "GA",
 "address": "3110 Roswell Rd",
@@ -231,7 +231,7 @@
 "date": "2026-12-07",
 "time": "19:30",
 "status": "onsale",
-"venue": "Buckhead Theatre",
+"venue": "Buckhead Theatre by SCANA Energy",
 "venueCity": "Atlanta",
 "state": "GA",
 "address": "3110 Roswell Rd",
@@ -253,7 +253,7 @@
 "date": "2026-12-10",
 "time": "19:00",
 "status": "onsale",
-"venue": "Buckhead Theatre",
+"venue": "Buckhead Theatre by SCANA Energy",
 "venueCity": "Atlanta",
 "state": "GA",
 "address": "3110 Roswell Rd",
@@ -275,7 +275,7 @@
 "date": "2026-12-11",
 "time": "19:00",
 "status": "onsale",
-"venue": "Buckhead Theatre",
+"venue": "Buckhead Theatre by SCANA Energy",
 "venueCity": "Atlanta",
 "state": "GA",
 "address": "3110 Roswell Rd",
@@ -297,7 +297,7 @@
 "date": "2026-12-11",
 "time": "21:30",
 "status": "onsale",
-"venue": "Buckhead Theatre",
+"venue": "Buckhead Theatre by SCANA Energy",
 "venueCity": "Atlanta",
 "state": "GA",
 "address": "3110 Roswell Rd",
@@ -319,7 +319,7 @@
 "date": "2026-12-18",
 "time": "18:30",
 "status": "onsale",
-"venue": "Buckhead Theatre",
+"venue": "Buckhead Theatre by SCANA Energy",
 "venueCity": "Atlanta",
 "state": "GA",
 "address": "3110 Roswell Rd",
@@ -341,7 +341,7 @@
 "date": "2026-12-18",
 "time": "21:30",
 "status": "onsale",
-"venue": "Buckhead Theatre",
+"venue": "Buckhead Theatre by SCANA Energy",
 "venueCity": "Atlanta",
 "state": "GA",
 "address": "3110 Roswell Rd",
@@ -363,7 +363,7 @@
 "date": "2026-12-20",
 "time": "16:00",
 "status": "onsale",
-"venue": "Buckhead Theatre",
+"venue": "Buckhead Theatre by SCANA Energy",
 "venueCity": "Atlanta",
 "state": "GA",
 "address": "3110 Roswell Rd",
@@ -385,7 +385,7 @@
 "date": "2026-12-20",
 "time": "19:30",
 "status": "onsale",
-"venue": "Buckhead Theatre",
+"venue": "Buckhead Theatre by SCANA Energy",
 "venueCity": "Atlanta",
 "state": "GA",
 "address": "3110 Roswell Rd",
@@ -441,28 +441,6 @@
 "subGenre": "Comedy",
 "attractions": [
 "Michael Blaustein"
-],
-"ageRestricted": false
-},
-{
-"city": "AUS",
-"id": "Z7r9jZ1AAe8fZ",
-"name": "Reem Edan",
-"date": "2026-11-10",
-"time": "19:30",
-"status": "onsale",
-"venue": "Cap City Comedy Club",
-"venueCity": "Austin",
-"state": "TX",
-"address": "8120 Research Blvd #100",
-"lat": 30.3878,
-"lng": -97.707199,
-"url": "https://www.ticketmaster.com/event/Z7r9jZ1AAe8fZ",
-"priceMin": null,
-"priceMax": null,
-"subGenre": "Comedy",
-"attractions": [
-"Reem Edan"
 ],
 "ageRestricted": false
 },
@@ -1195,7 +1173,7 @@
 {
 "city": "BAL",
 "id": "17A8v0G6GRLowuT",
-"name": "DONNELL RAWLINGS: THE UNSPEAKABLE TOUR",
+"name": "DONNELL RAWLINGS: Love Lies & Therapy Tour",
 "date": "2026-11-28",
 "time": "20:00",
 "status": "onsale",
@@ -1205,7 +1183,7 @@
 "address": "101 MGM National Ave",
 "lat": 38.791707,
 "lng": -77.003002,
-"url": "https://www.ticketmaster.com/donnell-rawlings-the-unspeakable-tour-national-harbor-maryland-11-28-2026/event/150064CBDF47237F",
+"url": "https://www.ticketmaster.com/donnell-rawlings-love-lies-therapy-tour-national-harbor-maryland-11-28-2026/event/150064CBDF47237F",
 "priceMin": null,
 "priceMax": null,
 "subGenre": "Comedy",
@@ -1498,6 +1476,26 @@
 "attractions": [
 "A John Waters Christmas"
 ],
+"ageRestricted": true
+},
+{
+"city": "BAL",
+"id": "1A4Zk4JGketfAp-",
+"name": "New Year's Comedy Jam",
+"date": "2027-01-01",
+"time": "20:00",
+"status": "offsale",
+"venue": "DAR Constitution Hall",
+"venueCity": "Washington",
+"state": "DC",
+"address": "1776 D Street NW",
+"lat": 38.89423638,
+"lng": -77.04092216,
+"url": "https://www.ticketmaster.com/new-years-comedy-jam-washington-district-of-columbia-01-01-2027/event/15006566A95055A1",
+"priceMin": null,
+"priceMax": null,
+"subGenre": "Comedy",
+"attractions": [],
 "ageRestricted": true
 },
 {
@@ -5892,26 +5890,6 @@
 "attractions": [
 "HYPROV: Improv Under Hypnosis."
 ],
-"ageRestricted": false
-},
-{
-"city": "DFW",
-"id": "1atZk4PavZoZe56",
-"name": "Test Your Mic",
-"date": "2026-11-10",
-"time": "18:30",
-"status": "onsale",
-"venue": "Arlington Improv",
-"venueCity": "Arlington",
-"state": "TX",
-"address": "309 Curtis Mathes Way #147",
-"lat": 32.68074,
-"lng": -97.107349,
-"url": "https://www.ticketweb.com/event/test-your-mic-arlington-improv-tickets/15045423?REFERRAL_ID=tmfeed",
-"priceMin": null,
-"priceMax": null,
-"subGenre": "Comedy",
-"attractions": [],
 "ageRestricted": false
 },
 {
@@ -11392,7 +11370,7 @@
 "id": "1718v0G61NjvoYQ",
 "name": "T. Murph",
 "date": "2026-12-13",
-"time": "19:30",
+"time": "20:30",
 "status": "onsale",
 "venue": "Houston Improv",
 "venueCity": "Houston",
@@ -12740,76 +12718,6 @@
 },
 {
 "city": "LA",
-"id": "rZ7HnEZ1AfuJvV",
-"name": "Tonight at the Improv ft. Chelsea Handler, Jay Leno, Jessica Kirson, Jay Pharoah, Brian Monarch, Brittany Ross and Very Special Guests",
-"date": "2026-11-10",
-"time": "19:30",
-"status": "onsale",
-"venue": "Hollywood Improv (The Main Room) ",
-"venueCity": "Hollywood",
-"state": "CA",
-"address": "8162 Melrose Avenue",
-"lat": 34.083418,
-"lng": -118.366556,
-"url": "https://www.ticketweb.com/event/tonight-at-the-improv-ft-hollywood-improv-the-main-room-tickets/14366074",
-"priceMin": 44.79,
-"priceMax": 44.79,
-"subGenre": "Comedy",
-"attractions": [
-"Chelsea Handler",
-"Jay Leno",
-"Jessica Kirson",
-"Jay Pharoah"
-],
-"ageRestricted": false
-},
-{
-"city": "LA",
-"id": "rZ7HnEZ1AfuOe7",
-"name": "Just Pull Up ft. Dulcé Sloan, Camille Waters, Jay Washington, Fatimah Taliah, Solomon Georgio, Bresha Webb, Jordan Conley and more TBA",
-"date": "2026-11-10",
-"time": "19:30",
-"status": "onsale",
-"venue": "Hollywood Improv (The Lab)",
-"venueCity": "Hollywood",
-"state": "CA",
-"address": "8162 Melrose Avenue",
-"lat": 34.0834329,
-"lng": -118.367284,
-"url": "https://www.ticketweb.com/event/just-pull-up-ft-dulc-hollywood-improv-the-lab-tickets/14360084",
-"priceMin": 24.19,
-"priceMax": 24.19,
-"subGenre": "Comedy",
-"attractions": [
-"Dulcé Sloan",
-"Solomon Georgio"
-],
-"ageRestricted": false
-},
-{
-"city": "LA",
-"id": "rZ7HnEZ1AfuZ0V",
-"name": "Deon Cole: Does This Work?",
-"date": "2026-11-10",
-"time": "21:30",
-"status": "onsale",
-"venue": "Hollywood Improv (The Lab)",
-"venueCity": "Hollywood",
-"state": "CA",
-"address": "8162 Melrose Avenue",
-"lat": 34.0834329,
-"lng": -118.367284,
-"url": "https://www.ticketweb.com/event/deon-cole-does-this-work-hollywood-improv-the-lab-tickets/14340934",
-"priceMin": 24.19,
-"priceMax": 24.19,
-"subGenre": "Comedy",
-"attractions": [
-"Deon Cole"
-],
-"ageRestricted": false
-},
-{
-"city": "LA",
 "id": "vv1AaZkfyGkdypE9k",
 "name": "Sexy Unique Podcast",
 "date": "2026-11-11",
@@ -13686,7 +13594,7 @@
 {
 "city": "LA",
 "id": "rZ7HnEZ1Afuej0",
-"name": "Tonight at the Improv ft.  Ray Romano, Jay Leno, Craig Robinson, Brian Monarch and Very Special Guests",
+"name": "Tonight at the Improv ft.  Ray Romano, Jay Leno, Iliza Shlesinger, Craig Robinson, Brian Monarch, Leah Knauer, and Very Special Guests",
 "date": "2026-11-17",
 "time": "19:30",
 "status": "onsale",
@@ -13703,6 +13611,7 @@
 "attractions": [
 "Ray Romano",
 "Jay Leno",
+"Iliza Shlesinger",
 "Craig Robinson"
 ],
 "ageRestricted": false
@@ -14419,6 +14328,28 @@
 },
 {
 "city": "LA",
+"id": "rZ7HnEZ1Af8M_7",
+"name": "Jeff Dye",
+"date": "2026-11-22",
+"time": "20:30",
+"status": "onsale",
+"venue": "Ontario Improv",
+"venueCity": "Ontario",
+"state": "CA",
+"address": "4555 Mills Cir",
+"lat": 34.074345,
+"lng": -117.550029,
+"url": "https://www.ticketweb.com/event/jeff-dye-ontario-improv-tickets/14437644",
+"priceMin": 37.17,
+"priceMax": 55.5,
+"subGenre": "Comedy",
+"attractions": [
+"Jeff Dye"
+],
+"ageRestricted": false
+},
+{
+"city": "LA",
 "id": "rZ7HnEZ1AfuZP7",
 "name": "Deon Cole: Does This Work?",
 "date": "2026-11-22",
@@ -15042,6 +14973,26 @@
 },
 {
 "city": "LA",
+"id": "vv170Z_pGkn26kW4",
+"name": "The Basement Series - Vinyl Room @ the Palladium",
+"date": "2026-12-01",
+"time": "20:00",
+"status": "offsale",
+"venue": "Hollywood Palladium",
+"venueCity": "Hollywood",
+"state": "CA",
+"address": "6215 Sunset Blvd",
+"lat": 34.09850537,
+"lng": -118.32421313,
+"url": "https://www.ticketmaster.com/the-basement-series-vinyl-room-the-hollywood-california-12-01-2026/event/0900656A8F1C6F55",
+"priceMin": null,
+"priceMax": null,
+"subGenre": "Comedy",
+"attractions": [],
+"ageRestricted": false
+},
+{
+"city": "LA",
 "id": "rZ7HnEZ1Af-Ffd",
 "name": "Comedy Juice Featuring: Cole Garrett, Masey Isaacs, Mike Falzone, and a Special Guest!",
 "date": "2026-12-01",
@@ -15479,6 +15430,29 @@
 "subGenre": "Comedy",
 "attractions": [
 "Dulcé Sloan"
+],
+"ageRestricted": false
+},
+{
+"city": "LA",
+"id": "rZ7HnEZ1Af8z_V",
+"name": "An Evening at the Improv featuring Arijana Ramic, Radu Bondar, Darren Carter, Monarey Martinez, Orlando Leyba, and Clay Newman!",
+"date": "2026-12-08",
+"time": "20:00",
+"status": "onsale",
+"venue": "Irvine Improv",
+"venueCity": "Irvine",
+"state": "CA",
+"address": "527 Spectrum Center Dr.",
+"lat": 33.652275,
+"lng": -117.744924,
+"url": "https://www.ticketweb.com/event/aneveningattheimprovfeaturing-arijana-ramic-radu-bondar-irvine-improv-tickets/14438674",
+"priceMin": 31.14,
+"priceMax": 83.16,
+"subGenre": "Comedy",
+"attractions": [
+"Darren Carter",
+"Orlando Leyba"
 ],
 "ageRestricted": false
 },
@@ -17201,6 +17175,28 @@
 },
 {
 "city": "LA",
+"id": "rZ7HnEZ1Af8Upf",
+"name": "The Comedy Spotlight w/ Chris Millhouse",
+"date": "2026-12-30",
+"time": "19:30",
+"status": "onsale",
+"venue": "Irvine Improv",
+"venueCity": "Irvine",
+"state": "CA",
+"address": "527 Spectrum Center Dr.",
+"lat": 33.652275,
+"lng": -117.744924,
+"url": "https://www.ticketweb.com/event/the-comedy-spotlight-w-chris-irvine-improv-tickets/14436594",
+"priceMin": 31.14,
+"priceMax": 101.65,
+"subGenre": "Comedy",
+"attractions": [
+"Chris Millhouse"
+],
+"ageRestricted": false
+},
+{
+"city": "LA",
 "id": "rZ7HnEZ1AfGdJf",
 "name": "Pete Lee",
 "date": "2026-12-31",
@@ -17927,6 +17923,28 @@
 },
 {
 "city": "LA",
+"id": "rZ7HnEZ1Af8yZ7",
+"name": "Usama Siddiquee",
+"date": "2027-01-08",
+"time": "19:30",
+"status": "onsale",
+"venue": "Corona Improv",
+"venueCity": "Corona",
+"state": "CA",
+"address": "2710 Lakeshore Dr",
+"lat": 33.8139578,
+"lng": -117.5096982,
+"url": "https://www.ticketweb.com/event/usama-siddiquee-corona-improv-tickets/14439004",
+"priceMin": 43.19,
+"priceMax": 43.19,
+"subGenre": "Comedy",
+"attractions": [
+"Usama Siddiquee"
+],
+"ageRestricted": false
+},
+{
+"city": "LA",
 "id": "rZ7HnEZ1A4v3xK",
 "name": "Lavell Crawford",
 "date": "2027-01-08",
@@ -17971,6 +17989,28 @@
 },
 {
 "city": "LA",
+"id": "rZ7HnEZ1Af8yZ0",
+"name": "Usama Siddiquee",
+"date": "2027-01-08",
+"time": "21:45",
+"status": "onsale",
+"venue": "Corona Improv",
+"venueCity": "Corona",
+"state": "CA",
+"address": "2710 Lakeshore Dr",
+"lat": 33.8139578,
+"lng": -117.5096982,
+"url": "https://www.ticketweb.com/event/usama-siddiquee-corona-improv-tickets/14439024",
+"priceMin": 43.19,
+"priceMax": 43.19,
+"subGenre": "Comedy",
+"attractions": [
+"Usama Siddiquee"
+],
+"ageRestricted": false
+},
+{
+"city": "LA",
 "id": "rZ7HnEZ1A4v3xd",
 "name": "Lavell Crawford",
 "date": "2027-01-09",
@@ -17993,6 +18033,28 @@
 },
 {
 "city": "LA",
+"id": "rZ7HnEZ1Af8yZf",
+"name": "Usama Siddiquee",
+"date": "2027-01-09",
+"time": "18:00",
+"status": "onsale",
+"venue": "Corona Improv",
+"venueCity": "Corona",
+"state": "CA",
+"address": "2710 Lakeshore Dr",
+"lat": 33.8139578,
+"lng": -117.5096982,
+"url": "https://www.ticketweb.com/event/usama-siddiquee-corona-improv-tickets/14439014",
+"priceMin": 49.22,
+"priceMax": 49.22,
+"subGenre": "Comedy",
+"attractions": [
+"Usama Siddiquee"
+],
+"ageRestricted": false
+},
+{
+"city": "LA",
 "id": "rZ7HnEZ1Afea-0",
 "name": "Craig Robinson",
 "date": "2027-01-09",
@@ -18010,6 +18072,28 @@
 "subGenre": "Comedy",
 "attractions": [
 "Craig Robinson"
+],
+"ageRestricted": false
+},
+{
+"city": "LA",
+"id": "vvG1iZ_pCrJein",
+"name": "NURSE JOHN: AGAINST MEDICAL ADVICE: READMITTED",
+"date": "2027-01-09",
+"time": "19:00",
+"status": "offsale",
+"venue": "Fox Performing Arts Center",
+"venueCity": "Riverside",
+"state": "CA",
+"address": "3801 Mission Inn Avenue",
+"lat": 33.98376036,
+"lng": -117.37533193,
+"url": "https://www.ticketmaster.com/nurse-john-against-medical-advice-readmitted-riverside-california-01-09-2027/event/0B0065639E982B2A",
+"priceMin": null,
+"priceMax": null,
+"subGenre": "Comedy",
+"attractions": [
+"Nurse John"
 ],
 "ageRestricted": false
 },
@@ -18054,6 +18138,28 @@
 "subGenre": "Comedy",
 "attractions": [
 "Lavell Crawford"
+],
+"ageRestricted": false
+},
+{
+"city": "LA",
+"id": "rZ7HnEZ1Af8yvf",
+"name": "Usama Siddiquee",
+"date": "2027-01-09",
+"time": "20:30",
+"status": "onsale",
+"venue": "Corona Improv",
+"venueCity": "Corona",
+"state": "CA",
+"address": "2710 Lakeshore Dr",
+"lat": 33.8139578,
+"lng": -117.5096982,
+"url": "https://www.ticketweb.com/event/usama-siddiquee-corona-improv-tickets/14439054",
+"priceMin": 49.22,
+"priceMax": 49.22,
+"subGenre": "Comedy",
+"attractions": [
+"Usama Siddiquee"
 ],
 "ageRestricted": false
 },
@@ -18120,6 +18226,28 @@
 "subGenre": "Comedy",
 "attractions": [
 "Lavell Crawford"
+],
+"ageRestricted": false
+},
+{
+"city": "LA",
+"id": "rZ7HnEZ1Af8yZV",
+"name": "Usama Siddiquee",
+"date": "2027-01-10",
+"time": "18:00",
+"status": "onsale",
+"venue": "Corona Improv",
+"venueCity": "Corona",
+"state": "CA",
+"address": "2710 Lakeshore Dr",
+"lat": 33.8139578,
+"lng": -117.5096982,
+"url": "https://www.ticketweb.com/event/usama-siddiquee-corona-improv-tickets/14439034",
+"priceMin": 43.19,
+"priceMax": 43.19,
+"subGenre": "Comedy",
+"attractions": [
+"Usama Siddiquee"
 ],
 "ageRestricted": false
 },
@@ -18230,264 +18358,6 @@
 "subGenre": "Comedy",
 "attractions": [
 "Ryan Hamilton"
-],
-"ageRestricted": false
-},
-{
-"city": "LAS",
-"id": "17AYv0G651lW4f5",
-"name": "Popovich Comedy Pet Theater",
-"date": "2026-11-10",
-"time": "14:30",
-"status": "onsale",
-"venue": "V Theater at Planet Hollywood Inside the Miracle Mile Mall",
-"venueCity": "Las Vegas",
-"state": "NV",
-"address": "3663 Las Vegas Blvd South Suite 360A",
-"lat": 36.1101115,
-"lng": -115.1708107,
-"url": "https://www.ticketmaster.com/popovich-comedy-pet-theater-las-vegas-nevada-11-10-2026/event/170064B2ABF5550B",
-"priceMin": null,
-"priceMax": null,
-"subGenre": "Comedy",
-"attractions": [
-"Popovich Comedy Pet Theater"
-],
-"ageRestricted": false
-},
-{
-"city": "LAS",
-"id": "1AyZkfMGkdxrJe6",
-"name": "Rich Little at Laugh Factory Comedy Club",
-"date": "2026-11-10",
-"time": "18:30",
-"status": "onsale",
-"venue": "Laugh Factory at Horseshoe Las Vegas",
-"venueCity": "Las Vegas",
-"state": "NV",
-"address": "3645 Las Vegas Blvd. South",
-"lat": 36.11376452,
-"lng": -115.16889906,
-"url": "https://www.ticketmaster.com/rich-little-at-laugh-factory-comedy-las-vegas-nevada-11-10-2026/event/39006537E27A6087",
-"priceMin": null,
-"priceMax": null,
-"subGenre": "Comedy",
-"attractions": [
-"Rich Little",
-"Laugh Factory Las Vegas"
-],
-"ageRestricted": false
-},
-{
-"city": "LAS",
-"id": "1Ad0Z_eGkSpllPn",
-"name": "Comedy Cellar (Las Vegas)",
-"date": "2026-11-10",
-"time": "19:00",
-"status": "onsale",
-"venue": "Comedy Cellar at Rio Las Vegas",
-"venueCity": "Las Vegas",
-"state": "NV",
-"address": "3700 W Flamingo Rd",
-"lat": 36.117575,
-"lng": -115.187717,
-"url": "https://www.ticketmaster.com/comedy-cellar-las-vegas-las-vegas-nevada-11-10-2026/event/3900642CD6AEB96A",
-"priceMin": null,
-"priceMax": null,
-"subGenre": "Comedy",
-"attractions": [
-"Comedy Cellar (Las Vegas)",
-"Mark Cohen",
-"Landry",
-"Aminah Imani",
-"Jeff Richards",
-"Allan Harvey"
-],
-"ageRestricted": false
-},
-{
-"city": "LAS",
-"id": "G5ezZbzEucpg0",
-"name": "Tape Face",
-"date": "2026-11-10",
-"time": "19:30",
-"status": "onsale",
-"venue": "Underground Theater at MGM Grand",
-"venueCity": "Las Vegas",
-"state": "NV",
-"address": "3799 Las Vegas Blvd South",
-"lat": 36.10226,
-"lng": -115.167991,
-"url": "https://www.ticketmaster.com/tape-face-las-vegas-nevada-11-10-2026/event/2E006389CDB56D64",
-"priceMin": null,
-"priceMax": null,
-"subGenre": "Comedy",
-"attractions": [
-"Tape Face"
-],
-"ageRestricted": false
-},
-{
-"city": "LAS",
-"id": "G5ezZbgZenyhM",
-"name": "BGCC: Kristin Key with Daniel Eachus & Frazer Smith",
-"date": "2026-11-10",
-"time": "20:00",
-"status": "onsale",
-"venue": "Brad Garrett's Comedy Club",
-"venueCity": "Las Vegas",
-"state": "NV",
-"address": "3799 Las Vegas Blvd South Las Vegas",
-"lat": 36.102906,
-"lng": -115.168696,
-"url": "https://www.ticketmaster.com/bgcc-kristin-key-with-daniel-eachus-las-vegas-nevada-11-10-2026/event/2E00635002AB96F7",
-"priceMin": null,
-"priceMax": null,
-"subGenre": "Comedy",
-"attractions": [
-"Brad Garrett's Comedy Club",
-"Kristin Key",
-"Daniel Eachus",
-"Frazer Smith"
-],
-"ageRestricted": false
-},
-{
-"city": "LAS",
-"id": "G5ezZbY9Rvxhb",
-"name": "Carrot Top",
-"date": "2026-11-10",
-"time": "20:00",
-"status": "onsale",
-"venue": "Atrium Showroom at Luxor Hotel and Casino",
-"venueCity": "Las Vegas",
-"state": "NV",
-"address": "3900 Las Vegas Blvd South",
-"lat": 36.095325,
-"lng": -115.175975,
-"url": "https://www.ticketmaster.com/carrot-top-las-vegas-nevada-11-10-2026/event/2E006305EF0626D8",
-"priceMin": null,
-"priceMax": null,
-"subGenre": "Comedy",
-"attractions": [
-"Carrot Top"
-],
-"ageRestricted": false
-},
-{
-"city": "LAS",
-"id": "1Ad0ZbzGkSIoqQL",
-"name": "Nick Thune at Laugh Factory Las Vegas",
-"date": "2026-11-10",
-"time": "20:30",
-"status": "onsale",
-"venue": "Laugh Factory at Horseshoe Las Vegas",
-"venueCity": "Las Vegas",
-"state": "NV",
-"address": "3645 Las Vegas Blvd. South",
-"lat": 36.11376452,
-"lng": -115.16889906,
-"url": "https://www.ticketmaster.com/nick-thune-at-laugh-factory-las-las-vegas-nevada-11-10-2026/event/3900638CE845D69F",
-"priceMin": null,
-"priceMax": null,
-"subGenre": "Comedy",
-"attractions": [
-"Laugh Factory Las Vegas",
-"Nick Thune"
-],
-"ageRestricted": false
-},
-{
-"city": "LAS",
-"id": "17AYv0G6GGHvwXV",
-"name": "Eddie Griffin (Las Vegas)",
-"date": "2026-11-10",
-"time": "20:30",
-"status": "onsale",
-"venue": "Saxe Theater at Planet Hollywood Inside the Miracle Mile Mall",
-"venueCity": "Las Vegas",
-"state": "NV",
-"address": "3663 Las Vegas Blvd South Suite 454A",
-"lat": 36.11012884,
-"lng": -115.1708107,
-"url": "https://www.ticketmaster.com/eddie-griffin-las-vegas-las-vegas-nevada-11-10-2026/event/170064C33C072FB4",
-"priceMin": null,
-"priceMax": null,
-"subGenre": "Comedy",
-"attractions": [
-"Eddie Griffin (Las Vegas)"
-],
-"ageRestricted": false
-},
-{
-"city": "LAS",
-"id": "1Ad0Z_eGkSpiDPi",
-"name": "Comedy Cellar (Las Vegas)",
-"date": "2026-11-10",
-"time": "21:30",
-"status": "onsale",
-"venue": "Comedy Cellar at Rio Las Vegas",
-"venueCity": "Las Vegas",
-"state": "NV",
-"address": "3700 W Flamingo Rd",
-"lat": 36.117575,
-"lng": -115.187717,
-"url": "https://www.ticketmaster.com/comedy-cellar-las-vegas-las-vegas-nevada-11-10-2026/event/3900642CD6B3B96C",
-"priceMin": null,
-"priceMax": null,
-"subGenre": "Comedy",
-"attractions": [
-"Comedy Cellar (Las Vegas)",
-"Mark Cohen",
-"Landry",
-"Aminah Imani",
-"Jeff Richards",
-"Allan Harvey"
-],
-"ageRestricted": false
-},
-{
-"city": "LAS",
-"id": "G5ezZ_1Um9w65",
-"name": "Steve Falcon",
-"date": "2026-11-10",
-"time": "21:30",
-"status": "onsale",
-"venue": "Underground Theater at MGM Grand",
-"venueCity": "Las Vegas",
-"state": "NV",
-"address": "3799 Las Vegas Blvd South",
-"lat": 36.10226,
-"lng": -115.167991,
-"url": "https://www.ticketmaster.com/steve-falcon-las-vegas-nevada-11-10-2026/event/2E0064ADAE5F21CB",
-"priceMin": null,
-"priceMax": null,
-"subGenre": "Comedy",
-"attractions": [
-"Steve Falcon"
-],
-"ageRestricted": false
-},
-{
-"city": "LAS",
-"id": "1AyZkfKGkdp6m9z",
-"name": "Willie Barcena at Laugh Factory Las Vegas",
-"date": "2026-11-10",
-"time": "22:00",
-"status": "onsale",
-"venue": "Laugh Factory at Horseshoe Las Vegas",
-"venueCity": "Las Vegas",
-"state": "NV",
-"address": "3645 Las Vegas Blvd. South",
-"lat": 36.11376452,
-"lng": -115.16889906,
-"url": "https://www.ticketmaster.com/willie-barcena-at-laugh-factory-las-las-vegas-nevada-11-10-2026/event/39006513D61EE5F8",
-"priceMin": null,
-"priceMax": null,
-"subGenre": "Comedy",
-"attractions": [
-"Willie Barcena",
-"Laugh Factory Las Vegas"
 ],
 "ageRestricted": false
 },
@@ -33075,7 +32945,7 @@
 "name": "BGCC: TBA with Dan Duvall",
 "date": "2027-01-05",
 "time": "20:00",
-"status": "offsale",
+"status": "onsale",
 "venue": "Brad Garrett's Comedy Club",
 "venueCity": "Las Vegas",
 "state": "NV",
@@ -33120,7 +32990,7 @@
 "name": "BGCC: Brad Garrett with Dan Duvall",
 "date": "2027-01-06",
 "time": "20:00",
-"status": "offsale",
+"status": "onsale",
 "venue": "Brad Garrett's Comedy Club",
 "venueCity": "Las Vegas",
 "state": "NV",
@@ -33140,7 +33010,7 @@
 {
 "city": "LAS",
 "id": "1AvjZ_fGkXr9Wve",
-"name": "Jim Gaffigan: Everything is Wonderful",
+"name": "Jim Gaffigan: Still Fighting It",
 "date": "2027-01-06",
 "time": "20:00",
 "status": "onsale",
@@ -33150,7 +33020,7 @@
 "address": "3131 Las Vegas Boulevard South",
 "lat": 36.1276013,
 "lng": -115.1676835,
-"url": "https://www.ticketmaster.com/jim-gaffigan-everything-is-wonderful-las-vegas-nevada-01-06-2027/event/1700654F9E5FD042",
+"url": "https://www.ticketmaster.com/jim-gaffigan-still-fighting-it-las-vegas-nevada-01-06-2027/event/1700654F9E5FD042",
 "priceMin": null,
 "priceMax": null,
 "subGenre": "Comedy",
@@ -33231,7 +33101,7 @@
 {
 "city": "LAS",
 "id": "1AvjZ_fGkXrbcv2",
-"name": "Jim Gaffigan: Everything is Wonderful",
+"name": "Jim Gaffigan: Still Fighting It",
 "date": "2027-01-07",
 "time": "20:00",
 "status": "onsale",
@@ -33241,7 +33111,7 @@
 "address": "3131 Las Vegas Boulevard South",
 "lat": 36.1276013,
 "lng": -115.1676835,
-"url": "https://www.ticketmaster.com/jim-gaffigan-everything-is-wonderful-las-vegas-nevada-01-07-2027/event/1700654F9E62D04F",
+"url": "https://www.ticketmaster.com/jim-gaffigan-still-fighting-it-las-vegas-nevada-01-07-2027/event/1700654F9E62D04F",
 "priceMin": null,
 "priceMax": null,
 "subGenre": "Comedy",
@@ -34442,6 +34312,96 @@
 "lat": 36.11376452,
 "lng": -115.16889906,
 "url": "https://www.ticketmaster.com/laugh-factory-las-vegas-las-vegas-nevada-01-18-2027/event/39006548DE4B9747",
+"priceMin": null,
+"priceMax": null,
+"subGenre": "Comedy",
+"attractions": [
+"Laugh Factory Las Vegas"
+],
+"ageRestricted": false
+},
+{
+"city": "LAS",
+"id": "G5ezZ_KUBQ0tM",
+"name": "Tape Face",
+"date": "2027-01-19",
+"time": "19:30",
+"status": "onsale",
+"venue": "Underground Theater at MGM Grand",
+"venueCity": "Las Vegas",
+"state": "NV",
+"address": "3799 Las Vegas Blvd South",
+"lat": 36.10226,
+"lng": -115.167991,
+"url": "https://www.ticketmaster.com/tape-face-las-vegas-nevada-01-19-2027/event/2E00653DBA6A4A77",
+"priceMin": null,
+"priceMax": null,
+"subGenre": "Comedy",
+"attractions": [
+"Tape Face"
+],
+"ageRestricted": false
+},
+{
+"city": "LAS",
+"id": "G5ezZ_fQbO3ys",
+"name": "BGCC: Brendan Eyre with Jay Hollingsworth",
+"date": "2027-01-19",
+"time": "20:00",
+"status": "onsale",
+"venue": "Brad Garrett's Comedy Club",
+"venueCity": "Las Vegas",
+"state": "NV",
+"address": "3799 Las Vegas Blvd South Las Vegas",
+"lat": 36.102906,
+"lng": -115.168696,
+"url": "https://www.ticketmaster.com/bgcc-brendan-eyre-with-jay-hollingsworth-las-vegas-nevada-01-19-2027/event/2E00654698812E71",
+"priceMin": null,
+"priceMax": null,
+"subGenre": "Comedy",
+"attractions": [
+"Brad Garrett's Comedy Club",
+"Brendan Eyre",
+"Jay Hollingsworth"
+],
+"ageRestricted": false
+},
+{
+"city": "LAS",
+"id": "G5ezZ_8BI5eH9",
+"name": "Carrot Top",
+"date": "2027-01-19",
+"time": "20:00",
+"status": "onsale",
+"venue": "Atrium Showroom at Luxor Hotel and Casino",
+"venueCity": "Las Vegas",
+"state": "NV",
+"address": "3900 Las Vegas Blvd South",
+"lat": 36.095325,
+"lng": -115.175975,
+"url": "https://www.ticketmaster.com/carrot-top-las-vegas-nevada-01-19-2027/event/2E00650EA82C2F17",
+"priceMin": null,
+"priceMax": null,
+"subGenre": "Comedy",
+"attractions": [
+"Carrot Top"
+],
+"ageRestricted": false
+},
+{
+"city": "LAS",
+"id": "1AyZk4FGkdrf_qa",
+"name": "Laugh Factory Las Vegas",
+"date": "2027-01-19",
+"time": "20:30",
+"status": "onsale",
+"venue": "Laugh Factory at Horseshoe Las Vegas",
+"venueCity": "Las Vegas",
+"state": "NV",
+"address": "3645 Las Vegas Blvd. South",
+"lat": 36.11376452,
+"lng": -115.16889906,
+"url": "https://www.ticketmaster.com/laugh-factory-las-vegas-las-vegas-nevada-01-19-2027/event/39006548DE519749",
 "priceMin": null,
 "priceMax": null,
 "subGenre": "Comedy",
@@ -35711,28 +35671,6 @@
 "Adele Givens",
 "Don DC Curry",
 "Tommy Davidson"
-],
-"ageRestricted": false
-},
-{
-"city": "MKE",
-"id": "vv1A6ZkokGkeMxM8w",
-"name": "Daniel Sloss: BITTER  (Brand New Tour!)",
-"date": "2026-11-10",
-"time": "19:00",
-"status": "onsale",
-"venue": "Pabst Theater",
-"venueCity": "Milwaukee",
-"state": "WI",
-"address": "144 E Wells St",
-"lat": 43.041112,
-"lng": -87.910423,
-"url": "https://www.pabsttheatergroup.com/events/detail/daniel-sloss-2026",
-"priceMin": null,
-"priceMax": null,
-"subGenre": "Comedy",
-"attractions": [
-"Daniel Sloss"
 ],
 "ageRestricted": false
 },
@@ -37036,72 +36974,6 @@
 },
 {
 "city": "NYC",
-"id": "k7vGF_8l6sovm",
-"name": "Wally Baram: My Snake's Quinceañera, Presented by the NY Comedy Fest.",
-"date": "2026-11-10",
-"time": "19:00",
-"status": "onsale",
-"venue": "Gramercy Theatre",
-"venueCity": "New York",
-"state": "NY",
-"address": "127 East 23rd Street",
-"lat": 40.73975368,
-"lng": -73.98501292,
-"url": "https://www.ticketmaster.com/wally-baram-my-snakes-quinceanera-presented-new-york-new-york-11-10-2026/event/0000650AC7C5106E",
-"priceMin": null,
-"priceMax": null,
-"subGenre": "Comedy",
-"attractions": [
-"Wally Baram"
-],
-"ageRestricted": false
-},
-{
-"city": "NYC",
-"id": "1AdZZ_8GkY-nq-U",
-"name": "CHRIS VS. THE PEOPLE",
-"date": "2026-11-10",
-"time": "19:30",
-"status": "onsale",
-"venue": "The Bell House",
-"venueCity": "Brooklyn",
-"state": "NY",
-"address": "149 7th Street",
-"lat": 40.67373,
-"lng": -73.99156,
-"url": "https://www.ticketmaster.com/chris-vs-the-people-brooklyn-new-york-11-10-2026/event/3000650C21A9D876",
-"priceMin": null,
-"priceMax": null,
-"subGenre": "Comedy",
-"attractions": [
-"Chris Klemens"
-],
-"ageRestricted": false
-},
-{
-"city": "NYC",
-"id": "1AdZZ_fGky8Ciwe",
-"name": "MC Hammersmith Live!",
-"date": "2026-11-10",
-"time": "22:00",
-"status": "onsale",
-"venue": "The Bell House",
-"venueCity": "Brooklyn",
-"state": "NY",
-"address": "149 7th Street",
-"lat": 40.67373,
-"lng": -73.99156,
-"url": "https://www.ticketmaster.com/mc-hammersmith-live-brooklyn-new-york-11-10-2026/event/3000654E503ACC82",
-"priceMin": null,
-"priceMax": null,
-"subGenre": "Comedy",
-"attractions": [
-"MC Hammersmith"
-],
-"ageRestricted": false
-},
-{
-"city": "NYC",
 "id": "k7vGF_8Lpbkk4",
 "name": "New York Comedy Festival Presents: Pat McGann",
 "date": "2026-11-11",
@@ -37161,8 +37033,8 @@
 "lat": 40.7207511,
 "lng": -73.959998,
 "url": "https://www.ticketweb.com/event/afters-with-maddy-smith-brooklyn-improv-the-lab-tickets/14407844",
-"priceMin": 21.4,
-"priceMax": 21.4,
+"priceMin": 19.34,
+"priceMax": 19.34,
 "subGenre": "Comedy",
 "attractions": [
 "Cipha Sounds",
@@ -40789,7 +40661,7 @@
 {
 "city": "NYC",
 "id": "k7vGF_4i0twWI",
-"name": "Janine Harouni",
+"name": "Janine Harouni: This Is What You Waited For (encore performance) ",
 "date": "2026-12-20",
 "time": "19:00",
 "status": "onsale",
@@ -40799,7 +40671,7 @@
 "address": "127 East 23rd Street",
 "lat": 40.73975368,
 "lng": -73.98501292,
-"url": "https://www.ticketmaster.com/janine-harouni-new-york-new-york-12-20-2026/event/0000655B24A72F68",
+"url": "https://www.ticketmaster.com/janine-harouni-this-is-what-you-new-york-new-york-12-20-2026/event/0000655B24A72F68",
 "priceMin": null,
 "priceMax": null,
 "subGenre": "Comedy",
@@ -41518,7 +41390,7 @@
 "name": "Abby Govindan: Pushing 30",
 "date": "2027-01-14",
 "time": "19:30",
-"status": "offsale",
+"status": "onsale",
 "venue": "The Bell House",
 "venueCity": "Brooklyn",
 "state": "NY",
@@ -42185,8 +42057,8 @@
 },
 {
 "city": "PHL",
-"id": "vvG1FZ_2Gofx1Z",
-"name": "Giulio Gallarotti",
+"id": "vv17FZ_pGkI3tW5a",
+"name": "Comedy Allstars",
 "date": "2026-11-11",
 "time": "19:30",
 "status": "onsale",
@@ -42196,12 +42068,12 @@
 "address": "33 E. Laurel Street",
 "lat": 39.965819,
 "lng": -75.134752,
-"url": "https://www.ticketmaster.com/giulio-gallarotti-philadelphia-pennsylvania-11-11-2026/event/020064F311522280",
+"url": "https://www.ticketmaster.com/comedy-allstars-philadelphia-pennsylvania-11-11-2026/event/0200656A12A7D2C9",
 "priceMin": null,
 "priceMax": null,
 "subGenre": "Comedy",
 "attractions": [
-"Giulio Gallarotti"
+"Comedy Allstars"
 ],
 "ageRestricted": false
 },
@@ -44793,6 +44665,50 @@
 },
 {
 "city": "PHX",
+"id": "Z7r9jZ1AAAk0e",
+"name": "Nurse John",
+"date": "2027-01-07",
+"time": "19:00",
+"status": "offsale",
+"venue": "Mesa Arts Center",
+"venueCity": "Mesa",
+"state": "AZ",
+"address": "1 East Main Street",
+"lat": 33.433998,
+"lng": -111.848297,
+"url": "https://www.ticketmaster.com/event/Z7r9jZ1AAAk0e",
+"priceMin": null,
+"priceMax": null,
+"subGenre": "Comedy",
+"attractions": [
+"Nurse John"
+],
+"ageRestricted": false
+},
+{
+"city": "PHX",
+"id": "16_Zk4tvwZAG18Ae",
+"name": "NURSE JOHN: AGAINST MEDICAL ADVICE: READMITTED",
+"date": "2027-01-07",
+"time": "19:00",
+"status": "offsale",
+"venue": "Ikeda Theatre",
+"venueCity": "Mesa",
+"state": "AZ",
+"address": "1 East Main Street",
+"lat": 33.4146802,
+"lng": -111.83046095,
+"url": "https://boxoffice.mesaartscenter.com/Online/default.asp?BOset::WScontent::SearchCriteria::search_criteria=NurseJohn&BOparam::WScontent::search::article_search_id=DA4E69F1-5755-40D6-960A-C4D995733613&doWork::WScontent::search=1",
+"priceMin": null,
+"priceMax": null,
+"subGenre": "Comedy",
+"attractions": [
+"Nurse John"
+],
+"ageRestricted": false
+},
+{
+"city": "PHX",
 "id": "1Av0Z_fGkSvxpXo",
 "name": "Nurse Georgie Carroll",
 "date": "2027-01-12",
@@ -46113,6 +46029,28 @@
 },
 {
 "city": "SAN",
+"id": "vvG1IZ_p5kZUB0",
+"name": "NURSE JOHN: AGAINST MEDICAL ADVICE: READMITTED",
+"date": "2027-01-08",
+"time": "19:00",
+"status": "offsale",
+"venue": "San Diego Civic Theatre",
+"venueCity": "San Diego",
+"state": "CA",
+"address": "3rd & B St.",
+"lat": 32.7177942,
+"lng": -117.1619999,
+"url": "https://www.ticketmaster.com/nurse-john-against-medical-advice-readmitted-san-diego-california-01-08-2027/event/0A006562C6036EA4",
+"priceMin": null,
+"priceMax": null,
+"subGenre": "Comedy",
+"attractions": [
+"Nurse John"
+],
+"ageRestricted": false
+},
+{
+"city": "SAN",
 "id": "vvG1iZ_fJ96AfW",
 "name": "Nurse Georgie Carroll",
 "date": "2027-01-09",
@@ -46198,6 +46136,28 @@
 "Ali Wong"
 ],
 "ageRestricted": false
+},
+{
+"city": "SAN",
+"id": "vvG1iZ_u6by0HK",
+"name": "Jeff Arcuri: The Road Trip Tour",
+"date": "2027-01-19",
+"time": "19:30",
+"status": "onsale",
+"venue": "The Magnolia",
+"venueCity": "El Cajon",
+"state": "CA",
+"address": "210 E Main Street",
+"lat": 32.795625,
+"lng": -116.95955,
+"url": "https://www.ticketmaster.com/jeff-arcuri-the-road-trip-tour-el-cajon-california-01-19-2027/event/0B0064D1D8E64F13",
+"priceMin": null,
+"priceMax": null,
+"subGenre": "Comedy",
+"attractions": [
+"Jeff Arcuri"
+],
+"ageRestricted": true
 },
 {
 "city": "SEA",
@@ -47432,48 +47392,26 @@
 "ageRestricted": false
 },
 {
-"city": "SFO",
-"id": "G5vYZ_3lhedRE",
-"name": "Nick Cannon Presents: Wild 'N Out Live - The Next Generation",
-"date": "2026-11-10",
+"city": "SEA",
+"id": "vvG1HZ_ppgYBMB",
+"name": "NURSE JOHN: AGAINST MEDICAL ADVICE: READMITTED",
+"date": "2027-01-16",
 "time": "19:00",
-"status": "onsale",
-"venue": "Oakland Arena",
-"venueCity": "Oakland",
-"state": "CA",
-"address": "7000 Coliseum Way",
-"lat": 37.7515541,
-"lng": -122.2015715,
-"url": "https://www.ticketmaster.com/nick-cannon-presents-wild-n-out-oakland-california-11-10-2026/event/1C00652ADB083BE7",
+"status": "offsale",
+"venue": "Paramount Theatre",
+"venueCity": "Seattle",
+"state": "WA",
+"address": "911 Pine St",
+"lat": 47.6135664,
+"lng": -122.3319103,
+"url": "https://www.ticketmaster.com/nurse-john-against-medical-advice-readmitted-seattle-washington-01-16-2027/event/0F006565B5C3ADFA",
 "priceMin": null,
 "priceMax": null,
 "subGenre": "Comedy",
 "attractions": [
-"Nick Cannon Presents: Wild 'N Out Live"
+"Nurse John"
 ],
-"ageRestricted": false
-},
-{
-"city": "SFO",
-"id": "G5vYZ_295SZDo",
-"name": "Jamie Kaler",
-"date": "2026-11-10",
-"time": "19:30",
-"status": "onsale",
-"venue": "Punch Line Comedy Club - San Francisco",
-"venueCity": "San Francisco",
-"state": "CA",
-"address": "444 Battery Street",
-"lat": 37.79550849,
-"lng": -122.40013361,
-"url": "https://www.ticketmaster.com/jamie-kaler-san-francisco-california-11-10-2026/event/1C0064F5CBCC0ED1",
-"priceMin": null,
-"priceMax": null,
-"subGenre": "Comedy",
-"attractions": [
-"Jamie Kaler"
-],
-"ageRestricted": false
+"ageRestricted": true
 },
 {
 "city": "SFO",
@@ -48118,7 +48056,7 @@
 {
 "city": "SFO",
 "id": "G5vYZ_KQ9Ih6c",
-"name": "Caitlin Peluffo",
+"name": "Caitlin Peluffo - SOLD OUT",
 "date": "2026-11-18",
 "time": "19:00",
 "status": "onsale",
@@ -48128,7 +48066,7 @@
 "address": "444 Battery Street",
 "lat": 37.79550849,
 "lng": -122.40013361,
-"url": "https://www.ticketmaster.com/caitlin-peluffo-san-francisco-california-11-18-2026/event/1C00653697A1B1ED",
+"url": "https://www.ticketmaster.com/caitlin-peluffo-sold-out-san-francisco-california-11-18-2026/event/1C00653697A1B1ED",
 "priceMin": null,
 "priceMax": null,
 "subGenre": "Comedy",
@@ -52151,6 +52089,28 @@
 },
 {
 "city": "SFO",
+"id": "G5vYZ_pP1WYg_",
+"name": "Your Next Comic - A New Faces Showcase",
+"date": "2027-01-17",
+"time": "17:00",
+"status": "onsale",
+"venue": "Punch Line Comedy Club - San Francisco",
+"venueCity": "San Francisco",
+"state": "CA",
+"address": "444 Battery Street",
+"lat": 37.79550849,
+"lng": -122.40013361,
+"url": "https://www.ticketmaster.com/your-next-comic-a-new-faces-san-francisco-california-01-17-2027/event/1C0065694AF70D59",
+"priceMin": null,
+"priceMax": null,
+"subGenre": "Comedy",
+"attractions": [
+"Your Next Comic - A New Faces Showcase"
+],
+"ageRestricted": false
+},
+{
+"city": "SFO",
 "id": "rZ7HnEZ1AfZ4j7",
 "name": "Jay Jurden",
 "date": "2027-01-17",
@@ -52168,6 +52128,28 @@
 "subGenre": "Comedy",
 "attractions": [
 "Jay Jurden"
+],
+"ageRestricted": false
+},
+{
+"city": "SFO",
+"id": "G5vYZ_pPahYEw",
+"name": "S. F. Comedy Showcase",
+"date": "2027-01-17",
+"time": "20:00",
+"status": "onsale",
+"venue": "Punch Line Comedy Club - San Francisco",
+"venueCity": "San Francisco",
+"state": "CA",
+"address": "444 Battery Street",
+"lat": 37.79550849,
+"lng": -122.40013361,
+"url": "https://www.ticketmaster.com/s-f-comedy-showcase-san-francisco-california-01-17-2027/event/1C006569496F09F2",
+"priceMin": null,
+"priceMax": null,
+"subGenre": "Comedy",
+"attractions": [
+"S. F. Comedy Showcase"
 ],
 "ageRestricted": false
 },
