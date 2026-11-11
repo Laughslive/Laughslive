@@ -18,11 +18,13 @@ Background for a new Claude chat picking up this project, or starting a sister s
   - Never put the owner's personal email anywhere public or send it to outside services.
 - **Venue first.**
   - The venue's own calendar, or its official ticket seller, is the main source and the link fans get.
-  - Listing and resale sites (comedy.tickets, theater.guide, seatgeek, etc.) are backup only.
+  - Listing and resale sites (comedy.tickets, theater.guide, seatgeek, etc.) are the fallback: used when no official
+    seller, venue or comedian link exists (owner's rule, Nov 10, 2026).
 - **Ticket buttons:**
   - "Tickets & info" goes to the show's own page.
   - "Tickets at venue" goes to the venue's site (`SITES`).
-  - "Find tickets" (a Google search) is the last resort.
+  - "Resale tickets" goes to the resale/listing page, when there's no official or venue link.
+  - "Find tickets" (a Google search) is the last resort, for a show with no link at all.
 - **Accuracy:** never guess times, prices, names or URLs. Skip a show if no source gives its start time.
 - **Excluded:** magic and hypnotist acts, Popovich Comedy Pet Theater, Tape Face, open mics,
   drag brunches, music acts.

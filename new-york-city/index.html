@@ -563,10 +563,12 @@ const SITES={
  comedybardet:"https://comedybar.com/detroit/comedy-shows-detroit/",brewhaha:"https://www.comedycraftbeer.com/",watersedge:"https://www.comedycraftbeer.com/"
 };
 for(const k in SITES) if(V[k]) V[k].site=SITES[k];
-const LISTING_SITE=/comedy\.tickets|theater\.guide|concertfix|concerts50|new-york\.events|americanarenas|lotta\.events|ticketnetwork|comedycalendar|seatgeek|vividseats|stubhub|tickpick|eventticketscenter/;
+const LISTING_SITE=/comedy\.tickets|theater\.guide|concertfix|concerts50|new-york\.events|americanarenas|lotta\.events|ticketnetwork|comedycalendar|seatgeek|vividseats|stubhub|tickpick|eventticketscenter|gametime|ticketsmarter|songkick|bandsintown|jambase|allevents/;
+// Official seller first; the venue's own site next; a resale/listing page only when neither exists (owner's rule, Nov 10, 2026).
 function ticketLink(s){
-  if(!LISTING_SITE.test(s.url)) return {href:s.url,label:"Tickets & info"};
+  if(s.url&&!LISTING_SITE.test(s.url)) return {href:s.url,label:"Tickets & info"};
   if(s.v.site) return {href:s.v.site,label:"Tickets at venue"};
+  if(s.url) return {href:s.url,label:"Resale tickets"};
   return {href:"https://www.google.com/search?q="+encodeURIComponent(s.v.n+" "+s.v.b+" "+s.title+" tickets"),label:"Find tickets"};
 }
 const U={
