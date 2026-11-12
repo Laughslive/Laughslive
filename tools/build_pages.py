@@ -16,6 +16,7 @@ ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
 # The city list lives in data/cities.json (shared with the Ticketmaster scripts).
 _CFG = json.load(open(os.path.join(ROOT, "data", "cities.json"), encoding="utf-8"))
+INTROS = json.load(open(os.path.join(ROOT, "data", "city_intros.json"), encoding="utf-8")) if os.path.exists(os.path.join(ROOT, "data", "city_intros.json")) else {}
 CITIES = [(c["code"], c["slug"], c["name"], c["short"], c["nearby"]) for c in _CFG["cities"]]
 REGIONS = [(r, sorted([c["code"] for c in _CFG["cities"] if c["region"] == r],
                       key=lambda k: next(x["name"] for x in _CFG["cities"] if x["code"] == k)))
@@ -209,6 +210,11 @@ def main():
                     lambda m: f'<p class="tag">Comedy shows in {html.escape(name)} and up to 50 miles around it, '
                               f'from club showcases to arena headliners. Enter where you are to see what\'s closest.</p>',
                     pg, count=1, flags=re.S)
+        intro = INTROS.get(code)
+        if intro:
+            pg = pg.replace("<footer>", f'<section class="cityintro" style="max-width:70ch;margin:28px auto 0;padding:0 16px;color:var(--muted)">'
+                            f'<h2 style="font-size:1.05rem;color:var(--ink);margin:0 0 6px">Comedy in {html.escape(name)}</h2>'
+                            f'<p style="margin:0">{html.escape(intro)}</p></section>\n<footer>', 1)
         pg = pg.replace('<main id="results"></main>',
                         f'<main id="results">{static_list(code, shows.get(code, []))}</main>', 1)
         pg = put_block(pg, "nav", nav_html(code), "<footer>")
