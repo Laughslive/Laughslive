@@ -84,7 +84,7 @@ Background for a new Claude chat picking up this project, or starting a sister s
   shows@laughslive.com (show submissions). The Proton plan allows one custom domain, which this site uses.
 - **Newsletter:** Brevo chosen, not yet connected. Connecting it needs DNS records at GoDaddy
   (merge with the existing SPF record) and the API key stored as a GitHub secret. Newsletters need a
-  postal address (CAN-SPAM); the owner plans a PO box.
+  postal address (CAN-SPAM); use the business address on the About page (3103 Hulmeville Road, Suite 200, Bensalem, PA 19020; phone 215-559-9288).
 - **Social:** pending. The owner won't give out a phone number (prepaid number suggested).
 - **Hosting is free** (GitHub Pages). The site keeps running without a Claude subscription, but the
   twice-weekly Claude updates would stop. The Ticketmaster Action keeps running.
