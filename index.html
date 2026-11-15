@@ -400,6 +400,8 @@ const V={
  tarrytown:{n:"Tarrytown Music Hall",area:"Tarrytown",b:"Westchester",lat:41.0763,lng:-73.8595},
  comedyconnri:{n:"Comedy Connection",area:"East Providence",b:"East Providence, RI",lat:41.8183,lng:-71.3745},
  acllive:{n:"ACL Live at the Moody Theater",area:"Downtown",b:"Austin",lat:30.2653,lng:-97.7477},
+ playhousesq:{n:"Playhouse Square",area:"Downtown",b:"Cleveland",lat:41.5016,lng:-81.6807},
+ schuster:{n:"Schuster Center",area:"Downtown Dayton",b:"Dayton, OH",lat:39.7605,lng:-84.1923},
 // <tm-venues>  (added automatically from the Ticketmaster feed; rebuilt each update)
  tm_gas_south_arena:{n:"Gas South Arena",area:"Duluth",b:"GA",c:"ATL",lat:33.9869,lng:-84.0907},
  tm_michael_susan_dell_hall:{n:"Michael & Susan Dell Hall",area:"Austin",b:"TX",c:"AUS",lat:30.2721,lng:-97.7424},
@@ -601,6 +603,8 @@ for(const k in V)V[k].c??=(V[k].b==="Philadelphia"?"PHL":"NYC");
 // Venues' own websites / box offices. Ticket buttons use these instead of
 // listing or resale sites whenever a show's link points at one of those.
 const SITES={
+ schuster:"https://www.daytonlive.org/",
+ playhousesq:"https://www.playhousesquare.org/",
  acllive:"https://www.acllive.com/",
  comedyconnri:"https://events-ricomedyconnection-com.seatengine.com",
  tarrytown:"https://tickets.tarrytownmusichall.org/",
@@ -721,6 +725,7 @@ const U={
 const S="Stand-up",I="Improv & sketch",P="Live podcast & talk";
 // [date, time(24h), title, performers, venue, type, url, price, flags]
 const RAW=[
+ ["2026-12-12","20:00","Jerry Seinfeld","Jerry Seinfeld","beacon",S,"https://www.ticketmaster.com/event/3B0064A5D7AB5CA0",null],
  ["2027-01-29","19:30|22:30","Tim Dillon","Tim Dillon","beacon",S,"https://comedy.tickets/tickets/tim-dillon/",null],
  ["2027-03-06","20:00","Jim Florentine & Rich Vos","Jim Florentine, Rich Vos","tarrytown",S,"https://tickets.tarrytownmusichall.org/eventperformances.asp?evt=3235","$40–63"],
  ["2027-02-27","21:30","Rich Vos","Rich Vos","stressnb",S,"https://newbrunswick.stressfactory.com/shows/352208",null],
@@ -1413,6 +1418,7 @@ const RAW=[
  ["2027-01-09","18:30|21:00","Tammy Pescatelli","Tammy Pescatelli","pimprov",S,"https://improv.com/pittsburgh/comic/tammy+pescatelli/",null],
  ["2026-12-17","19:00","Joe Bartnick","Joe Bartnick","pimprov",S,"https://improv.com/pittsburgh/calendar/",null],
  // Cleveland
+ ["2027-03-26","19:00","Ali Wong","Ali Wong","playhousesq",S,"https://tickets.playhousesquare.org/online/default.asp?doWork::WScontent::loadArticle=Load&BOparam::WScontent::loadArticle::article_id=1733123D-629F-4A3F-9ABC-5205AAAF3B50",null],
  ["2026-11-15", "19:00", "Dwayne Kennedy", "Dwayne Kennedy", "hilarities",S,"https://hilarities.com/events/145774",null,["21"]],
  ["2026-11-19", "19:00", "Janet McNamara", "Janet McNamara", "frolic",S,"https://hilarities.com/events/137228",null,["21"]],
  ["2026-11-19", "19:30", "Steve Rannazzisi", "Steve Rannazzisi", "hilarities",S,"https://hilarities.com/shows/379622",null,["21"]],
@@ -2242,6 +2248,7 @@ const RAW=[
  ["2026-11-20","20:00","Jonathan Van Ness","Jonathan Van Ness","hardrockorl",S,U.ctorl,"$51"],
  ["2026-12-12","15:00","Jimmy Dore","Jimmy Dore","fborl",S,"https://orlando.funnybone.com/shows/",null],
  // Cincinnati
+ ["2027-03-05","19:00","Jerry Seinfeld","Jerry Seinfeld","schuster",S,"https://www.daytonlive.org/events/seinfeld",null],
  ["2026-11-19", "19:00", "Kam Patterson", "Kam Patterson", "fbliberty",S,"https://liberty.funnybone.com/events/category/series/kam-patterson/liberty-funny-bone-comedy-club/","$36–46",["21"]],
  ["2026-11-20", "19:00", "Kam Patterson", "Kam Patterson", "fbliberty",S,"https://liberty.funnybone.com/events/category/series/kam-patterson/liberty-funny-bone-comedy-club/","$36–46",["21"]],
  ["2026-11-21", "18:30|21:15", "Kam Patterson", "Kam Patterson", "fbliberty",S,"https://liberty.funnybone.com/events/category/series/kam-patterson/liberty-funny-bone-comedy-club/","$36–46",["21"]],
@@ -3010,6 +3017,14 @@ const RAW=[
  ["2027-01-08","19:00|21:45","Danny Gonzalez","Danny Gonzalez","standuplive",S,"https://phoenix.standuplive.com/events/143372",null],
  ["2027-01-09","19:00|21:45","Danny Gonzalez","Danny Gonzalez","standuplive",S,"https://phoenix.standuplive.com/events/143372",null],
  // Las Vegas
+ ["2027-10-30","21:00","Jerry Seinfeld","Jerry Seinfeld","encorelv",S,"https://www.ticketmaster.com/event/17006554F39584BE",null],
+ ["2027-10-30","18:00","Jerry Seinfeld","Jerry Seinfeld","encorelv",S,"https://www.ticketmaster.com/event/17006554F39184B5",null],
+ ["2027-10-29","20:00","Jerry Seinfeld","Jerry Seinfeld","encorelv",S,"https://www.ticketmaster.com/event/17006554F38E84AD",null],
+ ["2027-10-28","20:00","Jerry Seinfeld","Jerry Seinfeld","encorelv",S,"https://www.ticketmaster.com/event/17006554F38A84A4",null],
+ ["2027-06-12","21:00","Jerry Seinfeld","Jerry Seinfeld","encorelv",S,"https://www.ticketmaster.com/event/17006554F3868492",null],
+ ["2027-06-12","18:00","Jerry Seinfeld","Jerry Seinfeld","encorelv",S,"https://www.ticketmaster.com/event/17006554F3828484",null],
+ ["2027-06-11","20:00","Jerry Seinfeld","Jerry Seinfeld","encorelv",S,"https://www.ticketmaster.com/event/17006554F37E8481",null],
+ ["2027-06-10","20:00","Jerry Seinfeld","Jerry Seinfeld","encorelv",S,"https://www.ticketmaster.com/event/17006554F37A8475",null],
  ["2027-02-14","21:00","Jerry Seinfeld","Jerry Seinfeld","encorelv",S,"https://www.ticketmaster.com/event/17006554F3768471",null],
  ["2027-02-13","18:00","Jerry Seinfeld","Jerry Seinfeld","encorelv",S,"https://www.ticketmaster.com/event/17006554F372846E",null],
  ["2027-02-12","20:00","Jerry Seinfeld","Jerry Seinfeld","encorelv",S,"https://www.ticketmaster.com/event/17006554F36E8469",null],
@@ -4723,7 +4738,6 @@ const RAW=[
  ["2026-12-10","19:30","Elon Gold's Hanukkah Tour 2026","Elon Gold","beacon",S,"https://www.ticketmaster.com/elon-golds-hanukkah-tour-2026-new-york-new-york-12-10-2026/event/3B00645CCD565552",null],
  ["2026-12-10","20:00","Ron Taylor","Ron Taylor","tm_new_jersey_performing_arts_c",S,"https://www.ticketmaster.com/ron-taylor-newark-new-jersey-12-10-2026/event/000064CBB58FEEB8",null],
  ["2026-12-11","19:00","George Wallace","George Wallace","levity",S,"https://www.ticketweb.com/event/george-wallace-west-nyack-levity-live-tickets/14345684","$37–108"],
- ["2026-12-12","17:00","Jerry Seinfeld","Jerry Seinfeld","beacon",S,"https://www.ticketmaster.com/jerry-seinfeld-new-york-new-york-12-12-2026/event/3B0064A5D74E5C6C",null],
  ["2026-12-12","18:00","George Wallace","George Wallace","levity",S,"https://www.ticketweb.com/event/george-wallace-west-nyack-levity-live-tickets/14345704","$37–108"],
  ["2026-12-12","19:00","CHELSEA HANDLER: THE HIGH AND MIGHTY TOUR","Chelsea Handler","tm_loew_s_jersey_theatre",S,"https://www.ticketmaster.com/chelsea-handler-the-high-and-mighty-jersey-city-new-jersey-12-12-2026/event/020065530A42EB2B",null],
  ["2026-12-13","15:30","Modi: Live In Huntington!","Modi","tm_the_paramount_in_concert_wit",S,"https://www.ticketmaster.com/modi-live-in-huntington-huntington-new-york-12-13-2026/event/00006513CD35551D",null],
