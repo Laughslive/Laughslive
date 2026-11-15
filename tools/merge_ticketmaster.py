@@ -40,8 +40,10 @@ CITY_STATES = {c["code"]: " ".join(c["states"]) for c in _CITIES}
 def vtokens(s):
     return {w for w in re.findall(r"[a-z0-9]+", (s or "").lower()) if w not in VENUE_GENERIC}
 
-def name_match(a, b):
-    ta, tb = vtokens(a), vtokens(b)
+def name_match(a, b, city=""):
+    # City words ("Las Vegas", "New York") say nothing about which venue it is.
+    cw = vtokens(city)
+    ta, tb = (vtokens(a) - cw) or vtokens(a), (vtokens(b) - cw) or vtokens(b)
     if not ta or not tb:
         return 0.0
     return len(ta & tb) / min(len(ta), len(tb))
@@ -102,7 +104,7 @@ def main(page_path, data_path="data/ticketmaster.json"):
             dist = miles(v["ll"], ll)
             if dist > 5:
                 continue
-            score = name_match(v["n"], e["venue"])
+            score = name_match(v["n"], e["venue"], e.get("venueCity", ""))
             if score >= 0.5 and (score, -dist) > (best[0], -best[1]):
                 key, best = k, (score, dist)
         if key is None:
