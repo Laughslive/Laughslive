@@ -1,0 +1,49 @@
+name: Weekly newsletter
+# Thursday morning: each city's subscribers get that city's "comedy this week" email (Brevo).
+# Friday and Saturday runs send any cities that didn't fit under Brevo's free 300-a-day limit.
+# Manual run: fill in "test_email" to send one city's email as a test to that address only.
+on:
+  schedule:
+    - cron: "43 12 * * 4"   # Thursday ~7:43am Eastern
+    - cron: "43 12 * * 5"   # Friday catch-up
+    - cron: "43 13 * * 6"   # Saturday catch-up
+  workflow_dispatch:
+    inputs:
+      test_email:
+        description: "Send a TEST to this address only (leave blank to send the real weekly emails)"
+        required: false
+        default: "info@laughslive.com"
+      test_city:
+        description: "City for the test email"
+        required: false
+        default: "Philadelphia"
+permissions:
+  contents: write
+concurrency: newsletter
+jobs:
+  send:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Build and send
+        env:
+          BREVO_API_KEY: ${{ secrets.BREVO_API_KEY }}
+          TEST_EMAIL: ${{ github.event.inputs.test_email }}
+          TEST_CITY: ${{ github.event.inputs.test_city }}
+        run: python3 tools/newsletter/send.py
+      - name: Remember which cities were sent
+        if: github.event.inputs.test_email == ''
+        run: |
+          git config user.name "LaughsLive"
+          git config user.email "laughslive@users.noreply.github.com"
+          cp data/newsletter_state.json "$RUNNER_TEMP/state.json" 2>/dev/null || exit 0
+          for i in 1 2 3; do
+            git fetch -q origin main && git reset -q --hard origin/main
+            cp "$RUNNER_TEMP/state.json" data/newsletter_state.json
+            git add data/newsletter_state.json
+            if git diff --cached --quiet; then exit 0; fi
+            git commit -q -m "Newsletter sent $(date -u +%F)"
+            if git push -q origin HEAD:main; then exit 0; fi
+            sleep 5
+          done
+          exit 1
