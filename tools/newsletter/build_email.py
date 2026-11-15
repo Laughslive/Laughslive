@@ -104,7 +104,7 @@ def build(shows, city, slug, week):
     picks_html = "".join(line(s, show_day=True, run=[x["d"] for x in shows if x["title"] == s["title"] and x["v"] == s["v"]]) for s in picks)
     n = len(shows)
     url = f"https://laughslive.com/{slug}/"
-    return f'''<!doctype html><html><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+    return f'''<!doctype html><html><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="robots" content="noindex">
 <title>Comedy in {esc(city)} this week</title></head>
 <body style="margin:0;padding:0;background:{BG};font-family:Helvetica,Arial,sans-serif">
 <div style="display:none;max-height:0;overflow:hidden">{n} comedy shows in the {esc(city)} area, {esc(week)}.</div>
