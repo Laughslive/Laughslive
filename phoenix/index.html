@@ -403,6 +403,7 @@ const V={
  acllive:{n:"ACL Live at the Moody Theater",area:"Downtown",b:"Austin",lat:30.2653,lng:-97.7477},
  playhousesq:{n:"Playhouse Square",area:"Downtown",b:"Cleveland",lat:41.5016,lng:-81.6807},
  schuster:{n:"Schuster Center",area:"Downtown Dayton",b:"Dayton, OH",lat:39.7605,lng:-84.1923},
+ victheatre:{n:"Vic Theatre",area:"Lakeview",b:"Chicago",lat:41.9397,lng:-87.6538},
 // <tm-venues>  (added automatically from the Ticketmaster feed; rebuilt each update)
  tm_gas_south_arena:{n:"Gas South Arena",area:"Duluth",b:"GA",c:"ATL",lat:33.9869,lng:-84.0907},
  tm_michael_susan_dell_hall:{n:"Michael & Susan Dell Hall",area:"Austin",b:"TX",c:"AUS",lat:30.2721,lng:-97.7424},
@@ -431,7 +432,6 @@ const V={
  tm_rialto_square_theatre:{n:"Rialto Square Theatre",area:"Joliet",b:"IL",c:"CHI",lat:41.5261,lng:-88.0816},
  tm_riviera_theatre:{n:"Riviera Theatre",area:"Chicago",b:"IL",c:"CHI",lat:41.9689,lng:-87.6597},
  tm_the_venue_at_horseshoe_casin:{n:"The Venue at Horseshoe Casino",area:"Hammond",b:"IN",c:"CHI",lat:41.6931,lng:-87.5082},
- tm_vic_theatre:{n:"Vic Theatre",area:"Chicago",b:"IL",c:"CHI",lat:41.9395,lng:-87.6538},
  tm_avondale_music_hall:{n:"Avondale Music Hall",area:"Chicago",b:"IL",c:"CHI",lat:41.9460,lng:-87.7467},
  tm_united_center:{n:"United Center",area:"Chicago",b:"IL",c:"CHI",lat:41.8812,lng:-87.6743},
  tm_reggies_music_joint:{n:"Reggies Music Joint",area:"Chicago",b:"IL",c:"CHI",lat:41.8540,lng:-87.6271},
@@ -604,6 +604,7 @@ for(const k in V)V[k].c??=(V[k].b==="Philadelphia"?"PHL":"NYC");
 // Venues' own websites / box offices. Ticket buttons use these instead of
 // listing or resale sites whenever a show's link points at one of those.
 const SITES={
+ victheatre:"https://www.victheatre.com/",
  schuster:"https://www.daytonlive.org/",
  playhousesq:"https://www.playhousesquare.org/",
  acllive:"https://www.acllive.com/",
@@ -1061,6 +1062,7 @@ const RAW=[
  ["2027-01-02","19:00|21:30","Tim Meadows","Tim Meadows","helium",S,"https://philadelphia-heliumcomedy-com.seatengine.com/shows/395584",null],
  ["2027-01-03","19:00","Tim Meadows","Tim Meadows","helium",S,"https://philadelphia-heliumcomedy-com.seatengine.com/shows/395582",null],
  // Boston  (several start times are separated by |)
+ ["2027-04-17","19:00","Joe List","Joe List","wilbur",S,"https://comedy.tickets/tickets/joe-list/",null],
  ["2027-05-08","19:00","Are You Garbage?: Army of Garbage Tour","Are You Garbage?","wilbur",P,"https://thewilbur.com/event/are-you-garbage-army-of-garbage-tour/","$35–45"],
  ["2026-11-28","19:00|21:30","Rich Vos","Rich Vos","comedyconnri",S,"https://events-ricomedyconnection-com.seatengine.com",null],
  ["2026-11-27","19:00|21:30","Rich Vos","Rich Vos","comedyconnri",S,"https://events-ricomedyconnection-com.seatengine.com",null],
@@ -1486,6 +1488,8 @@ const RAW=[
  ["2027-01-14","19:30","Natalie Cuomo","Natalie Cuomo","hilarities",S,"https://hilarities.com/shows/361787",null],
  ["2026-11-16","19:30","Benny Feldman","Benny Feldman","grog",S,U.ctcle,"$35"],
  // Nashville
+ ["2027-04-10","19:00","Joe List","Joe List","zanies",S,"https://comedy.tickets/tickets/joe-list/",null],
+ ["2027-04-08","19:00|21:15","Joe List","Joe List","zanies",S,"https://comedy.tickets/tickets/joe-list/",null],
  ["2027-02-11","19:00","Ali Wong","Ali Wong","ryman",S,"https://www.axs.com/events/1612166/ali-wong-live-tickets?skin=ryman",null],
  ["2026-11-15","18:00","Tacarra Williams","Tacarra Williams","zanies",S,U.ctzan,"$50"],
  ["2026-11-16","19:00","Nateland Live","","zlab",S,U.zan,"$24"],
@@ -1569,6 +1573,7 @@ const RAW=[
  ["2027-01-08","19:00","Lil Mo Mozzarella","Lil Mo Mozzarella","empire",S,"https://empirecomedyme.com/show/lil-mo-mozzarella",null,["21"]],
  ["2027-01-09","19:00","Lil Mo Mozzarella","Lil Mo Mozzarella","empire",S,"https://empirecomedyme.com/show/lil-mo-mozzarella",null,["21"]],
  // Chicago
+ ["2027-03-06","19:30","Joe List","Joe List","victheatre",S,"https://comedy.tickets/tickets/joe-list/",null],
  ["2027-01-30","19:00","Tim Dillon","Tim Dillon","chitheatre",S,"https://comedy.tickets/tickets/tim-dillon/",null],
  ["2027-03-20","21:30","Are You Garbage?","Are You Garbage?","chimprov",P,"https://comedy.tickets/tickets/are-you-garbage/",null],
  ["2027-03-19","19:00|21:30","Are You Garbage?","Are You Garbage?","chimprov",P,"https://comedy.tickets/tickets/are-you-garbage/",null],
@@ -2123,6 +2128,9 @@ const RAW=[
  ["2027-01-16","19:00|21:30","Steve Treviño","Steve Treviño","miaimprov",S,"https://www.miamiimprov.com/shows/390682",null],
  ["2027-01-17","19:00","Steve Treviño","Steve Treviño","miaimprov",S,"https://www.miamiimprov.com/shows/390684",null],
  // Tampa
+ ["2027-02-20","19:00|21:30","Robert Kelly","Robert Kelly","sidesplitters",S,"https://punchup.live/venue/sidesplitterscomedytampa",null],
+ ["2027-02-19","19:00|21:30","Robert Kelly","Robert Kelly","sidesplitters",S,"https://punchup.live/venue/sidesplitterscomedytampa",null],
+ ["2027-02-18","19:30","Robert Kelly","Robert Kelly","sidesplitters",S,"https://punchup.live/venue/sidesplitterscomedytampa",null],
  ["2026-11-27","19:00|21:45","Red Grant","Red Grant","fbtpa",S,"https://www.etix.com/ticket/e/1060828/?partner_id=100","$32–37",["21"]],
  ["2026-11-28","18:30|21:15","Red Grant","Red Grant","fbtpa",S,"https://www.etix.com/ticket/e/1060828/?partner_id=100","$32–37",["21"]],
  ["2026-11-29","18:00","Sloan-A-Claus","","fbtpa",S,"https://www.etix.com/ticket/p/60902197/sloanaclaus-tampa-funny-bone-comedy-club-tampa?partner_id=100","$10",["21"]],
@@ -3721,7 +3729,7 @@ const RAW=[
  ["2026-12-11","19:00","KATHY GRIFFIN: New Face, New Tour","Kathy Griffin","tm_riviera_theatre",S,"https://www.axs.com/events/1378500/kathy-griffin-new-face-new-tour-tickets",null],
  ["2026-12-12","18:00","Gary Owen: No Hard Feelings Tour","Gary Owen","tm_the_venue_at_horseshoe_casin",S,"https://www.ticketmaster.com/gary-owen-no-hard-feelings-tour-hammond-indiana-12-12-2026/event/0700647BE11B8481",null],
  ["2026-12-12","20:00","A John Waters Christmas","A John Waters Christmas","tm_avondale_music_hall",S,"https://www.ticketmaster.com/event/Z7r9jZ1AAZEOU",null],
- ["2026-12-12","20:00","Matt Rogers: THIS TIME IT'S *REALLY* CHRISTMAS Tour","Matt Rogers","tm_vic_theatre",S,"https://www.axs.com/events/1600693/matt-rogers-this-time-its-really-christmas-tour-tickets",null],
+ ["2026-12-12","20:00","Matt Rogers: THIS TIME IT'S *REALLY* CHRISTMAS Tour","Matt Rogers","victheatre",S,"https://www.axs.com/events/1600693/matt-rogers-this-time-its-really-christmas-tour-tickets",null],
  ["2026-12-16","19:00","Terry Fator A Very Terry Christmas","Terry Fator","tm_rialto_square_theatre",S,"https://www.ticketmaster.com/terry-fator-a-very-terry-christmas-joliet-illinois-12-16-2026/event/07006507B79E848F",null],
  ["2026-12-17","18:30","Chicago Comedy Club","Chicago Comedy Club","tm_house_of_blues_chicago",S,"https://www.ticketmaster.com/chicago-comedy-club-chicago-illinois-12-17-2026/event/04006519D39F13D2",null],
  ["2026-12-17","19:00","Natasha Leggero","Natasha Leggero","chimprov",S,"https://www.ticketweb.com/event/natasha-leggero-chicago-improv-tickets/14271824","$33–52"],
