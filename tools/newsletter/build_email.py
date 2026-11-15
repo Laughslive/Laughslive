@@ -41,6 +41,12 @@ def group(shows):
     return list(out.values())
 
 
+# Household names get mentioned first in the intro (same list the tour check follows).
+STARS = ("seinfeld", "chappelle", "kevin hart", "bill burr", "gaffigan", "mulaney", "ali wong", "trevor noah", "nate bargatze",
+         "matt rife", "taylor tomlinson", "nikki glaser", "sebastian", "iglesias", "leanne morgan", "theo von", "bert kreischer",
+         "tom segura", "your mom's house", "andrew schulz", "tim dillon", "hasan minhaj", "ronny chieng", "ms. pat", "brian regan",
+         "ricky gervais", "mark normand", "sam morril", "stavros", "joe list", "tom papa", "dave attell", "patton oswalt",
+         "craig robinson", "jordan klepper", "brad garrett", "david cross", "joel mchale", "bobby lee", "kill tony", "colin quinn")
 CLUB = ("comedy", "punch line", "punchline", "helium", "improv", "funny bone", "zanies", "laugh", "cellar", "hyena")
 
 
@@ -80,7 +86,8 @@ def line(s, show_day=False, run=None):
 
 
 def default_intro(city, picks, n):
-    stars = sorted(picks, key=lambda p: (any(w in p["v"].lower() for w in CLUB), p.get("mi", 0) > 20, p["d"]))
+    stars = sorted(picks, key=lambda p: (p.get("mi", 0) > 20, min([i for i, w in enumerate(STARS) if w in p["title"].lower()] or [999]),
+                                         any(w in p["v"].lower() for w in CLUB), p["d"]))
     names = [p["who"] if p.get("who") and len(p["who"]) < len(p["title"]) else p["title"].split(":")[0].strip() for p in stars[:2]]
     lead = f"{names[0]} and {names[1]}" if len(names) == 2 else (names[0] if names else "some great comics")
     return (f"Hey {city}! It's a good week for comedy: {lead} are both in town, plus {n - 2 if n > 2 else n} more shows "
