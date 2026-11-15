@@ -91,8 +91,8 @@ def default_intro(city, picks, n):
     names = [p["who"] if p.get("who") and len(p["who"]) < len(p["title"]) else p["title"].split(":")[0].strip() for p in stars[:2]]
     lead = f"{names[0]} and {names[1]}" if len(names) == 2 else (names[0] if names else "some great comics")
     return (f"Hey {city}! It's a good week for comedy: {lead} are both in town, plus {n - 2 if n > 2 else n} more shows "
-            f"around the area. Here are the ones worth grabbing tickets for before they sell out. Have fun out there!") if len(names) == 2 else \
-           (f"Hey {city}! Here are this week's biggest comedy shows, plus a link to all {n} shows around the area. Have fun out there!")
+            f"around the area.") if len(names) == 2 else \
+           (f"Hey {city}! Here are this week's biggest comedy shows, plus a link to all {n} shows around the area.")
 
 
 def build(shows, city, slug, week, intro=None):
