@@ -397,11 +397,14 @@ const V={
  sdNationalComedy:{n:"National Comedy Theatre",area:"Mission Hills",b:"San Diego",c:"SAN",lat:32.747,lng:-117.187},
  sdFinestCityImprov:{n:"Finest City Improv",area:"Hillcrest",b:"San Diego",c:"SAN",lat:32.7462,lng:-117.16},
  comedystudio:{n:"The Comedy Studio",area:"Harvard Square",b:"Cambridge",lat:42.3727,lng:-71.1194},
+ stressnb:{n:"Stress Factory Comedy Club",area:"New Brunswick",b:"New Brunswick, NJ",lat:40.4955,lng:-74.4436},
+ tarrytown:{n:"Tarrytown Music Hall",area:"Tarrytown",b:"Westchester",lat:41.0763,lng:-73.8595},
+ comedyconnri:{n:"Comedy Connection",area:"East Providence",b:"East Providence, RI",lat:41.8183,lng:-71.3745},
+ acllive:{n:"ACL Live at the Moody Theater",area:"Downtown",b:"Austin",lat:30.2653,lng:-97.7477},
 // <tm-venues>  (added automatically from the Ticketmaster feed; rebuilt each update)
  tm_gas_south_arena:{n:"Gas South Arena",area:"Duluth",b:"GA",c:"ATL",lat:33.9869,lng:-84.0907},
  tm_michael_susan_dell_hall:{n:"Michael & Susan Dell Hall",area:"Austin",b:"TX",c:"AUS",lat:30.2721,lng:-97.7424},
  tm_emo_s_austin:{n:"Emo's Austin",area:"Austin",b:"TX",c:"AUS",lat:30.2396,lng:-97.7280},
- tm_moody_center_atx:{n:"Moody Center ATX",area:"Austin",b:"TX",c:"AUS",lat:30.2807,lng:-97.7308},
  tm_lincoln_theatre:{n:"Lincoln Theatre",area:"Washington",b:"DC",c:"DC",lat:38.9174,lng:-77.0290},
  tm_birchmere:{n:"Birchmere",area:"Alexandria",b:"VA",c:"DC",lat:38.8398,lng:-77.0613},
  tm_the_theater_at_mgm_national_:{n:"The Theater at MGM National Harbor",area:"National Harbor",b:"MD",c:"DC",lat:38.7917,lng:-77.0030},
@@ -599,6 +602,10 @@ for(const k in V)V[k].c??=(V[k].b==="Philadelphia"?"PHL":"NYC");
 // Venues' own websites / box offices. Ticket buttons use these instead of
 // listing or resale sites whenever a show's link points at one of those.
 const SITES={
+ acllive:"https://www.acllive.com/",
+ comedyconnri:"https://events-ricomedyconnection-com.seatengine.com",
+ tarrytown:"https://tickets.tarrytownmusichall.org/",
+ stressnb:"https://newbrunswick.stressfactory.com/events",
  comedystudio:"https://www.thecomedystudio.com/events/list/",
  cellarvu:"https://www.comedycellar.com/", bananas:"https://www.bananascomedyclub.com/", comix:"https://mohegansun.com/", foxwoods:"https://foxwoods.com/", riothtx:"https://www.theriothtx.com/", chartway:"https://odu-chartway.evenue.net/", encorelv:"https://www.wynnlasvegas.com/", fillmoredet:"https://www.thefillmoredetroit.com/", hardrockhwd:"https://www.seminolehardrockhollywood.com/",
  collegest:"https://www.collegestreetmusichall.com/",
@@ -715,6 +722,12 @@ const U={
 const S="Stand-up",I="Improv & sketch",P="Live podcast & talk";
 // [date, time(24h), title, performers, venue, type, url, price, flags]
 const RAW=[
+ ["2027-01-29","19:30|22:30","Tim Dillon","Tim Dillon","beacon",S,"https://comedy.tickets/tickets/tim-dillon/",null],
+ ["2027-03-06","20:00","Jim Florentine & Rich Vos","Jim Florentine, Rich Vos","tarrytown",S,"https://tickets.tarrytownmusichall.org/eventperformances.asp?evt=3235","$40–63"],
+ ["2027-02-27","21:30","Rich Vos","Rich Vos","stressnb",S,"https://newbrunswick.stressfactory.com/shows/352208",null],
+ ["2027-02-27","19:00","Rich Vos","Rich Vos","stressnb",S,"https://newbrunswick.stressfactory.com/shows/352206",null],
+ ["2027-02-26","21:30","Rich Vos","Rich Vos","stressnb",S,"https://newbrunswick.stressfactory.com/shows/352207",null],
+ ["2027-02-26","19:00","Rich Vos","Rich Vos","stressnb",S,"https://newbrunswick.stressfactory.com/shows/352205",null],
  ["2027-02-06","20:00","Jerry Seinfeld","Jerry Seinfeld","beacon",S,"https://www.ticketmaster.com/event/3B0064A5D8205CF7",null],
  ["2027-02-05","19:00","Jerry Seinfeld","Jerry Seinfeld","beacon",S,"https://www.ticketmaster.com/event/3B0064A5D80C5CEA",null],
  ["2027-01-30","19:00|21:30","Brendan Sagalow","Brendan Sagalow","bananas",S,"https://www.bananascomedyclub.com/events/146708",null],
@@ -947,6 +960,10 @@ const RAW=[
  ["2027-01-02","19:00","The Gotham All-Stars (The Vintage Lounge)","","gotham",S,"https://gothamcomedyclub.com/events/the-gotham-all-stars-the-vintage-lounge-26gzgjrfw",null],
  ["2027-01-02","21:00","The Gotham All-Stars (The Vintage Lounge)","","gotham",S,"https://gothamcomedyclub.com/events/the-gotham-all-stars-the-vintage-lounge-26avgfoxx",null],
  // Philadelphia
+ ["2027-02-13","21:30","Brendan Sagalow","Brendan Sagalow","helium",S,"https://philadelphia.heliumcomedy.com/shows/395025",null],
+ ["2027-02-12","21:15","Brendan Sagalow","Brendan Sagalow","helium",S,"https://philadelphia.heliumcomedy.com/shows/395024",null],
+ ["2027-02-13","19:00","Brendan Sagalow","Brendan Sagalow","helium",S,"https://philadelphia.heliumcomedy.com/shows/395023",null],
+ ["2027-02-12","19:00","Brendan Sagalow","Brendan Sagalow","helium",S,"https://philadelphia.heliumcomedy.com/shows/395022",null],
  ["2026-12-19","20:00","Are You Garbage?","","xcite",P,U.xc,"$52",["21"]],
  ["2026-11-15","16:00","Hollywood Crime Scene","","helium",P,"https://philadelphia-heliumcomedy-com.seatengine.com/shows/373234",null],
  ["2026-11-15","19:00","Aaron Branch","Aaron Branch","helium",S,"https://philadelphia-heliumcomedy-com.seatengine.com/shows/372305",null],
@@ -1039,6 +1056,10 @@ const RAW=[
  ["2027-01-02","19:00|21:30","Tim Meadows","Tim Meadows","helium",S,"https://philadelphia-heliumcomedy-com.seatengine.com/shows/395584",null],
  ["2027-01-03","19:00","Tim Meadows","Tim Meadows","helium",S,"https://philadelphia-heliumcomedy-com.seatengine.com/shows/395582",null],
  // Boston  (several start times are separated by |)
+ ["2027-05-08","19:00","Are You Garbage?: Army of Garbage Tour","Are You Garbage?","wilbur",P,"https://thewilbur.com/event/are-you-garbage-army-of-garbage-tour/","$35–45"],
+ ["2026-11-28","19:00|21:30","Rich Vos","Rich Vos","comedyconnri",S,"https://events-ricomedyconnection-com.seatengine.com",null],
+ ["2026-11-27","19:00|21:30","Rich Vos","Rich Vos","comedyconnri",S,"https://events-ricomedyconnection-com.seatengine.com",null],
+ ["2027-01-22","19:00|21:30","Ian Fidance","Ian Fidance","laughbos",S,"https://www.tixr.com/groups/laughboston",null],
  ["2027-02-26","19:30","Brian Regan","Brian Regan","wilbur",S,"https://thewilbur.com/event/brian-regan/",null],
  ["2027-02-27","19:30","Brian Regan","Brian Regan","wilbur",S,"https://thewilbur.com/event/brian-regan/",null],
  ["2026-11-17","19:00","Ilana Glazer Live!","Ilana Glazer","wilbur",S,"https://www.ticketmaster.com/event/010064D1006663A8",null,["out"]],
@@ -1219,6 +1240,11 @@ const RAW=[
  ["2026-12-19","21:30","Sam Morril","Sam Morril","magooby",S,"https://www.magoobysjokehouse.com/shows/381614",null,["18"]],
  ["2026-12-20","19:00","Vlad Caamano","Vlad Caamano","magooby",S,"https://www.magoobysjokehouse.com/shows/389021",null,["18"]],
  // Washington, D.C.
+ ["2027-04-24","21:30","Brendan Sagalow","Brendan Sagalow","loft",S,"https://www.dccomedyloft.com/shows/394477",null],
+ ["2027-04-23","21:45","Brendan Sagalow","Brendan Sagalow","loft",S,"https://www.dccomedyloft.com/shows/394476",null],
+ ["2027-04-24","19:00","Brendan Sagalow","Brendan Sagalow","loft",S,"https://www.dccomedyloft.com/shows/394475",null],
+ ["2027-04-23","19:30","Brendan Sagalow","Brendan Sagalow","loft",S,"https://www.dccomedyloft.com/shows/394474",null],
+ ["2027-04-22","19:30","Brendan Sagalow","Brendan Sagalow","loft",S,"https://www.dccomedyloft.com/shows/394473",null],
  ["2026-11-15","15:30|18:30","An Idiot's Guide to Wine","","loft",S,"https://www.dccomedyloft.com/events/139768",null,["18"]],
  ["2026-11-15","17:00","David Jolly","David Jolly","loft",S,"https://www.dccomedyloft.com/events/143278",null,["18"]],
  ["2026-11-15","19:00","Stand-Up Showcase · Lounge","","dcimprov",S,"https://dcimprov-com.seatengine.com/events/140684",null],
@@ -1537,6 +1563,9 @@ const RAW=[
  ["2027-01-08","19:00","Lil Mo Mozzarella","Lil Mo Mozzarella","empire",S,"https://empirecomedyme.com/show/lil-mo-mozzarella",null,["21"]],
  ["2027-01-09","19:00","Lil Mo Mozzarella","Lil Mo Mozzarella","empire",S,"https://empirecomedyme.com/show/lil-mo-mozzarella",null,["21"]],
  // Chicago
+ ["2027-01-30","19:00","Tim Dillon","Tim Dillon","chitheatre",S,"https://comedy.tickets/tickets/tim-dillon/",null],
+ ["2027-03-20","21:30","Are You Garbage?","Are You Garbage?","chimprov",P,"https://comedy.tickets/tickets/are-you-garbage/",null],
+ ["2027-03-19","19:00|21:30","Are You Garbage?","Are You Garbage?","chimprov",P,"https://comedy.tickets/tickets/are-you-garbage/",null],
  ["2026-11-15", "16:00", "No Bears? No Problem! A Bye Week Comedy Showcase", "", "chiZaniesRosemont",S,"https://rosemont.zanies.com/show/no-bears-no-problem-a-bye-week-comedy-showcase/zanies-comedy-club-rosemont/rosemont-illinois/","$27.25",["21"]],
  ["2026-11-15", "17:00", "Iranian Music & Comedy Showcase", "", "comedybarchi",S,"https://comedybar.com/chicago/comedy-shows-chicago-new/",null],
  ["2026-11-15", "18:00", "ISMO", "ISMO", "chimprov",S,"https://improv.com/chicago/comic/ismo/",null],
@@ -1760,6 +1789,8 @@ const RAW=[
  ["2026-12-19","18:00|21:30","D.L. Hughley","D.L. Hughley","cwchi",S,"https://citywinery.com/pages/genre/dl-hughley-chicago-multishow","$69"],
  ["2026-12-20","17:00|20:30","D.L. Hughley","D.L. Hughley","cwchi",S,"https://citywinery.com/pages/genre/dl-hughley-chicago-multishow","$69"],
  // Atlanta
+ ["2027-01-17","19:01","Ian Fidance · The Other Room","Ian Fidance","heliumatl",S,"https://atlanta-heliumcomedy-com.seatengine.com/events",null],
+ ["2027-01-16","19:00|21:30","Ian Fidance · The Other Room","Ian Fidance","heliumatl",S,"https://atlanta-heliumcomedy-com.seatengine.com/events",null],
  ["2027-03-20","19:30|22:00","Brendan Sagalow","Brendan Sagalow","heliumatl",S,"https://atlanta.heliumcomedy.com/events/146709",null],
  ["2027-03-19","19:30|21:45","Brendan Sagalow","Brendan Sagalow","heliumatl",S,"https://atlanta.heliumcomedy.com/events/146709",null],
  ["2027-03-18","20:00","Brendan Sagalow","Brendan Sagalow","heliumatl",S,"https://atlanta.heliumcomedy.com/events/146709",null],
@@ -1971,6 +2002,8 @@ const RAW=[
  ["2027-01-02","18:30","Guy Torry","Guy Torry","fbvb",S,"https://www.etix.com/ticket/p/50370170/guy-torry-virginia-beach-funny-bone-comedy-club-virginia-beach?partner_id=100","$24",["21"]],
  ["2027-01-02","21:30","Guy Torry","Guy Torry","fbvb",S,"https://www.etix.com/ticket/p/83910761/guy-torry-virginia-beach-funny-bone-comedy-club-virginia-beach?partner_id=100","$24",["21"]],
  // Hartford
+ ["2027-02-06","18:00|20:00","Are You Garbage?","Are You Garbage?","comix",P,"https://comedy.tickets/tickets/are-you-garbage/",null],
+ ["2027-02-04","20:00","Are You Garbage?","Are You Garbage?","comix",P,"https://comedy.tickets/tickets/are-you-garbage/",null],
  ["2026-12-19","18:00|20:00","Mike Cannon","Mike Cannon","comix",S,"https://events.leapevents.com/event/mike-cannon-121926o5bxc8l",null],
  ["2026-12-17","20:00","Mike Cannon","Mike Cannon","comix",S,"https://events.leapevents.com/event/mike-cannon-1219266dfgbtq",null],
  ["2026-11-15","18:00","WTF! What Tha Funny Comedy Tour","Shang, Mike Estime & JP Justice","fbhfd",S,U.fbhfd,"$25",["18"]],
@@ -2632,6 +2665,7 @@ const RAW=[
  ["2026-12-20","19:00","Cam Bertrand","Cam Bertrand","heliumind",S,"https://indianapolis-heliumcomedy-com.seatengine.com/shows/378300",null],
  ["2026-12-30","19:30","That One Mailman","That One Mailman","heliumind",S,"https://indianapolis-heliumcomedy-com.seatengine.com/shows/391769",null],
  // Austin
+ ["2027-02-18","19:00","Tim Dillon","Tim Dillon","acllive",S,"https://comedy.tickets/tickets/tim-dillon/",null],
  ["2026-11-15","19:30","Anthony Fuentes · The Red Room","Anthony Fuentes","capcity",S,"https://www.capcitycomedy.com/shows/376991",null],
  ["2026-11-15","16:00","Philip Lindsay","Philip Lindsay","capcity",S,"https://www.capcitycomedy.com/shows/374062",null],
  ["2026-11-15","19:00","Darren Fleet","Darren Fleet","capcity",S,"https://www.capcitycomedy.com/shows/394504",null],
@@ -3625,7 +3659,7 @@ const RAW=[
  ["2027-01-23","20:00","Peter Antoniou: Brain Teaser","Peter Antoniou","buckhead",S,"https://www.ticketmaster.com/peter-antoniou-brain-teaser-atlanta-georgia-01-23-2027/event/0E006537DC2C34FE",null],
  ["2026-11-21","19:00","Brett Goldstein","Brett Goldstein","tm_michael_susan_dell_hall",S,"https://www.ticketmaster.com/event/Z7r9jZ1AAZU1_",null],
  ["2026-11-27","18:30","Grief Sucks: A One Man Show By KevOnStage","KevOnStage","tm_emo_s_austin",S,"https://www.ticketmaster.com/grief-sucks-a-one-man-show-austin-texas-11-27-2026/event/3A0064E6E42CC53F",null],
- ["2026-12-31","19:00","Kill Tony","Kill Tony","tm_moody_center_atx",S,"https://www.ticketmaster.com/kill-tony-austin-texas-12-31-2026/event/3A00650DAA3A94EF",null],
+ ["2026-12-31","19:00","Kill Tony","Kill Tony","acllive",S,"https://www.ticketmaster.com/kill-tony-austin-texas-12-31-2026/event/3A00650DAA3A94EF",null],
  ["2026-12-23","20:00","A John Waters Christmas","A John Waters Christmas","tm_baltimore_soundstage",S,"https://www.ticketmaster.com/a-john-waters-christmas-baltimore-maryland-12-23-2026/event/150064AFB0EA8868",null],
  ["2027-01-16","20:00","Aries Spears","Aries Spears","tm_the_paramount_baltimore",S,"https://www.ticketmaster.com/aries-spears-baltimore-maryland-01-16-2027/event/1500653575D62AC7",null],
  ["2027-01-22","19:00","Vir Das: I say we RUN!","Vir Das","lyric",S,"https://www.etix.com/ticket/p/84336013/vir-dasi-say-we-run-baltimore-the-lyric",null],
