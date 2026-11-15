@@ -79,7 +79,16 @@ def line(s, show_day=False, run=None):
 </td></tr>'''
 
 
-def build(shows, city, slug, week):
+def default_intro(city, picks, n):
+    stars = sorted(picks, key=lambda p: (any(w in p["v"].lower() for w in CLUB), p.get("mi", 0) > 20, p["d"]))
+    names = [p["who"] if p.get("who") and len(p["who"]) < len(p["title"]) else p["title"].split(":")[0].strip() for p in stars[:2]]
+    lead = f"{names[0]} and {names[1]}" if len(names) == 2 else (names[0] if names else "some great comics")
+    return (f"Hey {city}! It's a good week for comedy: {lead} are both in town, plus {n - 2 if n > 2 else n} more shows "
+            f"around the area. Here are the ones worth grabbing tickets for before they sell out. Have fun out there!") if len(names) == 2 else \
+           (f"Hey {city}! Here are this week's biggest comedy shows, plus a link to all {n} shows around the area. Have fun out there!")
+
+
+def build(shows, city, slug, week, intro=None):
     g = group(shows)
     runs = {}
     for s in shows:
@@ -92,15 +101,7 @@ def build(shows, city, slug, week):
         if key in seen:
             continue
         seen.add(key); picks.append(s)
-    picks = picks[:6]
-    days = OrderedDict()
-    for s in g:
-        days.setdefault(s["d"], []).append(s)
-    day_html = ""
-    for d, arr in days.items():
-        dt = datetime.date.fromisoformat(d)
-        day_html += f'<tr><td style="padding:22px 0 4px;font-size:15px;font-weight:800;color:{INK};text-transform:uppercase;letter-spacing:1px">{dt.strftime("%A")} <span style="color:{MUTED};font-weight:600;text-transform:none;letter-spacing:0">{dt.strftime("%B")} {dt.day}</span></td></tr>'
-        day_html += "".join(line(s) for s in arr)
+    picks = picks[:8]
     picks_html = "".join(line(s, show_day=True, run=[x["d"] for x in shows if x["title"] == s["title"] and x["v"] == s["v"]]) for s in picks)
     n = len(shows)
     url = f"https://laughslive.com/{slug}/"
@@ -116,14 +117,14 @@ def build(shows, city, slug, week):
 </td></tr>
 <tr><td style="padding:26px 24px 6px">
 <div style="font-size:26px;font-weight:800;color:{INK};line-height:1.2">Comedy in {esc(city)} this week</div>
-<div style="font-size:15px;color:{MUTED};margin-top:6px">{esc(week)} · {n} shows within 50 miles</div>
+<div style="font-size:15px;color:{MUTED};margin-top:6px">{esc(week)}</div>
+<div style="font-size:16px;color:{INK};line-height:1.55;margin-top:16px">{esc(intro or default_intro(city, picks, n))}</div>
+<div style="font-size:16px;color:{INK};margin-top:10px">— The LaughsLive team</div>
 </td></tr>
-<tr><td style="padding:10px 24px 0"><div style="font-size:13px;font-weight:800;color:{PINK};text-transform:uppercase;letter-spacing:1.5px">Big shows</div>
+<tr><td style="padding:10px 24px 0"><div style="font-size:13px;font-weight:800;color:{PINK};text-transform:uppercase;letter-spacing:1.5px">This week's big shows</div>
 <table role="presentation" width="100%" cellpadding="0" cellspacing="0">{picks_html}</table></td></tr>
-<tr><td style="padding:18px 24px 0"><div style="font-size:13px;font-weight:800;color:{PINK};text-transform:uppercase;letter-spacing:1.5px">Every show this week</div>
-<table role="presentation" width="100%" cellpadding="0" cellspacing="0">{day_html}</table></td></tr>
 <tr><td align="center" style="padding:26px 24px">
-<a href="{url}" style="display:inline-block;background:{PINK};color:#ffffff;font-weight:700;font-size:16px;padding:13px 24px;border-radius:999px;text-decoration:none">See all {esc(city)} shows</a>
+<a href="{url}" style="display:inline-block;background:{PINK};color:#ffffff;font-weight:700;font-size:16px;padding:13px 24px;border-radius:999px;text-decoration:none">See all {n} shows this week</a>
 <div style="color:{MUTED};font-size:13px;margin-top:12px">Times and lineups change, so check the venue's page before you go.</div>
 </td></tr>
 <tr><td style="background:{BG};padding:18px 24px;color:{MUTED};font-size:12px;line-height:1.6;text-align:center">
@@ -136,6 +137,7 @@ LaughsLive · 3103 Hulmeville Road, Suite 200 · Bensalem, PA 19020
 
 if __name__ == "__main__":
     src, city, slug, week, out = sys.argv[1:6]
+    intro = sys.argv[6] if len(sys.argv) > 6 else None
     shows = json.load(open(src))
-    open(out, "w").write(build(shows, city, slug, week))
+    open(out, "w").write(build(shows, city, slug, week, intro))
     print("wrote", out)
