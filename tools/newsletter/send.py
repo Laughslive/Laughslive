@@ -37,7 +37,7 @@ def api(method, path, body=None):
             txt = r.read().decode()
             return json.loads(txt) if txt else {}
     except urllib.error.HTTPError as e:
-        raise SystemExit(f"Brevo {method} {path} failed: {e.code} {e.read().decode()[:500]}")
+        raise RuntimeError(f"Brevo {method} {path} failed: {e.code} {e.read().decode()[:500]}")
 
 
 def all_pages(path, key):
@@ -153,8 +153,14 @@ def main():
                                                "sender": SENDER, "htmlContent": html,
                                                "previewText": f"{len(cs)} shows within 50 miles, {week}",
                                                "recipients": {"listIds": [main_list["id"]]}})
-        api("POST", f"/emailCampaigns/{camp['id']}/sendTest", {"emailTo": [test_email]})
-        api("DELETE", f"/emailCampaigns/{camp['id']}")  # tidy up the draft
+        # Brevo only sends tests to existing contacts that are on some list: keep testers on a "Testers" list.
+        testers = next((l for l in lists if l["name"] == "Testers"), None)
+        tid = testers["id"] if testers else api("POST", "/contacts/lists", {"name": "Testers", "folderId": main_list.get("folderId") or 1})["id"]
+        api("POST", "/contacts", {"email": test_email, "listIds": [tid], "updateEnabled": True})
+        try:
+            api("POST", f"/emailCampaigns/{camp['id']}/sendTest", {"emailTo": [test_email]})
+        finally:
+            api("DELETE", f"/emailCampaigns/{camp['id']}")  # tidy up the draft
         print("Test sent to", test_email)
         return
 
