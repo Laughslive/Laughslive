@@ -86,6 +86,10 @@ Background for a new Claude chat picking up this project, or starting a sister s
   Sign-up box on every page (`signup.js` + the `#llSignup` section in index.html) posts email + CITY
   to the Brevo form "LaughsLive site sign-up" (double opt-in) -> list "LaughsLive Newsletter".
   No Brevo scripts load on the site. Confirmation link returns to https://laughslive.com/?subscribed=1.
+  Weekly send: `.github/workflows/newsletter.yml` runs `tools/newsletter/send.py` Thursday ~7:43am ET
+  (Fri/Sat catch-up for Brevo's free 300/day limit; `data/newsletter_state.json` tracks sent cities).
+  Email layout: `tools/newsletter/build_email.py` (intro + this week's big shows + "See all" button).
+  Manual run of the workflow = test email to one address only. Secret: BREVO_API_KEY.
   Footer address for emails: 3103 Hulmeville Road, Suite 200, Bensalem, PA 19020; phone 215-543-6489.
 - **Social:** pending. Use the business phone 215-543-6489 and info@laughslive.com for sign-ups.
 - **Hosting is free** (GitHub Pages). The site keeps running without a Claude subscription, but the
