@@ -50,6 +50,12 @@ for(const c in CENTER){
   out[c]=SHOWS.filter(s=>miles(CENTER[c],[s.v.lat,s.v.lng])<=RADIUS&&s.d>=todayStr)
     .sort((a,b)=>(a.d+a.t).localeCompare(b.d+b.t)).slice(0,40)
     .map(s=>({d:s.d,t:s.t,title:s.title,who:s.who,venue:s.v.n,area:s.v.area,b:s.v.b}));
+  // Venues with the most upcoming shows, for the "Comedy clubs" section.
+  const vs={};
+  SHOWS.filter(s=>miles(CENTER[c],[s.v.lat,s.v.lng])<=RADIUS&&s.d>=todayStr).forEach(s=>{
+    const k=s.v.n+"|"+s.v.area;(vs[k]??={n:s.v.n,area:s.v.area,b:s.v.b,count:0,site:(typeof SITES!=="undefined"&&SITES[s.vk])||s.v.site||""}).count++;
+  });
+  out["_clubs_"+c]=Object.values(vs).sort((a,b)=>b.count-a.count).slice(0,15);
 }
 console.log(JSON.stringify(out));
 """
@@ -72,6 +78,22 @@ def static_list(code, shows):
         f"{html.escape(s['venue'])}, {html.escape(s['area'])}</li>" for s in shows)
     return (f'<section class="seo-list"><h2>Upcoming comedy shows in {html.escape(name)}</h2>'
             f"<ul>{items}</ul></section>")
+
+def clubs_html(code, clubs):
+    """'Comedy clubs in <city>': the venues with the most upcoming shows (helps 'comedy clubs <city>' searches)."""
+    if not clubs:
+        return ""
+    name = BY[code][2]
+    def item(v):
+        label = html.escape(v["n"])
+        if v.get("site"):
+            label = f'<a href="{html.escape(v["site"])}" rel="noopener">{label}</a>'
+        return f"<li>{label} <span>· {html.escape(v['area'])} · {v['count']} upcoming show{'s' if v['count'] != 1 else ''}</span></li>"
+    return ('<section class="cityclubs" style="max-width:70ch;margin:28px auto 0;padding:0 16px;color:var(--muted)">'
+            '<style>.cityclubs ul{margin:6px 0 0;padding-left:18px;columns:2 260px;column-gap:28px}.cityclubs li{margin:3px 0;break-inside:avoid}'
+            '.cityclubs a{color:var(--ink);font-weight:600}.cityclubs span{font-size:14px}</style>'
+            f'<h2 style="font-size:1.05rem;color:var(--ink);margin:0">Comedy clubs and venues in {html.escape(name)}</h2>'
+            f'<ul>{"".join(item(v) for v in clubs)}</ul></section>')
 
 def nav_html(current=None):
     groups = []
@@ -201,9 +223,9 @@ def main():
     for code, slug, name, short, nearby in CITIES:
         url = f"{SITE}/{slug}/"
         n = len(shows.get(code, []))
-        title = f"Comedy Shows in {short}: Stand-Up Tonight & This Week | LaughsLive"
-        desc = (f"Upcoming comedy shows in {name} and within 50 miles, including {nearby}. "
-                "Club showcases, touring headliners and live podcasts, with links to the venue's own tickets.")
+        title = f"Comedy Shows & Comedy Clubs in {short}: Tonight & This Week | LaughsLive"
+        desc = (f"Every upcoming comedy show in {name} and within 50 miles, including {nearby}: "
+                "comedy clubs, stand-up, improv and touring headliners, with links to each venue's own tickets.")
         pg = set_title_desc(base, title, desc)
         pg = put_block(pg, "head", head_html(title, desc, url) + f"<script>window.LL_CITY={json.dumps(code)}</script>", "</head>")
         pg = pg.replace('<option value="NYC" selected>', '<option value="NYC">', 1)
@@ -218,6 +240,7 @@ def main():
             pg = pg.replace("<footer>", f'<section class="cityintro" style="max-width:70ch;margin:28px auto 0;padding:0 16px;color:var(--muted)">'
                             f'<h2 style="font-size:1.05rem;color:var(--ink);margin:0 0 6px">Comedy in {html.escape(name)}</h2>'
                             f'<p style="margin:0">{html.escape(intro)}</p></section>\n<footer>', 1)
+        pg = pg.replace("<footer>", clubs_html(code, shows.get("_clubs_" + code, [])) + "\n<footer>", 1)
         pg = pg.replace('<main id="results"></main>',
                         f'<main id="results">{static_list(code, shows.get(code, []))}</main>', 1)
         pg = put_block(pg, "nav", nav_html(code), "<footer>")
