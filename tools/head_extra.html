@@ -1,3 +1,20 @@
 <meta name="google-site-verification" content="sAcSGpN8w_DHBej0RQCsO_g2_s6IH9AmL6AKW1qIaH0" />
 <meta name="impact-site-verification" value="ca011c88-1927-4855-b2bd-a26274d045e2">
 <!-- Cloudflare Web Analytics --><script type='module' src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "044ae88d4e7e4f5ea7d719791a774a14"}'></script><!-- End Cloudflare Web Analytics -->
+<!-- Google Analytics (GA4) for laughslive.com, alongside Cloudflare. -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-H4JYZNPC69"></script>
+<script>
+window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)}
+gtag("js",new Date());gtag("config","G-H4JYZNPC69");
+// Count ticket-button clicks, "Show more" and newsletter sign-ups (no search text, location or email is sent).
+document.addEventListener("click",function(ev){try{
+  var a=ev.target.closest&&ev.target.closest(".buy a");
+  if(a){var card=a.closest(".ticket"),h=card&&card.querySelector("h3"),v=card&&card.querySelector(".where");
+    gtag("event","ticket_click",{show_title:h?h.textContent.trim().slice(0,100):"",venue:v?v.textContent.split("·")[0].trim().slice(0,100):"",
+      link_type:a.textContent.replace("↗","").trim(),link_domain:a.hostname,page_city:(typeof state!=="undefined"&&state.city)||""});return}
+  if(ev.target.id==="moreBtn")gtag("event","show_more",{page_city:(typeof state!=="undefined"&&state.city)||""});
+}catch(e){}},true);
+document.addEventListener("submit",function(ev){try{var f=ev.target;
+  if(f.closest&&f.closest("#llSignup")&&f.EMAIL&&f.EMAIL.value.indexOf("@")>0)gtag("event","newsletter_signup",{signup_city:f.CITY?f.CITY.value:""});
+}catch(e){}},true);
+</script>

@@ -17,7 +17,24 @@ img{max-width:100%}
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bungee&family=Figtree:wght@400;500;600;700&display=swap">
 <!--ll:head--><link rel="canonical" href="https://laughslive.com/chicago/"><meta property="og:type" content="website"><meta property="og:site_name" content="LaughsLive"><meta property="og:title" content="Comedy Shows &amp; Comedy Clubs in Chicago: Tonight &amp; This Week | LaughsLive"><meta property="og:description" content="Every upcoming comedy show in Chicago and within 50 miles, including Old Town, Wrigleyville, Schaumburg, Rosemont and the suburbs: comedy clubs, stand-up, improv and touring headliners, with links to each venue&#x27;s own tickets."><meta property="og:url" content="https://laughslive.com/chicago/"><meta name="twitter:card" content="summary"><meta property="og:image" content="https://laughslive.com/icons/icon-512.png"><link rel="manifest" href="/manifest.webmanifest"><meta name="theme-color" content="#0A0E22"><link rel="icon" href="/favicon.ico" sizes="48x48"><link rel="icon" type="image/png" sizes="96x96" href="/icons/favicon-96.png"><link rel="icon" type="image/png" sizes="32x32" href="/icons/favicon-32.png"><link rel="icon" type="image/png" sizes="192x192" href="/icons/icon-192.png"><link rel="apple-touch-icon" href="/icons/apple-touch-icon.png"><meta name="apple-mobile-web-app-capable" content="yes"><meta name="mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-title" content="LaughsLive"><meta name="apple-mobile-web-app-status-bar-style" content="black-translucent"><script>window.LL_SITE=1;if("serviceWorker"in navigator)addEventListener("load",()=>navigator.serviceWorker.register("/sw.js").catch(()=>{}))</script><script defer src="/install.js"></script><meta name="google-site-verification" content="sAcSGpN8w_DHBej0RQCsO_g2_s6IH9AmL6AKW1qIaH0" />
 <meta name="impact-site-verification" value="ca011c88-1927-4855-b2bd-a26274d045e2">
-<!-- Cloudflare Web Analytics --><script type='module' src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "044ae88d4e7e4f5ea7d719791a774a14"}'></script><!-- End Cloudflare Web Analytics --><script>window.LL_CITY="CHI"</script><!--/ll:head-->
+<!-- Cloudflare Web Analytics --><script type='module' src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "044ae88d4e7e4f5ea7d719791a774a14"}'></script><!-- End Cloudflare Web Analytics -->
+<!-- Google Analytics (GA4) for laughslive.com, alongside Cloudflare. -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-H4JYZNPC69"></script>
+<script>
+window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)}
+gtag("js",new Date());gtag("config","G-H4JYZNPC69");
+// Count ticket-button clicks, "Show more" and newsletter sign-ups (no search text, location or email is sent).
+document.addEventListener("click",function(ev){try{
+  var a=ev.target.closest&&ev.target.closest(".buy a");
+  if(a){var card=a.closest(".ticket"),h=card&&card.querySelector("h3"),v=card&&card.querySelector(".where");
+    gtag("event","ticket_click",{show_title:h?h.textContent.trim().slice(0,100):"",venue:v?v.textContent.split("·")[0].trim().slice(0,100):"",
+      link_type:a.textContent.replace("↗","").trim(),link_domain:a.hostname,page_city:(typeof state!=="undefined"&&state.city)||""});return}
+  if(ev.target.id==="moreBtn")gtag("event","show_more",{page_city:(typeof state!=="undefined"&&state.city)||""});
+}catch(e){}},true);
+document.addEventListener("submit",function(ev){try{var f=ev.target;
+  if(f.closest&&f.closest("#llSignup")&&f.EMAIL&&f.EMAIL.value.indexOf("@")>0)gtag("event","newsletter_signup",{signup_city:f.CITY?f.CITY.value:""});
+}catch(e){}},true);
+</script><script>window.LL_CITY="CHI"</script><!--/ll:head-->
 </head>
 <body>
 <style>
