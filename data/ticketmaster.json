@@ -1,5 +1,5 @@
 {
-"fetched": "2026-11-23T10:22:07+00:00",
+"fetched": "2026-11-24T10:19:44+00:00",
 "source": "Ticketmaster Discovery API",
 "events": [
 {
@@ -687,28 +687,6 @@
 "subGenre": "Comedy",
 "attractions": [
 "Kill Tony"
-],
-"ageRestricted": false
-},
-{
-"city": "BAL",
-"id": "16vfZ_K7pG7mDQ2",
-"name": "Criminal Presents: DON'T WORRY WITH PHOEBE JUDGE",
-"date": "2026-11-23",
-"time": "19:00",
-"status": "onsale",
-"venue": "9:30 CLUB",
-"venueCity": "Washington",
-"state": "DC",
-"address": "815 V Street N.W. ",
-"lat": 38.91795,
-"lng": -77.02373,
-"url": "https://www.ticketmaster.com/criminal-presents-dont-worry-with-phoebe-washington-district-of-columbia-11-23-2026/event/1500653116BBB68F",
-"priceMin": null,
-"priceMax": null,
-"subGenre": "Comedy",
-"attractions": [
-"Criminal Podcast"
 ],
 "ageRestricted": false
 },
@@ -1548,29 +1526,6 @@
 },
 {
 "city": "BOS",
-"id": "rZ7HnEZ1AfGVuf",
-"name": "Steve Sweeney with Mike McCarthy and Mike Koutrobis",
-"date": "2026-12-03",
-"time": "20:00",
-"status": "onsale",
-"venue": "Agoro's",
-"venueCity": "Somerset",
-"state": "MA",
-"address": "2756 County Street ",
-"lat": 41.76971,
-"lng": -71.13772,
-"url": "https://www.ticketweb.com/event/steve-sweeney-with-mike-mccarthy-agoros-tickets/14334354",
-"priceMin": 30.7,
-"priceMax": 40.96,
-"subGenre": "Comedy",
-"attractions": [
-"Steve Sweeney",
-"Johnny Joyce"
-],
-"ageRestricted": false
-},
-{
-"city": "BOS",
 "id": "rZ7HnEZ1AfuaCf",
 "name": "Steve Sweeney with Johnny Joyce",
 "date": "2026-12-03",
@@ -1650,8 +1605,8 @@
 "lat": 41.888243,
 "lng": -71.448906,
 "url": "https://www.ticketweb.com/event/frank-santos-jr-r-rated-ballys-twin-river-casino-tickets/14380684",
-"priceMin": 33.27,
-"priceMax": 38.91,
+"priceMin": 38.4,
+"priceMax": 46.61,
 "subGenre": "Comedy",
 "attractions": [
 "Frank Santos Jr."
@@ -2472,28 +2427,6 @@
 "subGenre": "Comedy",
 "attractions": [
 "Giggly Squad Podcast Live"
-],
-"ageRestricted": false
-},
-{
-"city": "CHI",
-"id": "rZ7HnEZ1AfOV7S",
-"name": "*SOLD OUT* Kyle Kinane",
-"date": "2026-11-23",
-"time": "20:00",
-"status": "onsale",
-"venue": "Thalia Hall",
-"venueCity": "Chicago",
-"state": "IL",
-"address": "1807 S Allport St",
-"lat": 41.857717,
-"lng": -87.657459,
-"url": "https://www.ticketweb.com/event/sold-out-kyle-kinane-thalia-hall-tickets/14834133",
-"priceMin": 0.0,
-"priceMax": 0.0,
-"subGenre": "Comedy",
-"attractions": [
-"Kyle Kinane"
 ],
 "ageRestricted": false
 },
@@ -3339,6 +3272,28 @@
 },
 {
 "city": "CHI",
+"id": "vv1kvYvPqaGA1Nf6_",
+"name": "Marcello Hernández",
+"date": "2027-01-08",
+"time": "19:00",
+"status": "onsale",
+"venue": "The Chicago Theatre",
+"venueCity": "Chicago",
+"state": "IL",
+"address": "175 N State St",
+"lat": 41.88537,
+"lng": -87.627457,
+"url": "https://www.ticketmaster.com/marcello-hernandez-chicago-illinois-01-08-2027/event/070065749A8D41D9",
+"priceMin": null,
+"priceMax": null,
+"subGenre": "Comedy",
+"attractions": [
+"Marcello Hernández"
+],
+"ageRestricted": false
+},
+{
+"city": "CHI",
 "id": "rZ7HnEZ1AfuJF7",
 "name": "Chris Distefano",
 "date": "2027-01-08",
@@ -3378,6 +3333,28 @@
 "subGenre": "Comedy",
 "attractions": [
 "Chris Distefano"
+],
+"ageRestricted": false
+},
+{
+"city": "CHI",
+"id": "vv1kvYvPqaGA1Pf60",
+"name": "Marcello Hernández",
+"date": "2027-01-08",
+"time": "22:00",
+"status": "onsale",
+"venue": "The Chicago Theatre",
+"venueCity": "Chicago",
+"state": "IL",
+"address": "175 N State St",
+"lat": 41.88537,
+"lng": -87.627457,
+"url": "https://www.ticketmaster.com/marcello-hernandez-chicago-illinois-01-08-2027/event/070065749A9541E4",
+"priceMin": null,
+"priceMax": null,
+"subGenre": "Comedy",
+"attractions": [
+"Marcello Hernández"
 ],
 "ageRestricted": false
 },
@@ -3427,6 +3404,72 @@
 },
 {
 "city": "CHI",
+"id": "vv1kvYvPqaGA1Ef6W",
+"name": "Marcello Hernández",
+"date": "2027-01-09",
+"time": "19:00",
+"status": "onsale",
+"venue": "The Chicago Theatre",
+"venueCity": "Chicago",
+"state": "IL",
+"address": "175 N State St",
+"lat": 41.88537,
+"lng": -87.627457,
+"url": "https://www.ticketmaster.com/marcello-hernandez-chicago-illinois-01-09-2027/event/070065749A9D41FD",
+"priceMin": null,
+"priceMax": null,
+"subGenre": "Comedy",
+"attractions": [
+"Marcello Hernández"
+],
+"ageRestricted": false
+},
+{
+"city": "CHI",
+"id": "vv1kvYvPqaGA1tfF7",
+"name": "Marcello Hernández",
+"date": "2027-01-09",
+"time": "22:00",
+"status": "onsale",
+"venue": "The Chicago Theatre",
+"venueCity": "Chicago",
+"state": "IL",
+"address": "175 N State St",
+"lat": 41.88537,
+"lng": -87.627457,
+"url": "https://www.ticketmaster.com/marcello-hernandez-chicago-illinois-01-09-2027/event/070065749AA54204",
+"priceMin": null,
+"priceMax": null,
+"subGenre": "Comedy",
+"attractions": [
+"Marcello Hernández"
+],
+"ageRestricted": false
+},
+{
+"city": "CHI",
+"id": "vv1A6Zk4MGkdKrI7B",
+"name": "Marcello Hernández",
+"date": "2027-01-10",
+"time": "17:00",
+"status": "onsale",
+"venue": "The Chicago Theatre",
+"venueCity": "Chicago",
+"state": "IL",
+"address": "175 N State St",
+"lat": 41.88537,
+"lng": -87.627457,
+"url": "https://www.ticketmaster.com/marcello-hernandez-chicago-illinois-01-10-2027/event/07006577D37A813A",
+"priceMin": null,
+"priceMax": null,
+"subGenre": "Comedy",
+"attractions": [
+"Marcello Hernández"
+],
+"ageRestricted": false
+},
+{
+"city": "CHI",
 "id": "vv1A6Zk4kGkd5FMoa",
 "name": "Roy Wood Jr.",
 "date": "2027-01-10",
@@ -3444,6 +3487,28 @@
 "subGenre": "Comedy",
 "attractions": [
 "Roy Wood Jr."
+],
+"ageRestricted": false
+},
+{
+"city": "CHI",
+"id": "vv1A6Zk4MGkdKObA3",
+"name": "Marcello Hernández",
+"date": "2027-01-10",
+"time": "20:00",
+"status": "onsale",
+"venue": "The Chicago Theatre",
+"venueCity": "Chicago",
+"state": "IL",
+"address": "175 N State St",
+"lat": 41.88537,
+"lng": -87.627457,
+"url": "https://www.ticketmaster.com/marcello-hernandez-chicago-illinois-01-10-2027/event/07006577D3818152",
+"priceMin": null,
+"priceMax": null,
+"subGenre": "Comedy",
+"attractions": [
+"Marcello Hernández"
 ],
 "ageRestricted": false
 },
@@ -6177,6 +6242,28 @@
 },
 {
 "city": "DFW",
+"id": "rZ7HnEZ1A4v_JK",
+"name": "Gabriel Iglesias",
+"date": "2026-12-18",
+"time": "18:00",
+"status": "onsale",
+"venue": "Addison Improv",
+"venueCity": "Addison",
+"state": "TX",
+"address": "4980 Beltline Road #250",
+"lat": 32.95394,
+"lng": -96.82502,
+"url": "https://www.ticketweb.com/event/gabriel-iglesias-addison-improv-tickets/15059993",
+"priceMin": 67.45,
+"priceMax": 77.75,
+"subGenre": "Comedy",
+"attractions": [
+"Gabriel Iglesias"
+],
+"ageRestricted": false
+},
+{
+"city": "DFW",
 "id": "vvG1YZ_fGA3wEg",
 "name": "Taylor Williamson",
 "date": "2026-12-18",
@@ -6265,6 +6352,28 @@
 },
 {
 "city": "DFW",
+"id": "rZ7HnEZ1A4vOZK",
+"name": "Gabriel Iglesias",
+"date": "2026-12-18",
+"time": "21:00",
+"status": "onsale",
+"venue": "Addison Improv",
+"venueCity": "Addison",
+"state": "TX",
+"address": "4980 Beltline Road #250",
+"lat": 32.95394,
+"lng": -96.82502,
+"url": "https://www.ticketweb.com/event/gabriel-iglesias-addison-improv-tickets/15060013",
+"priceMin": 67.45,
+"priceMax": 77.75,
+"subGenre": "Comedy",
+"attractions": [
+"Gabriel Iglesias"
+],
+"ageRestricted": false
+},
+{
+"city": "DFW",
 "id": "vvG1YZ_42P_FT0",
 "name": "Comedy Allstars",
 "date": "2026-12-18",
@@ -6304,6 +6413,28 @@
 "subGenre": "Comedy",
 "attractions": [
 "Alfred Robles"
+],
+"ageRestricted": false
+},
+{
+"city": "DFW",
+"id": "rZ7HnEZ1A4vOZN",
+"name": "Gabriel Iglesias",
+"date": "2026-12-19",
+"time": "17:00",
+"status": "onsale",
+"venue": "Addison Improv",
+"venueCity": "Addison",
+"state": "TX",
+"address": "4980 Beltline Road #250",
+"lat": 32.95394,
+"lng": -96.82502,
+"url": "https://www.ticketweb.com/event/gabriel-iglesias-addison-improv-tickets/15060023",
+"priceMin": 67.45,
+"priceMax": 77.75,
+"subGenre": "Comedy",
+"attractions": [
+"Gabriel Iglesias"
 ],
 "ageRestricted": false
 },
@@ -6370,6 +6501,28 @@
 "subGenre": "Comedy",
 "attractions": [
 "Alfred Robles"
+],
+"ageRestricted": false
+},
+{
+"city": "DFW",
+"id": "rZ7HnEZ1A4vOZd",
+"name": "Gabriel Iglesias",
+"date": "2026-12-19",
+"time": "20:00",
+"status": "onsale",
+"venue": "Addison Improv",
+"venueCity": "Addison",
+"state": "TX",
+"address": "4980 Beltline Road #250",
+"lat": 32.95394,
+"lng": -96.82502,
+"url": "https://www.ticketweb.com/event/gabriel-iglesias-addison-improv-tickets/15060003",
+"priceMin": 67.45,
+"priceMax": 77.75,
+"subGenre": "Comedy",
+"attractions": [
+"Gabriel Iglesias"
 ],
 "ageRestricted": false
 },
@@ -7165,6 +7318,28 @@
 },
 {
 "city": "DFW",
+"id": "rZ7HnEZ1Af-EpK",
+"name": "DL Hughley",
+"date": "2027-01-08",
+"time": "19:30",
+"status": "onsale",
+"venue": "Addison Improv",
+"venueCity": "Addison",
+"state": "TX",
+"address": "4980 Beltline Road #250",
+"lat": 32.95394,
+"lng": -96.82502,
+"url": "https://www.ticketweb.com/event/dl-hughley-addison-improv-tickets/14867593",
+"priceMin": 56.12,
+"priceMax": 445.46,
+"subGenre": "Comedy",
+"attractions": [
+"DL Hughley"
+],
+"ageRestricted": false
+},
+{
+"city": "DFW",
 "id": "1k18vP_oGACUZBh",
 "name": "Funny Marco",
 "date": "2027-01-08",
@@ -7181,6 +7356,50 @@
 "priceMax": null,
 "subGenre": "Comedy",
 "attractions": [],
+"ageRestricted": false
+},
+{
+"city": "DFW",
+"id": "vvG1YZ_9QJJSuE",
+"name": "Comedy Allstars",
+"date": "2027-01-08",
+"time": "21:30",
+"status": "offsale",
+"venue": "Punch Line Irving",
+"venueCity": "Irving",
+"state": "TX",
+"address": "310 W Las Colinas Blvd., Suite 130",
+"lat": 32.86581,
+"lng": -96.93776,
+"url": "https://www.ticketmaster.com/comedy-allstars-irving-texas-01-08-2027/event/0C006576A69B3367",
+"priceMin": null,
+"priceMax": null,
+"subGenre": "Comedy",
+"attractions": [
+"Comedy Allstars"
+],
+"ageRestricted": false
+},
+{
+"city": "DFW",
+"id": "rZ7HnEZ1Af-EbN",
+"name": "DL Hughley",
+"date": "2027-01-08",
+"time": "21:45",
+"status": "onsale",
+"venue": "Addison Improv",
+"venueCity": "Addison",
+"state": "TX",
+"address": "4980 Beltline Road #250",
+"lat": 32.95394,
+"lng": -96.82502,
+"url": "https://www.ticketweb.com/event/dl-hughley-addison-improv-tickets/14867623",
+"priceMin": 56.12,
+"priceMax": 445.46,
+"subGenre": "Comedy",
+"attractions": [
+"DL Hughley"
+],
 "ageRestricted": false
 },
 {
@@ -7222,6 +7441,28 @@
 "subGenre": "Comedy",
 "attractions": [
 "Stephen Rannazzisi"
+],
+"ageRestricted": false
+},
+{
+"city": "DFW",
+"id": "rZ7HnEZ1Af-EbK",
+"name": "DL Hughley",
+"date": "2027-01-09",
+"time": "19:00",
+"status": "onsale",
+"venue": "Addison Improv",
+"venueCity": "Addison",
+"state": "TX",
+"address": "4980 Beltline Road #250",
+"lat": 32.95394,
+"lng": -96.82502,
+"url": "https://www.ticketweb.com/event/dl-hughley-addison-improv-tickets/14867613",
+"priceMin": 56.12,
+"priceMax": 445.46,
+"subGenre": "Comedy",
+"attractions": [
+"DL Hughley"
 ],
 "ageRestricted": false
 },
@@ -7291,6 +7532,28 @@
 },
 {
 "city": "DFW",
+"id": "rZ7HnEZ1Af-Ebd",
+"name": "DL Hughley",
+"date": "2027-01-09",
+"time": "21:30",
+"status": "onsale",
+"venue": "Addison Improv",
+"venueCity": "Addison",
+"state": "TX",
+"address": "4980 Beltline Road #250",
+"lat": 32.95394,
+"lng": -96.82502,
+"url": "https://www.ticketweb.com/event/dl-hughley-addison-improv-tickets/14867603",
+"priceMin": 56.12,
+"priceMax": 445.46,
+"subGenre": "Comedy",
+"attractions": [
+"DL Hughley"
+],
+"ageRestricted": false
+},
+{
+"city": "DFW",
 "id": "1k18vP_oGACU8XQ",
 "name": "Funny Marco",
 "date": "2027-01-09",
@@ -7349,6 +7612,28 @@
 "priceMax": null,
 "subGenre": "Comedy",
 "attractions": [],
+"ageRestricted": false
+},
+{
+"city": "DFW",
+"id": "rZ7HnEZ1Af-EbS",
+"name": "DL Hughley",
+"date": "2027-01-10",
+"time": "19:30",
+"status": "onsale",
+"venue": "Addison Improv",
+"venueCity": "Addison",
+"state": "TX",
+"address": "4980 Beltline Road #250",
+"lat": 32.95394,
+"lng": -96.82502,
+"url": "https://www.ticketweb.com/event/dl-hughley-addison-improv-tickets/14867633",
+"priceMin": 56.12,
+"priceMax": 445.46,
+"subGenre": "Comedy",
+"attractions": [
+"DL Hughley"
+],
 "ageRestricted": false
 },
 {
@@ -7662,6 +7947,28 @@
 },
 {
 "city": "DFW",
+"id": "vvG1YZ_9QIhdok",
+"name": "Stand-up & Sing",
+"date": "2027-01-20",
+"time": "19:30",
+"status": "offsale",
+"venue": "Punch Line Irving",
+"venueCity": "Irving",
+"state": "TX",
+"address": "310 W Las Colinas Blvd., Suite 130",
+"lat": 32.86581,
+"lng": -96.93776,
+"url": "https://www.ticketmaster.com/standup-sing-irving-texas-01-20-2027/event/0C006576A86C3446",
+"priceMin": null,
+"priceMax": null,
+"subGenre": "Comedy",
+"attractions": [
+"Daniel Shimek"
+],
+"ageRestricted": false
+},
+{
+"city": "DFW",
 "id": "rZ7HnEZ1A4ZKjK",
 "name": "Will Burkart",
 "date": "2027-01-21",
@@ -7679,6 +7986,28 @@
 "subGenre": "Comedy",
 "attractions": [
 "Will Burkart"
+],
+"ageRestricted": false
+},
+{
+"city": "DFW",
+"id": "vvG1YZ_9QnCdfF",
+"name": "Andrea Jin",
+"date": "2027-01-22",
+"time": "19:00",
+"status": "offsale",
+"venue": "Punch Line Irving",
+"venueCity": "Irving",
+"state": "TX",
+"address": "310 W Las Colinas Blvd., Suite 130",
+"lat": 32.86581,
+"lng": -96.93776,
+"url": "https://www.ticketmaster.com/andrea-jin-irving-texas-01-22-2027/event/0C006576AA383508",
+"priceMin": null,
+"priceMax": null,
+"subGenre": "Comedy",
+"attractions": [
+"Andrea Jin"
 ],
 "ageRestricted": false
 },
@@ -7728,6 +8057,28 @@
 },
 {
 "city": "DFW",
+"id": "vvG1YZ_9QlMK_K",
+"name": "Andrea Jin",
+"date": "2027-01-23",
+"time": "19:00",
+"status": "offsale",
+"venue": "Punch Line Irving",
+"venueCity": "Irving",
+"state": "TX",
+"address": "310 W Las Colinas Blvd., Suite 130",
+"lat": 32.86581,
+"lng": -96.93776,
+"url": "https://www.ticketmaster.com/andrea-jin-irving-texas-01-23-2027/event/0C006576ABDD3653",
+"priceMin": null,
+"priceMax": null,
+"subGenre": "Comedy",
+"attractions": [
+"Andrea Jin"
+],
+"ageRestricted": false
+},
+{
+"city": "DFW",
 "id": "rZ7HnEZ1A4ZKqK",
 "name": "Will Burkart",
 "date": "2027-01-23",
@@ -7745,6 +8096,28 @@
 "subGenre": "Comedy",
 "attractions": [
 "Will Burkart"
+],
+"ageRestricted": false
+},
+{
+"city": "DFW",
+"id": "vvG1YZ_9QcZdhI",
+"name": "Andrea Jin",
+"date": "2027-01-23",
+"time": "21:15",
+"status": "offsale",
+"venue": "Punch Line Irving",
+"venueCity": "Irving",
+"state": "TX",
+"address": "310 W Las Colinas Blvd., Suite 130",
+"lat": 32.86581,
+"lng": -96.93776,
+"url": "https://www.ticketmaster.com/andrea-jin-irving-texas-01-23-2027/event/0C006576AD0036E8",
+"priceMin": null,
+"priceMax": null,
+"subGenre": "Comedy",
+"attractions": [
+"Andrea Jin"
 ],
 "ageRestricted": false
 },
@@ -8142,28 +8515,6 @@
 "subGenre": "Comedy",
 "attractions": [
 "Jerry Seinfeld"
-],
-"ageRestricted": false
-},
-{
-"city": "HFD",
-"id": "G5vVZ_KdRd5G4",
-"name": "Nick Cannon Presents: Wild 'N Out Live - The Next Generation",
-"date": "2026-12-05",
-"time": "19:00",
-"status": "onsale",
-"venue": "PeoplesBank Arena",
-"venueCity": "Hartford",
-"state": "CT",
-"address": "One Civic Center Plaza",
-"lat": 41.768353,
-"lng": -72.676384,
-"url": "https://www.axs.com/events/1607396/nick-cannon-wild-n-out-live-tickets",
-"priceMin": null,
-"priceMax": null,
-"subGenre": "Comedy",
-"attractions": [
-"Nick Cannon Presents: Wild 'N Out Live"
 ],
 "ageRestricted": false
 },
@@ -8705,6 +9056,28 @@
 "Jeff Foxworthy"
 ],
 "ageRestricted": true
+},
+{
+"city": "HOU",
+"id": "1k18vPqsGA5fotL",
+"name": "Ali Siddiq Presents: the Jive Turkeys",
+"date": "2026-11-25",
+"time": "17:00",
+"status": "onsale",
+"venue": "Houston Improv",
+"venueCity": "Houston",
+"state": "TX",
+"address": "7620 Katy Freeway, Ste. 455",
+"lat": 29.785454,
+"lng": -95.463962,
+"url": "https://www.ticketweb.com/event/ali-siddiq-presents-the-jive-houston-improv-tickets/15067113?REFERRAL_ID=tmfeed",
+"priceMin": null,
+"priceMax": null,
+"subGenre": "Comedy",
+"attractions": [
+"Ali Siddiq"
+],
+"ageRestricted": false
 },
 {
 "city": "HOU",
@@ -10382,6 +10755,28 @@
 },
 {
 "city": "HOU",
+"id": "G5dIZ_9fU7uAS",
+"name": "Luke Severeid",
+"date": "2027-01-08",
+"time": "19:00",
+"status": "offsale",
+"venue": "Punch Line Houston",
+"venueCity": "Houston",
+"state": "TX",
+"address": "1204 Caroline Street",
+"lat": 29.75338,
+"lng": -95.36397,
+"url": "https://www.ticketmaster.com/luke-severeid-houston-texas-01-08-2027/event/3A0065753610D173",
+"priceMin": null,
+"priceMax": null,
+"subGenre": "Comedy",
+"attractions": [
+"Luke Severeid"
+],
+"ageRestricted": false
+},
+{
+"city": "HOU",
 "id": "1718v0G6u04V-7R",
 "name": "Chris D'Elia",
 "date": "2027-01-08",
@@ -10399,6 +10794,28 @@
 "subGenre": "Comedy",
 "attractions": [
 "Chris D'Elia"
+],
+"ageRestricted": false
+},
+{
+"city": "HOU",
+"id": "G5dIZ_9fUAqAX",
+"name": "Luke Severeid",
+"date": "2027-01-08",
+"time": "21:15",
+"status": "offsale",
+"venue": "Punch Line Houston",
+"venueCity": "Houston",
+"state": "TX",
+"address": "1204 Caroline Street",
+"lat": 29.75338,
+"lng": -95.36397,
+"url": "https://www.ticketmaster.com/luke-severeid-houston-texas-01-08-2027/event/3A0065753615D17E",
+"priceMin": null,
+"priceMax": null,
+"subGenre": "Comedy",
+"attractions": [
+"Luke Severeid"
 ],
 "ageRestricted": false
 },
@@ -10426,6 +10843,28 @@
 },
 {
 "city": "HOU",
+"id": "G5dIZ_9fUFWkV",
+"name": "Luke Severeid",
+"date": "2027-01-09",
+"time": "19:00",
+"status": "offsale",
+"venue": "Punch Line Houston",
+"venueCity": "Houston",
+"state": "TX",
+"address": "1204 Caroline Street",
+"lat": 29.75338,
+"lng": -95.36397,
+"url": "https://www.ticketmaster.com/luke-severeid-houston-texas-01-09-2027/event/3A0065753623D1B4",
+"priceMin": null,
+"priceMax": null,
+"subGenre": "Comedy",
+"attractions": [
+"Luke Severeid"
+],
+"ageRestricted": false
+},
+{
+"city": "HOU",
 "id": "1718v0G6u04V-7J",
 "name": "Chris D'Elia",
 "date": "2027-01-09",
@@ -10443,6 +10882,28 @@
 "subGenre": "Comedy",
 "attractions": [
 "Chris D'Elia"
+],
+"ageRestricted": false
+},
+{
+"city": "HOU",
+"id": "G5dIZ_9fU1u6Z",
+"name": "Luke Severeid",
+"date": "2027-01-09",
+"time": "21:15",
+"status": "offsale",
+"venue": "Punch Line Houston",
+"venueCity": "Houston",
+"state": "TX",
+"address": "1204 Caroline Street",
+"lat": 29.75338,
+"lng": -95.36397,
+"url": "https://www.ticketmaster.com/luke-severeid-houston-texas-01-09-2027/event/3A0065753628D1C0",
+"priceMin": null,
+"priceMax": null,
+"subGenre": "Comedy",
+"attractions": [
+"Luke Severeid"
 ],
 "ageRestricted": false
 },
@@ -11531,99 +11992,6 @@
 },
 {
 "city": "LA",
-"id": "rZ7HnEZ1Af8f8V",
-"name": "Tonight at the Improv ft. Andrew Santino, Pete Holmes, Cameron Esposito, Dan Levy, Gary Cannon and More TBA",
-"date": "2026-11-23",
-"time": "19:15",
-"status": "onsale",
-"venue": "Hollywood Improv (The Main Room) ",
-"venueCity": "Hollywood",
-"state": "CA",
-"address": "8162 Melrose Avenue",
-"lat": 34.083418,
-"lng": -118.366556,
-"url": "https://www.ticketweb.com/event/tonight-at-the-improv-ft-hollywood-improv-the-main-room-tickets/14414434",
-"priceMin": 19.04,
-"priceMax": 19.04,
-"subGenre": "Comedy",
-"attractions": [
-"Andrew Santino",
-"Pete Holmes",
-"Cameron Esposito",
-"Dan Levy",
-"Gary Cannon"
-],
-"ageRestricted": false
-},
-{
-"city": "LA",
-"id": "rZ7HnEZ1AfuZPV",
-"name": "Deon Cole: Does This Work?",
-"date": "2026-11-23",
-"time": "19:30",
-"status": "onsale",
-"venue": "Hollywood Improv (The Lab)",
-"venueCity": "Hollywood",
-"state": "CA",
-"address": "8162 Melrose Avenue",
-"lat": 34.0834329,
-"lng": -118.367284,
-"url": "https://www.ticketweb.com/event/deon-cole-does-this-work-hollywood-improv-the-lab-tickets/14340974",
-"priceMin": 24.19,
-"priceMax": 24.19,
-"subGenre": "Comedy",
-"attractions": [
-"Deon Cole"
-],
-"ageRestricted": false
-},
-{
-"city": "LA",
-"id": "rZ7HnEZ1AfuJ0V",
-"name": "Improv Presents: MONDERAYS with Deray Davis ft. G Thang, K Dott, Maronzio Vance, Ha Ha Herby, Ray Lipowski & more TBA",
-"date": "2026-11-23",
-"time": "21:30",
-"status": "onsale",
-"venue": "Hollywood Improv (The Main Room) ",
-"venueCity": "Hollywood",
-"state": "CA",
-"address": "8162 Melrose Avenue",
-"lat": 34.083418,
-"lng": -118.366556,
-"url": "https://www.ticketweb.com/event/improv-presents-monderays-with-deray-hollywood-improv-the-main-room-tickets/14366934",
-"priceMin": 24.19,
-"priceMax": 24.19,
-"subGenre": "Comedy",
-"attractions": [
-"DeRay Davis",
-"Maronzio Vance"
-],
-"ageRestricted": false
-},
-{
-"city": "LA",
-"id": "rZ7HnEZ1AfuZJ7",
-"name": "Deon Cole: Does This Work?",
-"date": "2026-11-23",
-"time": "21:30",
-"status": "onsale",
-"venue": "Hollywood Improv (The Lab)",
-"venueCity": "Hollywood",
-"state": "CA",
-"address": "8162 Melrose Avenue",
-"lat": 34.0834329,
-"lng": -118.367284,
-"url": "https://www.ticketweb.com/event/deon-cole-does-this-work-hollywood-improv-the-lab-tickets/14340984",
-"priceMin": 24.19,
-"priceMax": 24.19,
-"subGenre": "Comedy",
-"attractions": [
-"Deon Cole"
-],
-"ageRestricted": false
-},
-{
-"city": "LA",
 "id": "rZ7HnEZ1AfuJe7",
 "name": "Tonight at the Improv ft. Ray Romano, Jay Leno, Chelsea Handler, Tim Dillon, Brian Monarch, Jen Murphy and Very Special Guests",
 "date": "2026-11-24",
@@ -11673,7 +12041,7 @@
 {
 "city": "LA",
 "id": "rZ7HnEZ1Af8Aff",
-"name": "Tonight at the Improv ft. Trevor Wallace, Godfrey, Leah Rudick, Bassem Youssef, Faysal Lawrence, Laurie Douglas and more TBA",
+"name": "Tonight at the Improv ft. Trevor Wallace, Godfrey, Amir K, Leah Rudick, Bassem Youssef, Faysal Lawrence, Laurie Douglas and more TBA",
 "date": "2026-11-24",
 "time": "21:30",
 "status": "onsale",
@@ -11690,6 +12058,7 @@
 "attractions": [
 "Trevor Wallace",
 "Godfrey",
+"Amir K",
 "Bassem Youssef"
 ],
 "ageRestricted": false
@@ -11829,7 +12198,7 @@
 {
 "city": "LA",
 "id": "rZ7HnEZ1AfC9-0",
-"name": "Mark Hayes & Friends ft. Craig Robinson, Earthquake, Trevor Wallace, Denny Love, Mark Hayes and more TBA",
+"name": "Mark Hayes & Friends ft. Craig Robinson, Godfrey, Earthquake, Trevor Wallace, Denny Love, Mark Hayes and more TBA",
 "date": "2026-11-25",
 "time": "21:30",
 "status": "onsale",
@@ -11845,6 +12214,7 @@
 "subGenre": "Comedy",
 "attractions": [
 "Craig Robinson",
+"Godfrey",
 "Earthquake",
 "Trevor Wallace"
 ],
@@ -11964,6 +12334,30 @@
 },
 {
 "city": "LA",
+"id": "rZ7HnEZ1AfuJPf",
+"name": "Tonight at the Improv ft. Trevor Wallace, Sarah Tiana, Rick Ingraham, Brent Morin, Eric Freedman, and More TBA",
+"date": "2026-11-27",
+"time": "21:30",
+"status": "onsale",
+"venue": "Hollywood Improv (The Main Room) ",
+"venueCity": "Hollywood",
+"state": "CA",
+"address": "8162 Melrose Avenue",
+"lat": 34.083418,
+"lng": -118.366556,
+"url": "https://www.ticketweb.com/event/tonight-at-the-improv-ft-hollywood-improv-the-main-room-tickets/14366954",
+"priceMin": 19.04,
+"priceMax": 19.04,
+"subGenre": "Comedy",
+"attractions": [
+"Trevor Wallace",
+"Sarah Tiana",
+"Brent Morin"
+],
+"ageRestricted": false
+},
+{
+"city": "LA",
 "id": "rZ7HnEZ1Af0OfN",
 "name": "Aries Spears",
 "date": "2026-11-27",
@@ -12064,8 +12458,8 @@
 "lat": 34.083418,
 "lng": -118.366556,
 "url": "https://www.ticketweb.com/event/chelsea-handler-friends-ft-hollywood-improv-the-main-room-tickets/15054623",
-"priceMin": 39.64,
-"priceMax": 39.64,
+"priceMin": 0.0,
+"priceMax": 0.0,
 "subGenre": "Comedy",
 "attractions": [
 "Chelsea Handler",
@@ -12120,7 +12514,7 @@
 {
 "city": "LA",
 "id": "rZ7HnEZ1AfuEZf",
-"name": "Tonight at the Lab ft. Pardis Parker and More TBA",
+"name": "Tonight at the Lab ft. Maddy Kelly, Liz Miele, Dave Waite, Pardis Parker, Eric Freedman, Mandy Robbins, Jay Light and More TBA",
 "date": "2026-11-28",
 "time": "19:30",
 "status": "onsale",
@@ -12135,6 +12529,8 @@
 "priceMax": 8.24,
 "subGenre": "Comedy",
 "attractions": [
+"Liz Miele",
+"Dave Waite",
 "Pardis Parker"
 ],
 "ageRestricted": false
@@ -12319,6 +12715,31 @@
 },
 {
 "city": "LA",
+"id": "rZ7HnEZ1Af8gjV",
+"name": "Tonight at the Improv ft. Iliza Shlesinger, Harland Williams, Cristela Alonzo, Donnell Rawlings and more TBA",
+"date": "2026-11-30",
+"time": "19:00",
+"status": "onsale",
+"venue": "Hollywood Improv (The Main Room) ",
+"venueCity": "Hollywood",
+"state": "CA",
+"address": "8162 Melrose Avenue",
+"lat": 34.083418,
+"lng": -118.366556,
+"url": "https://www.ticketweb.com/event/tonight-at-the-improv-ft-hollywood-improv-the-main-room-tickets/14435734",
+"priceMin": 24.19,
+"priceMax": 24.19,
+"subGenre": "Comedy",
+"attractions": [
+"Iliza Shlesinger",
+"Harland Williams",
+"Cristela Alonzo",
+"Donnell Rawlings"
+],
+"ageRestricted": false
+},
+{
+"city": "LA",
 "id": "rZ7HnEZ1AfuJPV",
 "name": "Improv Presents: MONDERAYS with Deray Davis & more",
 "date": "2026-11-30",
@@ -12490,6 +12911,30 @@
 "subGenre": "Comedy",
 "attractions": [
 "Steve Treviño"
+],
+"ageRestricted": false
+},
+{
+"city": "LA",
+"id": "rZ7HnEZ1A4vfjK",
+"name": "Tonight at the Improv ft. Ray Romano, Melissa Villasenor, Ron Funches, Brian Monarch and Very Special Guests",
+"date": "2026-12-04",
+"time": "19:30",
+"status": "onsale",
+"venue": "Hollywood Improv (The Main Room) ",
+"venueCity": "Hollywood",
+"state": "CA",
+"address": "8162 Melrose Avenue",
+"lat": 34.083418,
+"lng": -118.366556,
+"url": "https://www.ticketweb.com/event/tonight-at-the-improv-ft-hollywood-improv-the-main-room-tickets/15054713",
+"priceMin": 55.09,
+"priceMax": 55.09,
+"subGenre": "Comedy",
+"attractions": [
+"Ray Romano",
+"Melissa Villasenor",
+"Ron Funches"
 ],
 "ageRestricted": false
 },
@@ -12939,6 +13384,29 @@
 },
 {
 "city": "LA",
+"id": "rZ7HnEZ1Afa6-7",
+"name": "*JUST ADDED NIKKI GLASER & ILIZA* COMEDY CRUSH ft. JUSTINE MARINO, AVERY PEARSON + HUGE GUESTS",
+"date": "2026-12-09",
+"time": "19:30",
+"status": "onsale",
+"venue": "Hollywood Improv (The Main Room) ",
+"venueCity": "Hollywood",
+"state": "CA",
+"address": "8162 Melrose Avenue",
+"lat": 34.083418,
+"lng": -118.366556,
+"url": "https://www.ticketweb.com/event/just-added-nikki-glaser-hollywood-improv-the-main-room-tickets/14247844",
+"priceMin": 39.64,
+"priceMax": 39.64,
+"subGenre": "Comedy",
+"attractions": [
+"Nikki Glaser",
+"Iliza Shlesinger"
+],
+"ageRestricted": false
+},
+{
+"city": "LA",
 "id": "rZ7HnEZ1AfuFjV",
 "name": " Chinedu Unaka ",
 "date": "2026-12-09",
@@ -13226,7 +13694,7 @@
 {
 "city": "LA",
 "id": "rZ7HnEZ1A4v0aK",
-"name": "Helping Families Thrive ft. Nikki Glaser, Rick Glassman, Malik B, Charles Greaves and more TBA",
+"name": "Helping Families Thrive ft. Nikki Glaser, Kevin Nealon, Rick Glassman, Malik B, Charles Greaves and more TBA",
 "date": "2026-12-12",
 "time": "16:00",
 "status": "onsale",
@@ -13241,7 +13709,8 @@
 "priceMax": 34.49,
 "subGenre": "Comedy",
 "attractions": [
-"Nikki Glaser"
+"Nikki Glaser",
+"Kevin Nealon"
 ],
 "ageRestricted": false
 },
@@ -14787,6 +15256,28 @@
 "attractions": [
 "Nikki Glaser",
 "Chris Millhouse"
+],
+"ageRestricted": false
+},
+{
+"city": "LA",
+"id": "vv170Z_3GkIC0-Y4",
+"name": "John Mulaney: Mister Whatever",
+"date": "2026-12-28",
+"time": "19:30",
+"status": "offsale",
+"venue": "The Wiltern",
+"venueCity": "Los Angeles",
+"state": "CA",
+"address": "3790 Wilshire Blvd.",
+"lat": 34.06141494,
+"lng": -118.30879207,
+"url": "https://www.ticketmaster.com/john-mulaney-mister-whatever-los-angeles-california-12-28-2026/event/0900652A0E921C15",
+"priceMin": null,
+"priceMax": null,
+"subGenre": "Comedy",
+"attractions": [
+"John Mulaney"
 ],
 "ageRestricted": false
 },
@@ -17411,305 +17902,24 @@
 "ageRestricted": false
 },
 {
-"city": "LAS",
-"id": "17AYv0G651iFg-O",
-"name": "Popovich Comedy Pet Theater",
-"date": "2026-11-23",
-"time": "14:30",
-"status": "onsale",
-"venue": "V Theater at Planet Hollywood Inside the Miracle Mile Mall",
-"venueCity": "Las Vegas",
-"state": "NV",
-"address": "3663 Las Vegas Blvd South Suite 360A",
-"lat": 36.1101115,
-"lng": -115.1708107,
-"url": "https://www.ticketmaster.com/popovich-comedy-pet-theater-las-vegas-nevada-11-23-2026/event/170064B2AC235860",
-"priceMin": null,
-"priceMax": null,
-"subGenre": "Comedy",
-"attractions": [
-"Popovich Comedy Pet Theater"
-],
-"ageRestricted": false
-},
-{
-"city": "LAS",
-"id": "17AYv0G651iag-B",
-"name": "Popovich Comedy Pet Theater",
-"date": "2026-11-23",
-"time": "16:00",
-"status": "onsale",
-"venue": "V Theater at Planet Hollywood Inside the Miracle Mile Mall",
-"venueCity": "Las Vegas",
-"state": "NV",
-"address": "3663 Las Vegas Blvd South Suite 360A",
-"lat": 36.1101115,
-"lng": -115.1708107,
-"url": "https://www.ticketmaster.com/popovich-comedy-pet-theater-las-vegas-nevada-11-23-2026/event/170064B2AC27587A",
-"priceMin": null,
-"priceMax": null,
-"subGenre": "Comedy",
-"attractions": [
-"Popovich Comedy Pet Theater"
-],
-"ageRestricted": false
-},
-{
-"city": "LAS",
-"id": "1AyZkfMGkdx-keG",
-"name": "Rich Little at Laugh Factory Comedy Club",
-"date": "2026-11-23",
-"time": "18:30",
-"status": "onsale",
-"venue": "Laugh Factory at Horseshoe Las Vegas",
-"venueCity": "Las Vegas",
-"state": "NV",
-"address": "3645 Las Vegas Blvd. South",
-"lat": 36.11376452,
-"lng": -115.16889906,
-"url": "https://www.ticketmaster.com/rich-little-at-laugh-factory-comedy-las-vegas-nevada-11-23-2026/event/39006537E284608C",
-"priceMin": null,
-"priceMax": null,
-"subGenre": "Comedy",
-"attractions": [
-"Rich Little",
-"Laugh Factory Las Vegas"
-],
-"ageRestricted": false
-},
-{
-"city": "LAS",
-"id": "1Ad0Z_eGkS91lJt",
-"name": "Comedy Cellar (Las Vegas)",
-"date": "2026-11-23",
-"time": "19:00",
-"status": "onsale",
-"venue": "Comedy Cellar at Rio Las Vegas",
-"venueCity": "Las Vegas",
-"state": "NV",
-"address": "3700 W Flamingo Rd",
-"lat": 36.117575,
-"lng": -115.187717,
-"url": "https://www.ticketmaster.com/comedy-cellar-las-vegas-las-vegas-nevada-11-23-2026/event/3900642CD72AB9A9",
-"priceMin": null,
-"priceMax": null,
-"subGenre": "Comedy",
-"attractions": [
-"Comedy Cellar (Las Vegas)",
-"Mark Cohen",
-"Vanessa Graddick",
-"Tom Rhodes",
-"Andrè de Freitas",
-"Butch Bradley"
-],
-"ageRestricted": false
-},
-{
-"city": "LAS",
-"id": "17C8v0G61XrFgLY",
-"name": "Josh Wolf at Jimmy Kimmel's Comedy Club",
-"date": "2026-11-23",
+"city": "LA",
+"id": "rZ7HnEZ1A4vb_S",
+"name": "New Joke Night ft. J.F. Harris, Mike Falzone and more TBA",
+"date": "2027-02-01",
 "time": "19:30",
 "status": "onsale",
-"venue": "Jimmy Kimmel's Comedy Club",
-"venueCity": "Las Vegas",
-"state": "NV",
-"address": "3545 S Las Vegas Blvd",
-"lat": 36.11793,
-"lng": -115.171531,
-"url": "https://www.ticketmaster.com/josh-wolf-at-jimmy-kimmels-comedy-las-vegas-nevada-11-23-2026/event/390064AF9E2357F0",
-"priceMin": null,
-"priceMax": null,
+"venue": "Hollywood Improv (The Lab)",
+"venueCity": "Hollywood",
+"state": "CA",
+"address": "8162 Melrose Avenue",
+"lat": 34.0834329,
+"lng": -118.367284,
+"url": "https://www.ticketweb.com/event/new-joke-night-ft-jf-hollywood-improv-the-lab-tickets/15058673",
+"priceMin": 8.24,
+"priceMax": 8.24,
 "subGenre": "Comedy",
 "attractions": [
-"Josh Wolf",
-"Jimmy Kimmel's Comedy Club - Las Vegas"
-],
-"ageRestricted": false
-},
-{
-"city": "LAS",
-"id": "G5ezZbzEuwJgM",
-"name": "Tape Face",
-"date": "2026-11-23",
-"time": "19:30",
-"status": "onsale",
-"venue": "Underground Theater at MGM Grand",
-"venueCity": "Las Vegas",
-"state": "NV",
-"address": "3799 Las Vegas Blvd South",
-"lat": 36.10226,
-"lng": -115.167991,
-"url": "https://www.ticketmaster.com/tape-face-las-vegas-nevada-11-23-2026/event/2E006389CDCA6D77",
-"priceMin": null,
-"priceMax": null,
-"subGenre": "Comedy",
-"attractions": [
-"Tape Face"
-],
-"ageRestricted": false
-},
-{
-"city": "LAS",
-"id": "G5ezZbgZkD_jf",
-"name": "BGCC: TRIXX with Darrin Rose & Kristeen Von Hagen",
-"date": "2026-11-23",
-"time": "20:00",
-"status": "onsale",
-"venue": "Brad Garrett's Comedy Club",
-"venueCity": "Las Vegas",
-"state": "NV",
-"address": "3799 Las Vegas Blvd South Las Vegas",
-"lat": 36.102906,
-"lng": -115.168696,
-"url": "https://www.ticketmaster.com/bgcc-trixx-with-darrin-rose-kristeen-las-vegas-nevada-11-23-2026/event/2E00635006ED9714",
-"priceMin": null,
-"priceMax": null,
-"subGenre": "Comedy",
-"attractions": [
-"Brad Garrett's Comedy Club",
-"Trixx",
-"Darrin Rose",
-"Kristeen Von Hagen"
-],
-"ageRestricted": false
-},
-{
-"city": "LAS",
-"id": "G5ezZbY9RA3hS",
-"name": "Carrot Top",
-"date": "2026-11-23",
-"time": "20:00",
-"status": "onsale",
-"venue": "Atrium Showroom at Luxor Hotel and Casino",
-"venueCity": "Las Vegas",
-"state": "NV",
-"address": "3900 Las Vegas Blvd South",
-"lat": 36.095325,
-"lng": -115.175975,
-"url": "https://www.ticketmaster.com/carrot-top-las-vegas-nevada-11-23-2026/event/2E006305EF1526F3",
-"priceMin": null,
-"priceMax": null,
-"subGenre": "Comedy",
-"attractions": [
-"Carrot Top"
-],
-"ageRestricted": false
-},
-{
-"city": "LAS",
-"id": "1Ad0ZbzGkSIsuhP",
-"name": "Bret Ernst at Laugh Factory Las Vegas",
-"date": "2026-11-23",
-"time": "20:30",
-"status": "onsale",
-"venue": "Laugh Factory at Horseshoe Las Vegas",
-"venueCity": "Las Vegas",
-"state": "NV",
-"address": "3645 Las Vegas Blvd. South",
-"lat": 36.11376452,
-"lng": -115.16889906,
-"url": "https://www.ticketmaster.com/bret-ernst-at-laugh-factory-las-las-vegas-nevada-11-23-2026/event/3900638CE8C4D6E5",
-"priceMin": null,
-"priceMax": null,
-"subGenre": "Comedy",
-"attractions": [
-"Laugh Factory Las Vegas",
-"Bret Ernst"
-],
-"ageRestricted": false
-},
-{
-"city": "LAS",
-"id": "17AYv0G6GGHuNZ7",
-"name": "Eddie Griffin (Las Vegas)",
-"date": "2026-11-23",
-"time": "20:30",
-"status": "onsale",
-"venue": "Saxe Theater at Planet Hollywood Inside the Miracle Mile Mall",
-"venueCity": "Las Vegas",
-"state": "NV",
-"address": "3663 Las Vegas Blvd South Suite 454A",
-"lat": 36.11012884,
-"lng": -115.1708107,
-"url": "https://www.ticketmaster.com/eddie-griffin-las-vegas-las-vegas-nevada-11-23-2026/event/170064C33C363004",
-"priceMin": null,
-"priceMax": null,
-"subGenre": "Comedy",
-"attractions": [
-"Eddie Griffin (Las Vegas)"
-],
-"ageRestricted": false
-},
-{
-"city": "LAS",
-"id": "17AYv0G6GKiah7F",
-"name": "Big Black Comedy Show",
-"date": "2026-11-23",
-"time": "20:30",
-"status": "onsale",
-"venue": "V Theater at Planet Hollywood Inside the Miracle Mile Mall",
-"venueCity": "Las Vegas",
-"state": "NV",
-"address": "3663 Las Vegas Blvd South Suite 360A",
-"lat": 36.1101115,
-"lng": -115.1708107,
-"url": "https://www.ticketmaster.com/big-black-comedy-show-las-vegas-nevada-11-23-2026/event/170064C4EC25B108",
-"priceMin": null,
-"priceMax": null,
-"subGenre": "Comedy",
-"attractions": [
-"Big Black Comedy Show"
-],
-"ageRestricted": false
-},
-{
-"city": "LAS",
-"id": "1AyZkubGkd2KaXS",
-"name": "Luenell at Jimmy Kimmel's Comedy Club",
-"date": "2026-11-23",
-"time": "21:30",
-"status": "onsale",
-"venue": "Jimmy Kimmel's Comedy Club",
-"venueCity": "Las Vegas",
-"state": "NV",
-"address": "3545 S Las Vegas Blvd",
-"lat": 36.11793,
-"lng": -115.171531,
-"url": "https://www.ticketmaster.com/luenell-at-jimmy-kimmels-comedy-club-las-vegas-nevada-11-23-2026/event/39006358CF4C9FB3",
-"priceMin": null,
-"priceMax": null,
-"subGenre": "Comedy",
-"attractions": [
-"Luenell",
-"Jimmy Kimmel's Comedy Club - Las Vegas"
-],
-"ageRestricted": false
-},
-{
-"city": "LAS",
-"id": "1Ad0Z_eGkS95DJl",
-"name": "Comedy Cellar (Las Vegas)",
-"date": "2026-11-23",
-"time": "21:30",
-"status": "onsale",
-"venue": "Comedy Cellar at Rio Las Vegas",
-"venueCity": "Las Vegas",
-"state": "NV",
-"address": "3700 W Flamingo Rd",
-"lat": 36.117575,
-"lng": -115.187717,
-"url": "https://www.ticketmaster.com/comedy-cellar-las-vegas-las-vegas-nevada-11-23-2026/event/3900642CD72FB9AB",
-"priceMin": null,
-"priceMax": null,
-"subGenre": "Comedy",
-"attractions": [
-"Comedy Cellar (Las Vegas)",
-"Mark Cohen",
-"Vanessa Graddick",
-"Tom Rhodes",
-"Andrè de Freitas",
-"Butch Bradley"
+"JF Harris"
 ],
 "ageRestricted": false
 },
@@ -26730,6 +26940,29 @@
 },
 {
 "city": "LAS",
+"id": "1ad0Z_9r8FNZd5AG",
+"name": "John Caparulo At Jimmy Kimmel's Comedy Club",
+"date": "2026-12-25",
+"time": "19:30",
+"status": "onsale",
+"venue": "Jimmy Kimmel's Comedy Club",
+"venueCity": "Las Vegas",
+"state": "NV",
+"address": "3545 S Las Vegas Blvd",
+"lat": 36.11793,
+"lng": -115.171531,
+"url": "https://www.ticketmaster.com/john-caparulo-at-jimmy-kimmels-comedy-las-vegas-nevada-12-25-2026/event/3900657790223A4B",
+"priceMin": null,
+"priceMax": null,
+"subGenre": "Comedy",
+"attractions": [
+"John Caparulo",
+"Jimmy Kimmel's Comedy Club - Las Vegas"
+],
+"ageRestricted": false
+},
+{
+"city": "LAS",
 "id": "G5ezZ_CXDA3Cf",
 "name": "BGCC: Bob Zany with Joe Praino",
 "date": "2026-12-25",
@@ -26820,6 +27053,29 @@
 },
 {
 "city": "LAS",
+"id": "1ad0Z_9r81dZd5AC",
+"name": "John Caparulo At Jimmy Kimmel's Comedy Club",
+"date": "2026-12-25",
+"time": "21:30",
+"status": "onsale",
+"venue": "Jimmy Kimmel's Comedy Club",
+"venueCity": "Las Vegas",
+"state": "NV",
+"address": "3545 S Las Vegas Blvd",
+"lat": 36.11793,
+"lng": -115.171531,
+"url": "https://www.ticketmaster.com/john-caparulo-at-jimmy-kimmels-comedy-las-vegas-nevada-12-25-2026/event/3900657790283A4D",
+"priceMin": null,
+"priceMax": null,
+"subGenre": "Comedy",
+"attractions": [
+"John Caparulo",
+"Jimmy Kimmel's Comedy Club - Las Vegas"
+],
+"ageRestricted": false
+},
+{
+"city": "LAS",
 "id": "1Ad0Z_eGkSbN5tH",
 "name": "Comedy Cellar (Las Vegas)",
 "date": "2026-12-25",
@@ -26903,6 +27159,29 @@
 "subGenre": "Comedy",
 "attractions": [
 "Comedy Cellar (Las Vegas)"
+],
+"ageRestricted": false
+},
+{
+"city": "LAS",
+"id": "16yZk4M0eZA275kv",
+"name": "John Caparulo At Jimmy Kimmel's Comedy Club",
+"date": "2026-12-26",
+"time": "19:30",
+"status": "onsale",
+"venue": "Jimmy Kimmel's Comedy Club",
+"venueCity": "Las Vegas",
+"state": "NV",
+"address": "3545 S Las Vegas Blvd",
+"lat": 36.11793,
+"lng": -115.171531,
+"url": "https://www.ticketmaster.com/john-caparulo-at-jimmy-kimmels-comedy-las-vegas-nevada-12-26-2026/event/39006577902E3A50",
+"priceMin": null,
+"priceMax": null,
+"subGenre": "Comedy",
+"attractions": [
+"John Caparulo",
+"Jimmy Kimmel's Comedy Club - Las Vegas"
 ],
 "ageRestricted": false
 },
@@ -27037,6 +27316,29 @@
 "subGenre": "Comedy",
 "attractions": [
 "Big Black Comedy Show"
+],
+"ageRestricted": false
+},
+{
+"city": "LAS",
+"id": "1ad0Z_9r8GSZd5k7",
+"name": "John Caparulo At Jimmy Kimmel's Comedy Club",
+"date": "2026-12-26",
+"time": "21:30",
+"status": "onsale",
+"venue": "Jimmy Kimmel's Comedy Club",
+"venueCity": "Las Vegas",
+"state": "NV",
+"address": "3545 S Las Vegas Blvd",
+"lat": 36.11793,
+"lng": -115.171531,
+"url": "https://www.ticketmaster.com/john-caparulo-at-jimmy-kimmels-comedy-las-vegas-nevada-12-26-2026/event/3900657790333A53",
+"priceMin": null,
+"priceMax": null,
+"subGenre": "Comedy",
+"attractions": [
+"John Caparulo",
+"Jimmy Kimmel's Comedy Club - Las Vegas"
 ],
 "ageRestricted": false
 },
@@ -29713,6 +30015,29 @@
 },
 {
 "city": "LAS",
+"id": "1AyZk4MGketN72k",
+"name": "Taylor Williamson At Jimmy Kimmel's Comedy Club",
+"date": "2027-01-08",
+"time": "19:30",
+"status": "onsale",
+"venue": "Jimmy Kimmel's Comedy Club",
+"venueCity": "Las Vegas",
+"state": "NV",
+"address": "3545 S Las Vegas Blvd",
+"lat": 36.11793,
+"lng": -115.171531,
+"url": "https://www.ticketmaster.com/taylor-williamson-at-jimmy-kimmels-comedy-las-vegas-nevada-01-08-2027/event/39006577A98C43C6",
+"priceMin": null,
+"priceMax": null,
+"subGenre": "Comedy",
+"attractions": [
+"Taylor Williamson",
+"Jimmy Kimmel's Comedy Club - Las Vegas"
+],
+"ageRestricted": false
+},
+{
+"city": "LAS",
 "id": "G5ezZ_fQboeMM",
 "name": "BGCC: Brad Garrett with Dan Duvall",
 "date": "2027-01-08",
@@ -29755,6 +30080,29 @@
 "attractions": [
 "Laugh Factory Las Vegas",
 "Greg Morton"
+],
+"ageRestricted": false
+},
+{
+"city": "LAS",
+"id": "1AyZk4MGket0V28",
+"name": "Taylor Williamson At Jimmy Kimmel's Comedy Club",
+"date": "2027-01-08",
+"time": "21:30",
+"status": "onsale",
+"venue": "Jimmy Kimmel's Comedy Club",
+"venueCity": "Las Vegas",
+"state": "NV",
+"address": "3545 S Las Vegas Blvd",
+"lat": 36.11793,
+"lng": -115.171531,
+"url": "https://www.ticketmaster.com/taylor-williamson-at-jimmy-kimmels-comedy-las-vegas-nevada-01-08-2027/event/39006577A99343D0",
+"priceMin": null,
+"priceMax": null,
+"subGenre": "Comedy",
+"attractions": [
+"Taylor Williamson",
+"Jimmy Kimmel's Comedy Club - Las Vegas"
 ],
 "ageRestricted": false
 },
@@ -29827,6 +30175,29 @@
 },
 {
 "city": "LAS",
+"id": "1AyZk4MGketEf2K",
+"name": "Taylor Williamson At Jimmy Kimmel's Comedy Club",
+"date": "2027-01-09",
+"time": "19:30",
+"status": "onsale",
+"venue": "Jimmy Kimmel's Comedy Club",
+"venueCity": "Las Vegas",
+"state": "NV",
+"address": "3545 S Las Vegas Blvd",
+"lat": 36.11793,
+"lng": -115.171531,
+"url": "https://www.ticketmaster.com/taylor-williamson-at-jimmy-kimmels-comedy-las-vegas-nevada-01-09-2027/event/39006577A99D43D3",
+"priceMin": null,
+"priceMax": null,
+"subGenre": "Comedy",
+"attractions": [
+"Taylor Williamson",
+"Jimmy Kimmel's Comedy Club - Las Vegas"
+],
+"ageRestricted": false
+},
+{
+"city": "LAS",
 "id": "G5ezZ_fQb33MB",
 "name": "BGCC: Brad Garrett with Dan Duvall",
 "date": "2027-01-09",
@@ -29869,6 +30240,29 @@
 "attractions": [
 "Laugh Factory Las Vegas",
 "Greg Morton"
+],
+"ageRestricted": false
+},
+{
+"city": "LAS",
+"id": "1AyZk4MGkett02_",
+"name": "Taylor Williamson At Jimmy Kimmel's Comedy Club",
+"date": "2027-01-09",
+"time": "21:30",
+"status": "onsale",
+"venue": "Jimmy Kimmel's Comedy Club",
+"venueCity": "Las Vegas",
+"state": "NV",
+"address": "3545 S Las Vegas Blvd",
+"lat": 36.11793,
+"lng": -115.171531,
+"url": "https://www.ticketmaster.com/taylor-williamson-at-jimmy-kimmels-comedy-las-vegas-nevada-01-09-2027/event/39006577A9A643D9",
+"priceMin": null,
+"priceMax": null,
+"subGenre": "Comedy",
+"attractions": [
+"Taylor Williamson",
+"Jimmy Kimmel's Comedy Club - Las Vegas"
 ],
 "ageRestricted": false
 },
@@ -34221,6 +34615,186 @@
 "ageRestricted": false
 },
 {
+"city": "LAS",
+"id": "1Ad0Z_4GkBcaheK",
+"name": "Comedy Cellar (Las Vegas)",
+"date": "2027-02-01",
+"time": "19:00",
+"status": "onsale",
+"venue": "Comedy Cellar at Rio Las Vegas",
+"venueCity": "Las Vegas",
+"state": "NV",
+"address": "3700 W Flamingo Rd",
+"lat": 36.117575,
+"lng": -115.187717,
+"url": "https://www.ticketmaster.com/comedy-cellar-las-vegas-las-vegas-nevada-02-01-2027/event/3900655EAD25B093",
+"priceMin": null,
+"priceMax": null,
+"subGenre": "Comedy",
+"attractions": [
+"Comedy Cellar (Las Vegas)"
+],
+"ageRestricted": false
+},
+{
+"city": "LAS",
+"id": "1AyZk4VGkdA5UZd",
+"name": "Josh Wolf at Jimmy Kimmel's Comedy Club",
+"date": "2027-02-01",
+"time": "19:30",
+"status": "onsale",
+"venue": "Jimmy Kimmel's Comedy Club",
+"venueCity": "Las Vegas",
+"state": "NV",
+"address": "3545 S Las Vegas Blvd",
+"lat": 36.11793,
+"lng": -115.171531,
+"url": "https://www.ticketmaster.com/josh-wolf-at-jimmy-kimmels-comedy-las-vegas-nevada-02-01-2027/event/39006574C52F6003",
+"priceMin": null,
+"priceMax": null,
+"subGenre": "Comedy",
+"attractions": [
+"Josh Wolf",
+"Jimmy Kimmel's Comedy Club - Las Vegas"
+],
+"ageRestricted": false
+},
+{
+"city": "LAS",
+"id": "G5ezZ_KUBEVno",
+"name": "Tape Face",
+"date": "2027-02-01",
+"time": "19:30",
+"status": "onsale",
+"venue": "Underground Theater at MGM Grand",
+"venueCity": "Las Vegas",
+"state": "NV",
+"address": "3799 Las Vegas Blvd South",
+"lat": 36.10226,
+"lng": -115.167991,
+"url": "https://www.ticketmaster.com/tape-face-las-vegas-nevada-02-01-2027/event/2E00653DBA9F4A91",
+"priceMin": null,
+"priceMax": null,
+"subGenre": "Comedy",
+"attractions": [
+"Tape Face"
+],
+"ageRestricted": false
+},
+{
+"city": "LAS",
+"id": "G5ezZ_fQbYKb4",
+"name": "BGCC: Jay Black with TBA",
+"date": "2027-02-01",
+"time": "20:00",
+"status": "onsale",
+"venue": "Brad Garrett's Comedy Club",
+"venueCity": "Las Vegas",
+"state": "NV",
+"address": "3799 Las Vegas Blvd South Las Vegas",
+"lat": 36.102906,
+"lng": -115.168696,
+"url": "https://www.ticketmaster.com/bgcc-jay-black-with-tba-las-vegas-nevada-02-01-2027/event/2E00654698C13615",
+"priceMin": null,
+"priceMax": null,
+"subGenre": "Comedy",
+"attractions": [
+"Brad Garrett's Comedy Club",
+"Jay Black"
+],
+"ageRestricted": false
+},
+{
+"city": "LAS",
+"id": "G5ezZ_8BIb3HV",
+"name": "Carrot Top",
+"date": "2027-02-01",
+"time": "20:00",
+"status": "onsale",
+"venue": "Atrium Showroom at Luxor Hotel and Casino",
+"venueCity": "Las Vegas",
+"state": "NV",
+"address": "3900 Las Vegas Blvd South",
+"lat": 36.095325,
+"lng": -115.175975,
+"url": "https://www.ticketmaster.com/carrot-top-las-vegas-nevada-02-01-2027/event/2E00650EA8612F34",
+"priceMin": null,
+"priceMax": null,
+"subGenre": "Comedy",
+"attractions": [
+"Carrot Top"
+],
+"ageRestricted": false
+},
+{
+"city": "LAS",
+"id": "1AyZk4FGkdrw_c8",
+"name": "Lowell Sanders at Laugh Factory Las Vegas",
+"date": "2027-02-01",
+"time": "20:30",
+"status": "onsale",
+"venue": "Laugh Factory at Horseshoe Las Vegas",
+"venueCity": "Las Vegas",
+"state": "NV",
+"address": "3645 Las Vegas Blvd. South",
+"lat": 36.11376452,
+"lng": -115.16889906,
+"url": "https://www.ticketmaster.com/lowell-sanders-at-laugh-factory-las-las-vegas-nevada-02-01-2027/event/39006548DEC99B50",
+"priceMin": null,
+"priceMax": null,
+"subGenre": "Comedy",
+"attractions": [
+"Laugh Factory Las Vegas",
+"Lowell Sanders"
+],
+"ageRestricted": false
+},
+{
+"city": "LAS",
+"id": "1AyZk4VGkenOVKV",
+"name": "Loni Love At Jimmy Kimmel's Comedy Club",
+"date": "2027-02-01",
+"time": "21:30",
+"status": "onsale",
+"venue": "Jimmy Kimmel's Comedy Club",
+"venueCity": "Las Vegas",
+"state": "NV",
+"address": "3545 S Las Vegas Blvd",
+"lat": 36.11793,
+"lng": -115.171531,
+"url": "https://www.ticketmaster.com/loni-love-at-jimmy-kimmels-comedy-las-vegas-nevada-02-01-2027/event/39006574AA8344F4",
+"priceMin": null,
+"priceMax": null,
+"subGenre": "Comedy",
+"attractions": [
+"Loni Love",
+"Jimmy Kimmel's Comedy Club - Las Vegas"
+],
+"ageRestricted": false
+},
+{
+"city": "LAS",
+"id": "1Ad0Z_4GkBc1leh",
+"name": "Comedy Cellar (Las Vegas)",
+"date": "2027-02-01",
+"time": "21:30",
+"status": "onsale",
+"venue": "Comedy Cellar at Rio Las Vegas",
+"venueCity": "Las Vegas",
+"state": "NV",
+"address": "3700 W Flamingo Rd",
+"lat": 36.117575,
+"lng": -115.187717,
+"url": "https://www.ticketmaster.com/comedy-cellar-las-vegas-las-vegas-nevada-02-01-2027/event/3900655EAD2AB09B",
+"priceMin": null,
+"priceMax": null,
+"subGenre": "Comedy",
+"attractions": [
+"Comedy Cellar (Las Vegas)"
+],
+"ageRestricted": false
+},
+{
 "city": "MIA",
 "id": "vvG1VZ_CNnisJD",
 "name": "Marcello Hernández",
@@ -36672,28 +37246,6 @@
 },
 {
 "city": "NYC",
-"id": "16YZk4k8NZAC5dk2",
-"name": "SOLD OUT - Jacqueline Novak",
-"date": "2026-11-23",
-"time": "19:00",
-"status": "onsale",
-"venue": "The Bell House",
-"venueCity": "Brooklyn",
-"state": "NY",
-"address": "149 7th Street",
-"lat": 40.67373,
-"lng": -73.99156,
-"url": "https://www.ticketmaster.com/sold-out-jacqueline-novak-brooklyn-new-york-11-23-2026/event/30006546423DA25E",
-"priceMin": null,
-"priceMax": null,
-"subGenre": "Comedy",
-"attractions": [
-"Jacqueline Novak"
-],
-"ageRestricted": false
-},
-{
-"city": "NYC",
 "id": "16dZZ_f_6G7iQou",
 "name": "Jacqueline Novak",
 "date": "2026-11-24",
@@ -36844,6 +37396,28 @@
 "subGenre": "Comedy",
 "attractions": [
 "Anthony Rodia"
+],
+"ageRestricted": false
+},
+{
+"city": "NYC",
+"id": "rZ7HnEZ1Af8eoV",
+"name": "Finally Friday with Sameer Naseem ft. Marcus Monroe, Derek Humphrey, Myka Fox, Kunal Arora, Gastor Almonte",
+"date": "2026-11-27",
+"time": "21:15",
+"status": "onsale",
+"venue": "Brooklyn Improv (The Lab)",
+"venueCity": "Brooklyn",
+"state": "NY",
+"address": "64 N 9th Street",
+"lat": 40.7207511,
+"lng": -73.959998,
+"url": "https://www.ticketweb.com/event/finally-friday-with-sameer-naseem-brooklyn-improv-the-lab-tickets/14402474",
+"priceMin": 19.34,
+"priceMax": 19.34,
+"subGenre": "Comedy",
+"attractions": [
+"Myka Fox"
 ],
 "ageRestricted": false
 },
@@ -37375,6 +37949,28 @@
 "subGenre": "Comedy",
 "attractions": [
 "Rohan Joshi"
+],
+"ageRestricted": false
+},
+{
+"city": "NYC",
+"id": "rZ7HnEZ1A4vJxd",
+"name": "MAN, IDK W/ YEDOYE & RUFAT ft. Gavin Matts, Alex Babbit, Jared Waters, and Lauren Davis",
+"date": "2026-12-04",
+"time": "19:00",
+"status": "onsale",
+"venue": "Brooklyn Improv (The Lab)",
+"venueCity": "Brooklyn",
+"state": "NY",
+"address": "64 N 9th Street",
+"lat": 40.7207511,
+"lng": -73.959998,
+"url": "https://www.ticketweb.com/event/man-idk-w-yedoye-brooklyn-improv-the-lab-tickets/15066883",
+"priceMin": 21.4,
+"priceMax": 21.4,
+"subGenre": "Comedy",
+"attractions": [
+"Gavin Matts"
 ],
 "ageRestricted": false
 },
@@ -38759,7 +39355,30 @@
 "Ana Fabrega",
 "John Wilson",
 "Devon Walker",
-"Jack Bensinger"
+"Jack Bensinger",
+"Matt Barats"
+],
+"ageRestricted": false
+},
+{
+"city": "NYC",
+"id": "1FGZvPqOoJZ7u2ku",
+"name": "The Bell House Stand Up Showcase",
+"date": "2026-12-23",
+"time": "19:30",
+"status": "onsale",
+"venue": "The Bell House",
+"venueCity": "Brooklyn",
+"state": "NY",
+"address": "149 7th Street",
+"lat": 40.67373,
+"lng": -73.99156,
+"url": "https://www.ticketmaster.com/the-bell-house-stand-up-showcase-brooklyn-new-york-12-23-2026/event/300065760466CE5C",
+"priceMin": null,
+"priceMax": null,
+"subGenre": "Comedy",
+"attractions": [
+"The Bell House Stand Up Showcase"
 ],
 "ageRestricted": false
 },
@@ -38936,6 +39555,33 @@
 "subGenre": "Comedy",
 "attractions": [
 "Mike Vecchione"
+],
+"ageRestricted": false
+},
+{
+"city": "NYC",
+"id": "16dZZ_9bkG7yiD0",
+"name": "The Ultimate Improv Show",
+"date": "2027-01-02",
+"time": "19:00",
+"status": "onsale",
+"venue": "The Bell House",
+"venueCity": "Brooklyn",
+"state": "NY",
+"address": "149 7th Street",
+"lat": 40.67373,
+"lng": -73.99156,
+"url": "https://www.ticketmaster.com/the-ultimate-improv-show-brooklyn-new-york-01-02-2027/event/3000657606E6CEE4",
+"priceMin": null,
+"priceMax": null,
+"subGenre": "Comedy",
+"attractions": [
+"Ultimate Improv Show",
+"Dan Black",
+"Jason Biggs",
+"Brandon Scott Jones",
+"Neil Casey",
+"Zach Cherry"
 ],
 "ageRestricted": false
 },
@@ -41024,28 +41670,6 @@
 },
 {
 "city": "PHL",
-"id": "vv1AOvPevGA11Rtt",
-"name": "Punch Line Philly Open Mic Night",
-"date": "2026-11-23",
-"time": "19:00",
-"status": "onsale",
-"venue": "Punch Line Philly Callback Bar",
-"venueCity": "Philadelphia",
-"state": "PA",
-"address": "33 E Laurel Street",
-"lat": 39.96545508,
-"lng": -75.1352,
-"url": "https://www.ticketmaster.com/punch-line-philly-open-mic-night-philadelphia-pennsylvania-11-23-2026/event/020065081A2AFA69",
-"priceMin": null,
-"priceMax": null,
-"subGenre": "Comedy",
-"attractions": [
-"Punch Line Philly Open Mic Night"
-],
-"ageRestricted": false
-},
-{
-"city": "PHL",
 "id": "vv16OvPAOFAZ78ekC",
 "name": "Granville Bazemore Presents: Keith Robinson & Friends",
 "date": "2026-11-25",
@@ -41270,7 +41894,7 @@
 "name": "Phylicia Dshea",
 "date": "2026-12-04",
 "time": "21:45",
-"status": "onsale",
+"status": "cancelled",
 "venue": "Punch Line Philly",
 "venueCity": "Philadelphia",
 "state": "PA",
@@ -41283,6 +41907,28 @@
 "subGenre": "Comedy",
 "attractions": [
 "Phylicia Dshea"
+],
+"ageRestricted": false
+},
+{
+"city": "PHL",
+"id": "vv1kFZ_9jZG7TLGP",
+"name": "Comedy Allstars",
+"date": "2026-12-04",
+"time": "21:45",
+"status": "onsale",
+"venue": "Punch Line Philly",
+"venueCity": "Philadelphia",
+"state": "PA",
+"address": "33 E. Laurel Street",
+"lat": 39.965819,
+"lng": -75.134752,
+"url": "https://www.ticketmaster.com/comedy-allstars-philadelphia-pennsylvania-12-04-2026/event/0200657700FDF325",
+"priceMin": null,
+"priceMax": null,
+"subGenre": "Comedy",
+"attractions": [
+"Comedy Allstars"
 ],
 "ageRestricted": false
 },
@@ -42977,6 +43623,28 @@
 "subGenre": "Comedy",
 "attractions": [
 "Peter Antoniou"
+],
+"ageRestricted": false
+},
+{
+"city": "PHL",
+"id": "vv1AOvP_xGA1EC65",
+"name": "Punch Line Philly Open Mic Night",
+"date": "2027-02-01",
+"time": "19:00",
+"status": "onsale",
+"venue": "Punch Line Philly Callback Bar",
+"venueCity": "Philadelphia",
+"state": "PA",
+"address": "33 E Laurel Street",
+"lat": 39.96545508,
+"lng": -75.1352,
+"url": "https://www.ticketmaster.com/punch-line-philly-open-mic-night-philadelphia-pennsylvania-02-01-2027/event/020065662A9CE1CB",
+"priceMin": null,
+"priceMax": null,
+"subGenre": "Comedy",
+"attractions": [
+"Punch Line Philly Open Mic Night"
 ],
 "ageRestricted": false
 },
